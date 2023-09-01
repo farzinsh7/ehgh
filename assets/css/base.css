@@ -1,0 +1,340 @@
+/*
+This file is made by Frenify
+This css file includes all base styles and template's main color (in this tempalte main color is pink(#f00a77)). 
+Template's main color styles located at the bottom of this file.
+*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
+	{
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	outline: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+
+blockquote {
+	quotes: none;
+}
+
+blockquote:before,blockquote:after {
+	content: '';
+	content: none;
+}
+ul, ol{
+	margin:30px;	
+}
+ul li, ol li{
+	margin-bottom:5px;
+}
+img{
+	vertical-align:middle;
+	max-width:100%;
+}
+iframe{
+	max-width:100%;
+}
+del {
+	text-decoration: line-through;
+}
+a, i{
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+	border:none;
+}
+a:hover{text-decoration:none;}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight:700;
+	color:#333;
+	margin-bottom:20px;
+}
+h1 { font-size: 45px; }
+h2 { font-size: 36px; }
+h3 { font-size: 30px; }
+h4 { font-size: 24px; }
+h5 { font-size: 20px; }
+h6 { font-size: 16px; }
+
+table{
+	width:100%;
+	max-width:100%;
+	text-align:left;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	margin-bottom:15px;
+	color:#999;
+	border:1px solid #eee;
+}
+table tr{
+	border:1px solid #eee;
+}
+table th{
+	vertical-align:top;
+	color:#333;
+	background:none;
+	font-size:16px;
+	font-weight:normal;
+	padding:15px 10px;
+	border:1px solid #eee;
+}
+table td{
+	vertical-align:top;
+	padding:10px;
+	border:1px solid #eee;
+}
+
+code, pre {
+	padding: 10px;
+	padding-bottom: 0;
+	border-left: 3px solid #6FBF71;
+	border-bottom: 1px solid transparent;
+	background: #f7f7f7;
+	overflow-x:scroll;
+}
+
+pre{
+	display: block;	
+	word-break: break-all;
+	word-wrap: break-word;
+}
+pre code { white-space: pre-wrap; }
+
+p{
+	letter-spacing:1px;
+}
+
+
+.space10{width:100%; float:left; clear:both; margin-bottom:10px;}
+.space20{width:100%; float:left; clear:both; margin-bottom:20px;}
+.space30{width:100%; float:left; clear:both; margin-bottom:30px;}
+.space40{width:100%; float:left; clear:both; margin-bottom:40px;}
+.space50{width:100%; float:left; clear:both; margin-bottom:50px;}
+.space60{width:100%; float:left; clear:both; margin-bottom:60px;}
+.space70{width:100%; float:left; clear:both; margin-bottom:70px;}
+.space80{width:100%; float:left; clear:both; margin-bottom:80px;}
+.space90{width:100%; float:left; clear:both; margin-bottom:90px;}
+.space100{width:100%; float:left; clear:both; margin-bottom:100px;}
+.space200{width:100%; float:left; clear:both; margin-bottom:200px;}
+.space300{width:100%; float:left; clear:both; margin-bottom:300px;}
+.space400{width:100%; float:left; clear:both; margin-bottom:400px;}
+.space500{width:100%; float:left; clear:both; margin-bottom:500px;}
+.space1000{width:100%; float:left; clear:both; margin-bottom:1000px;}
+
+
+/*------------------------------------------------------------------*/ 
+/*	x) FORM ELEMENTS
+/*------------------------------------------------------------------*/
+textarea{
+	border-radius:0;
+	font-size:13px;
+	color:#333;
+	resize:vertical;
+	font-family:'Raleway', Arial, Helvetica, sans-serif;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	-ms-box-sizing: border-box;     /* IE 10 + */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	
+	line-height:1.4;
+	padding:10px!important;
+	width:100%;
+	border:1px solid #eee;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+	border-radius:0;
+	font-size:13px;
+	min-width:220px;
+	color:#333;
+	letter-spacing:0.5px;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	-ms-box-sizing: border-box;     /* IE 10 + */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	
+	font-family:'Raleway', Arial, Helvetica, sans-serif;
+	
+	line-height:1.6;
+	padding:10px!important;
+	height:44px;
+	vertical-align:middle;
+	border:1px solid #eee;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+	
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+	border-color:#ccc;
+	background:#eee;
+}
+
+
+input[type="submit"]{
+	padding: 13px 15px;
+	height: 40px;
+	line-height: 1;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: 600;
+	text-decoration: none;
+	letter-spacing: 0.5px;
+	border:none;
+	cursor:pointer;
+	color: #FFF;
+	background:#777;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+input[type="submit"]:hover{
+	background:#444;
+}
+select{
+	padding:8px;
+	border:2px solid #eee;
+}
+input[type="button"]{
+	cursor:pointer;
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.container{
+	max-width: 1250px;
+	padding: 0 40px;
+	margin: 0 auto;
+	width: 100%;
+}
+.max200{max-width: 200px;}
+.max250{max-width: 250px;}
+.max300{max-width: 300px;}
+.max350{max-width: 350px;}
+.max400{max-width: 400px;}
+.max450{max-width: 450px;}
+.max500{max-width: 500px;}
+.max550{max-width: 550px;}
+.max600{max-width: 600px;}
+.max650{max-width: 650px;}
+.max700{max-width: 700px;}
+.max750{max-width: 750px;}
+.max800{max-width: 800px;}
+.max850{max-width: 850px;}
+.max900{max-width: 900px;}
+.max950{max-width: 950px;}
+.max1000{max-width: 1000px;}
+.max1050{max-width: 1050px;}
+.max1100{max-width: 1100px;}
+.max1150{max-width: 1150px;}
+.max1200{max-width: 1200px;}
+.max1250{max-width: 1250px;}
+.max1300{max-width: 1300px;}
+.max1350{max-width: 1350px;}
+.max1400{max-width: 1400px;}
+.max1450{max-width: 1450px;}
+.max1500{max-width: 1500px;}
+[data-margin-bottom]{margin-bottom: 20px;}
+[data-margin-top]{margin-top: 20px;}
+[data-padding-top]{padding-top: 20px;}
+[data-padding-bottom]{padding-bottom: 20px;}
+.space,
+.row,
+[class^="section_"]{
+	width: 100%;
+	position: relative;
+	float: left;
+	clear: both;
+	box-sizing: border-box;
+}
+[class^="col_"]{
+	float: left;
+	padding-left: 40px;
+	margin-bottom: 40px;
+	box-sizing: border-box;
+}
+.row_in{
+	width: auto;
+	min-width: 100%;
+	min-width: calc(100% + 40px);
+	margin-left: -40px;
+	float: left;
+}
+.col_1{width: 1%;}.col_2{width: 2%;}.col_3{width: 3%;}.col_4{width: 4%;}.col_5{width: 5%;}
+.col_6{width: 6%;}.col_7{width: 7%;}.col_8{width: 8%;}.col_9{width: 9%;}.col_10{width: 10%;}
+.col_11{width: 11%;}.col_12{width: 12%;}.col_13{width: 13%;}.col_14{width: 14%;}.col_15{width: 15%;}
+.col_16{width: 16%;}.col_17{width: 17%;}.col_18{width: 18%;}.col_19{width: 19%;}.col_20{width: 20%;}
+.col_21{width: 21%;}.col_22{width: 22%;}.col_23{width: 23%;}.col_24{width: 24%;}.col_15{width: 25%;}
+.col_26{width: 26%;}.col_27{width: 27%;}.col_28{width: 28%;}.col_29{width: 29%;}.col_30{width: 30%;}
+.col_31{width: 31%;}.col_32{width: 32%;}.col_33{width: 33%;}.col_34{width: 34%;}.col_35{width: 35%;}
+.col_36{width: 36%;}.col_37{width: 37%;}.col_38{width: 38%;}.col_39{width: 39%;}.col_40{width: 40%;}
+.col_41{width: 41%;}.col_42{width: 42%;}.col_43{width: 43%;}.col_44{width: 44%;}.col_45{width: 45%;}
+.col_46{width: 46%;}.col_47{width: 47%;}.col_48{width: 48%;}.col_49{width: 49%;}.col_50{width: 50%;}
+.col_51{width: 51%;}.col_52{width: 52%;}.col_53{width: 53%;}.col_54{width: 54%;}.col_55{width: 55%;}
+.col_56{width: 56%;}.col_57{width: 57%;}.col_58{width: 58%;}.col_59{width: 59%;}.col_60{width: 60%;}
+.col_61{width: 61%;}.col_62{width: 62%;}.col_63{width: 63%;}.col_64{width: 64%;}.col_65{width: 65%;}
+.col_66{width: 66%;}.col_67{width: 67%;}.col_68{width: 68%;}.col_69{width: 69%;}.col_70{width: 70%;}
+.col_71{width: 71%;}.col_72{width: 72%;}.col_73{width: 73%;}.col_74{width: 74%;}.col_75{width: 75%;}
+.col_76{width: 76%;}.col_77{width: 77%;}.col_78{width: 78%;}.col_79{width: 79%;}.col_80{width: 80%;}
+.col_81{width: 81%;}.col_82{width: 82%;}.col_83{width: 83%;}.col_84{width: 84%;}.col_85{width: 85%;}
+.col_86{width: 86%;}.col_87{width: 87%;}.col_88{width: 88%;}.col_89{width: 89%;}.col_90{width: 90%;}
+.col_91{width: 91%;}.col_92{width: 92%;}.col_93{width: 93%;}.col_94{width: 94%;}.col_95{width: 95%;}
+.col_96{width: 96%;}.col_97{width: 97%;}.col_98{width: 98%;}.col_99{width: 99%;}.col_100{width: 100%;}
+.clearfix:after,
+.clearfix:before{
+	content: '';
+	clear: both;
+	display: table;
+}
