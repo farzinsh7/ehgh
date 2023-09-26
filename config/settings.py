@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'ckeditor',
     'ckeditor_uploader',
+    'django_render_partial',
     'home.apps.HomeConfig',
     'industries.apps.IndustriesConfig',
 ]

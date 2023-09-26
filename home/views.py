@@ -6,3 +6,17 @@ from django.template import loader
 def index(request):
     template = loader.get_template("index.html")
     return HttpResponse(template.render())
+
+
+# class SiteHeaderView(ListView):
+#     model = SiteInformation
+#     template_name = 'base/shared/header.html'
+#     context_object_name = 'info'
+#     queryset = SiteInformation.objects.first()
+
+
+# class SiteFooterView(ListView):
+#     model = SiteInformation
+#     template_name = 'base/shared/footer.html'
+#     context_object_name = 'info'
+#     queryset = SiteInformation.objects.first()
