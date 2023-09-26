@@ -1,32 +1,6 @@
+{% extends 'base/main_base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="smartsystemco.com">
-    <meta name="description" content="Ehsan Group, as a leading economic enterprise in Iran with over half a century experience in the fields of industry, mining, trade, and investment.">
-    <title>Ehsan Group | Leading Economic Enterprise</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-          rel="stylesheet">
-    <!-- /Google Fonts -->
-
-    <!-- Styles -->
-    <link type="text/css" rel="stylesheet" href="{% static 'css/base.css' %}"/>
-    <link type="text/css" rel="stylesheet" href="{% static 'css/justified.css' %}"/>
-    <link type="text/css" rel="stylesheet" href="{% static 'css/fontello.css' %}"/>
-    <link type="text/css" rel="stylesheet" href="{% static 'css/magnific-popup.css' %}"/>
-    <link type="text/css" rel="stylesheet" href="{% static 'css/swiper.css' %}"/>
-    <link type="text/css" rel="stylesheet" href="{% static 'css/lightgallery.css' %}"/>
-    <link type="text/css" rel="stylesheet" href="{% static 'css/owl-carousel.css' %}"/>
-    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"/>
-    <!-- /Styles -->
-</head>
-<body>
+{% block content %}
 <!-- Wrapper All -->
 <div class="industify_fn_wrapper_all" data-nav-skin="transdark">
     <!-- Wrapper -->
@@ -1031,22 +1005,4 @@
 					<li><a href="https://ehsan-group.com/fa"><span>Fa</span></a></li>
 				</ul></div></div>
 <!-- /Wrapper All -->
-
-
-<!-- Scripts -->
-<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/justified.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/waypoints.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/countto.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/magnific-popup.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/kenburnsy.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/isotope.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/lightgallery.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/swiper.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/parallax.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/owl-carousel.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/init.js' %}"></script>
-<!-- /Scripts -->
-
-</body>
-</html>
+{% endblock %}

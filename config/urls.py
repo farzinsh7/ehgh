@@ -23,7 +23,9 @@ from home.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',index)
+    path('',include('home.urls')),
+    path('',include('industries.urls')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 
