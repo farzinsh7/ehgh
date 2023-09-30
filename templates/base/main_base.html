@@ -1,5 +1,5 @@
-{% load static %}
 {% load render_partial %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,18 +8,15 @@
     <meta name="author" content="smartsystemco.com">
     <meta name="description" content="Ehsan Group, as a leading economic enterprise in Iran with over half a century experience in the fields of industry, mining, trade, and investment.">
     <title>Ehsan Group | Leading Economic Enterprise</title>
-
 {% include 'base/_header_refrences.html'%}    
 </head>
 <body>
-<!-- Wrapper All -->
 {% include 'base/shared/preloader.html' %}  
 <div class="industify_fn_wrapper_all" data-nav-skin="transdark">
-<!-- Wrapper -->
 <div class="industify_fn_wrapper">
-{% render_partial 'home:head' %}
+{% render_partial 'page:head' %}
 {% block content%}{% endblock content %}
-{% render_partial 'home:foot' %}
+{% render_partial 'page:foot' %}
 {% include 'base/_footer_refrences.html'%}
 </body>
 </html>
