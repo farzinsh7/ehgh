@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'industries.apps.IndustriesConfig',
     'company.apps.CompanyConfig',
+    'news.apps.NewsConfig',
 ]
 
 MIDDLEWARE = [
@@ -152,7 +153,8 @@ CKEDITOR_CONFIGS = {
             ['NumberedList', 'BulletedList', '-', 'Blockquote'],
             ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
             ['Link', 'Unlink', 'Anchor'],
-            ['Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak'],
+            ['Image', 'Flash', 'Table', 'HorizontalRule',
+                'Smiley', 'SpecialChar', 'PageBreak'],
             ['Styles', 'Format', 'Font', 'FontSize'],
             ['TextColor', 'BGColor'],
             ['Maximize', 'ShowBlocks', '-', 'pbckcode'],
