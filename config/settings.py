@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'ckeditor',
     'ckeditor_uploader',
+    'django_render_partial',
     'home.apps.HomeConfig',
     'industries.apps.IndustriesConfig',
     'company.apps.CompanyConfig',
@@ -67,9 +68,9 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request',
             ],
         },
     },

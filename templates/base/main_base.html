@@ -1,4 +1,5 @@
 {% load static %}
+{% load render_partial %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,11 +13,13 @@
 </head>
 <body>
 <!-- Wrapper All -->
-{% include 'base/shared/preloader.html'%}  
+{% include 'base/shared/preloader.html' %}  
 <div class="industify_fn_wrapper_all" data-nav-skin="transdark">
 <!-- Wrapper -->
 <div class="industify_fn_wrapper">
+{% render_partial 'home:head' %}
 {% block content%}{% endblock content %}
+{% render_partial 'home:foot' %}
 {% include 'base/_footer_refrences.html'%}
 </body>
 </html>
