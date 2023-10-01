@@ -11,7 +11,7 @@
             <!-- Alpha Slider: wrapper -->
                 <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-5709px, 0px, 0px);">
                     {% for slide in home.sliders.all %}
-                        <div class="swiper-slide" data-swiper-slide-index="{{ forloop.counter }}" style="width: 1903px;">
+                        <div class="swiper-slide" data-swiper-slide-index="{{ forloop.counter0 }}" style="width: 1903px;">
                             <div class="item">
                                 <div class="img_holder" data-bg-img="{{ slide.image.url }}" style="background-image: url({{ slide.image.url }});"></div>
                                 <div class="title_holder">
@@ -42,51 +42,22 @@
                 <div class="inner">
                     <div class="shape"><span class="shape1"></span><span class="shape2"></span></div>
                     <ul class="fn_cs_miniboxes">
+                        {% for feature in home.features.all  %}
                         <li>
                             <div class="item">
                                 <div class="title_holder">
-                                    <h3>Loyalty</h3>
-                                    <p>The long-term success of a business relies on customers purchasing the “plus-one”
-                                        and loyal behavior.</p>
+                                    <h3>{{ feature.title }}</h3>
+                                    <p>{{ feature.description }}</p>
                                     <span class="icon">
 									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve" class="fn__svg replaced-svg">
 <path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111  C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587  c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
 </svg>
 								 </span>
                                 </div>
-                                <div class="number_holder">01</div>
+                                <div class="number_holder">0{{ forloop.counter }}</div>
                             </div>
                         </li>
-                        <li>
-                            <div class="item">
-                                <div class="title_holder">
-                                    <h3>Consistency</h3>
-                                    <p>Consumers need consistency in the company’s presentation of its brand, pricing,
-                                        product assortment and image.</p>
-                                    <span class="icon">
-									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve" class="fn__svg replaced-svg">
-<path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111  C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587  c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
-</svg>
-								 </span>
-                                </div>
-                                <div class="number_holder">02</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item">
-                                <div class="title_holder">
-                                    <h3>Trust</h3>
-                                    <p>Customers’ and employees’ trust of a business are critical in its ultimate
-                                        success.</p>
-                                    <span class="icon">
-									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve" class="fn__svg replaced-svg">
-<path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111  C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587  c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
-</svg>
-								 </span>
-                                </div>
-                                <div class="number_holder">03</div>
-                            </div>
-                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
@@ -104,11 +75,7 @@
                         <div class="leftpart">
                             <div class="title_holder">
                                 <h3 class="title">Vision of Ehsan Group</h3>
-                                <p>As one of the leading economic enterprises in Iran, Ehsan Group presently has
-                                    established about 500 specialized staff in the central offices of Tehran and other
-                                    cities, industrial factories, and mining projects.</p>
-                                <p>In the macro strategies of Ehsan Investment Group, it is stipulated that the number
-                                    of staff will reach about 1,500 in the next 5 years.</p>
+                                <p>{{ home.about|safe }}</p>
                             </div>
                         </div>
                         <div class="rightpart">
@@ -374,20 +341,7 @@
                         <div class="left_part">
                             <div class="title_holder">
                                 <h3>Mission of Ehsan Group</h3>
-                                <p>
-                                    Create and grow sustainable value for our stakeholders through the application of
-                                    best practices in mining and our commitment on protecting the health and well being
-                                    of our employees and the environment in the communities where we work.
-                                </p>
-                                <p>
-                                    Our products will be made from recycled materials and eco-friendly energy resources.
-                                    We will employ a production process that prevents waste and reduces the
-                                    manufacturing requirements for materials, energy and personnel.
-                                </p>
-                                <p>
-                                    Our development, production and supply processes will minimize environmental
-                                    pollution and be 100% in compliance with environmental legislation.
-                                </p>
+                                <p>{{ home.mission|safe }}</p>
                             </div>
                         </div>
                         <div class="right_part">
@@ -478,14 +432,7 @@
 	<path d="M112.5,208.25c61.856,0,112,50.145,112,112s-50.144,112-112,112s-112-50.145-112-112l-0.5-16   c0-123.712,100.288-224,224-224v64c-42.737,0-82.917,16.643-113.137,46.863c-5.817,5.818-11.126,12.008-15.915,18.51   C100.667,208.723,106.528,208.25,112.5,208.25z M400.5,208.25c61.855,0,112,50.145,112,112s-50.145,112-112,112   s-112-50.145-112-112l-0.5-16c0-123.712,100.287-224,224-224v64c-42.736,0-82.918,16.643-113.137,46.863   c-5.818,5.818-11.127,12.008-15.916,18.51C388.666,208.723,394.527,208.25,400.5,208.25z"></path>
 </svg>
                         <div class="content_holder">
-                            <p>
-                                I strongly believe that a company’s prime asset is its people, I believe in the power of
-                                people and their ability to shift boundaries, which leads to success. I believe that
-                                when inspired leaders in any specific field come together, one expects nothing less than
-                                greatness. Ehsan Group team has extensive hands-on experience in exploration, mining,
-                                and Steel. Recently we focus on tech industries and believe we will be successful in
-                                this industry as mining and steel in previous decade.
-                            </p>
+                            <p>{{ home.quote|safe }}</p>
                             <h5>CEO of Ehsan Group.</h5>
                         </div>
                     </div>
@@ -503,10 +450,7 @@
                 <div class="left_part">
                     <div class="fn_cs_sticky_section">
                         <h3>Sub-industries</h3>
-                        <p>Ehsan Group, with more than 50 years of investment experience and activity in productive
-                            industries, supports individuals and companies that are looking for a risky investor.</p>
-                        <p>In addition to financial contributions, Ehsan Group can accelerate the growth and development
-                            of your business due to the presence of experienced human resources.</p>
+                        <p>{{ home.sub_industries|safe }}</p>
                     </div>
                 </div>
 
