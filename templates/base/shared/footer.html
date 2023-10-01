@@ -31,14 +31,10 @@
                            <li>
                               <div class="item">
                                  <div class="logo">
-                                     <a href="index.html"><img src="{% static 'img/logo-light.png' %}" alt=""></a>
+                                     <a href="index.html"><img src="{{ info.logo.url }}" alt=""></a>
                                  </div>
                                  <div class="textwidget">
-                                     <p>
-                                         Ehsan Group, is a leading economic enterprise in Iran with over half a
-                                         century of experience in the fields of industry, mining, trade, and
-                                         Technology.
-                                     </p>
+                                     <p>{{ info.description }}</p>
                                  </div>
                               </div>
                            </li>

@@ -7,8 +7,8 @@
         <div class="header_inner">
             <div class="menu_logo">
                 <a href="index.html">
-                    <img class="desktop_logo" src="{% static 'img/logo-light.png' %}" alt="Industry HTML Template">
-                    <img class="desktop_logo_dark" src="{% static 'img/logo-dark.png' %}" alt="Industry HTML Template">
+                    <img class="desktop_logo" src="{{ info.logo.url }}" alt="Industry HTML Template">
+                    {% comment %} <img class="desktop_logo_dark" src="{% static 'img/logo-dark.png' %}" alt="Industry HTML Template"> {% endcomment %}
                 </a>
             </div>
             <div class="menu_nav">
