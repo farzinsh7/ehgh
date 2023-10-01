@@ -1,7 +1,41 @@
 from django.db import models
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 # Create your models here.
+
+class HomeData(models.Model):
+    title = models.CharField(max_length=250)
+    about = RichTextUploadingField()
+    mission = RichTextUploadingField()
+    quote = RichTextUploadingField()
+    sub_industries = RichTextUploadingField()
+
+    def __str__(self):
+        return self.title
+    
+
+class Slider(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField(null=True)
+    image = models.ImageField(upload_to='slider')
+    home_data = models.ForeignKey(HomeData, null=True, on_delete=models.SET_NULL, related_name='sliders')
+
+    def __str__(self):
+        return self.title
+    
+
+class Features(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField(null=True)
+    home_data = models.ForeignKey(HomeData, null=True, on_delete=models.SET_NULL, related_name='features')
+
+    def __str__(self):
+        return self.title
+
+
+
+
 class SiteInformation(models.Model):
     title = models.CharField(max_length=200)
     logo = models.ImageField(upload_to='logo', null=True)
