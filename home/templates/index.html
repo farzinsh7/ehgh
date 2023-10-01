@@ -10,23 +10,25 @@
 
             <!-- Alpha Slider: wrapper -->
                 <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-5709px, 0px, 0px);">
-                    <div class="swiper-slide" data-swiper-slide-index="0" style="width: 1903px;">
-                        <div class="item">
-                            <div class="img_holder" data-bg-img="{% static 'img/slider/1.jpg' %}" style="background-image: url({% static 'img/slider/1.jpg' %});"></div>
-                            <div class="title_holder">
-                                <div class="inner">
-                                    <div class="in">
-                                        <h3><span>Sustainability</span></h3>
-                                        <div class="desc">
-					    					<span>
-					    						Ehsan Group is deeply committed to follow world-class sustainable rules and regulations. Our green HSE team implemented many    sustainable processes and routines to make positive impact in the planet earth.
-					    					</span>
+                    {% for slide in home.sliders.all %}
+                        <div class="swiper-slide" data-swiper-slide-index="{{ forloop.counter }}" style="width: 1903px;">
+                            <div class="item">
+                                <div class="img_holder" data-bg-img="{{ slide.image.url }}" style="background-image: url({{ slide.image.url }});"></div>
+                                <div class="title_holder">
+                                    <div class="inner">
+                                        <div class="in">
+                                            <h3><span>{{ slide.title }}</span></h3>
+                                            <div class="desc">
+                                                <span>
+                                                    {{ slide.description }}
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    {% endfor %}
                 </div>
             <!-- Alpha Slider: wrapper -->
 
