@@ -1,12 +1,13 @@
 from django.shortcuts import render
 from django.views.generic import ListView
-from .models import SiteInformation
+from .models import SiteInformation, HomeData
 
 # Create your views here.
 class Index(ListView):
-    model = SiteInformation
+    model = HomeData
     template_name = 'index.html'
-    queryset = SiteInformation.objects.first()
+    context_object_name = "home"
+    queryset = HomeData.objects.first()
 
 
 class SiteHeaderView(ListView):
