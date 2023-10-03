@@ -8,7 +8,7 @@
                 <!-- Header: Bottom Panel -->
                 <div class="header_inner">
                     <div class="menu_logo">
-                        <a href="index.html">
+                        <a href="{% url 'page:home' %}">
                             <img class="desktop_logo" src="{{ info.logo_light.url }}" alt="Industry HTML Template">
                             <img class="desktop_logo_dark" src="{{ info.logo_dark.url }}" alt="Industry HTML Template">
                         </a>
@@ -16,10 +16,10 @@
                     <div class="menu_nav">
                         <ul class="industify_fn_main_nav vert_nav">
                             <li>
-                                <a href="index.html">Home</a>
+                                <a href="{% url 'page:home' %}">Home</a>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="industries.html">Industries</a>
+                                <a href="{% url 'industry:list_view' %}">Industries</a>
                                 <ul class="sub-menu">
                                     <li><a href="industry-1.html">Investment in Mining</a></li>
                                     <li><a href="industry-2.html">Investment in Steel</a></li>
@@ -63,7 +63,7 @@
         <div class="logo_hamb">
             <div class="in">
                 <div class="menu_logo">
-                    <a href="https://ehsan-group.com/index.html"><img src="{{ info.logo_light.url }}" alt="Industry HTML Template"></a>
+                    <a href="{% url 'page:home' %}"><img src="{{ info.logo_light.url }}" alt="Industry HTML Template"></a>
                 </div>
                 <div class="hamburger hamburger--collapse-r">
                     <div class="hamburger-box">
@@ -78,7 +78,7 @@
             <div>
                 <ul class="vert_menu_list">
                     <li>
-                        <a href="https://ehsan-group.com/index.html">Home</a>
+                        <a href="{% url 'page:home' %}">Home</a>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="https://ehsan-group.com/industries.html">Industries</a>

@@ -31,7 +31,7 @@
                            <li>
                               <div class="item">
                                  <div class="logo">
-                                     <a href="index.html"><img src="{{ info.logo_light.url }}" alt=""></a>
+                                     <a href="{% url 'page:home' %}"><img src="{{ info.logo_light.url }}" alt=""></a>
                                  </div>
                                  <div class="textwidget">
                                      <p>{{ info.description }}</p>
@@ -66,8 +66,8 @@
                      <div class="bottom_widget">
                          <div class="widget_nav_menu">
                              <ul class="menu">
-                                 <li><a href="index.html">Home</a></li>
-                                 <li><a href="industries.html">Industries</a></li>
+                                 <li><a href="{% url 'page:home' %}">Home</a></li>
+                                 <li><a href="{% url 'industry:list_view' %}">Industries</a></li>
                                  <li><a href="about.html">About</a></li>
                                  <li><a href="contact.html">Contact</a></li>
                                  <li><a href="#">Career</a></li>

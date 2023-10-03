@@ -1,0 +1,44 @@
+{% extends 'base/main_base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Page Title -->
+    <div class="industify_fn_pagetitle">
+        <div class="container">
+            <div class="title_holder">
+                <h3>{{ industry.title }}</h3>
+                <div class="industify_fn_breadcrumbs">
+                    <ul>
+                        <li><a href="index.html" title="Home">Home</a></li>
+                        <li class="separator"><span></span></li>
+                        <li><span class="bread-current">Industry</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Page Title -->
+    <div class="industify_fn_blog_full">
+        <div class="container">
+            <ul class="industify_fn_postlist">
+                <li>
+                    <div class="post has-post-thumbnail">
+                        <div class="img_holder">
+                            <a href="#"><img src="{{ industry.image.url }}" alt="{{ industry.slug }}"></a>
+                            <span class="shape1"></span><span class="shape2" style="border-left-width: 1070px;"></span>
+                        </div>
+                        <div class="content_holder">
+                            <div class="title">
+                                <h3>
+                                    <a href="#">{{ industry.title }}</a>
+                                </h3>
+                            </div>
+                            <div class="excerpt_holder">
+                                <p>{{ industry.description|safe }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

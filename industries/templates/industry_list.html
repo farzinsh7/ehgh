@@ -30,14 +30,14 @@
                             <div class="item_in">
                                 <div class="img_holder">
                                     <div class="img_abs" data-fn-bg-img="{{ item.image.url }}" style="background-image: url(&quot;{{ item.image.url }}&quot;);"></div>
-                                    <a href="#"></a>
+                                    <a href="{% url 'industry:detail_view' item.slug %}"></a>
                                 </div>
                                 <div class="title">
-                                    <h3><a href="#">{{ item.title }}</a></h3>
+                                    <h3><a href="{% url 'industry:detail_view' item.slug %}">{{ item.title }}</a></h3>
                                     <p>{{ item.seo_description|safe }}</p>
                                 </div>
                                 <div class="read_more">
-                                    <a href="#">Read More</a>
+                                    <a href="{% url 'industry:detail_view' item.slug %}">Read More</a>
                                 </div>
                             </div>
                         </div>
