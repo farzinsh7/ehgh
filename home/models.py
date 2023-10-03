@@ -34,11 +34,10 @@ class Features(models.Model):
         return self.title
 
 
-
-
 class SiteInformation(models.Model):
     title = models.CharField(max_length=200)
-    logo = models.ImageField(upload_to='logo', null=True)
+    logo_light = models.ImageField(upload_to='logo', null=True)
+    logo_dark = models.ImageField(upload_to='logo', null=True)
     description = models.TextField(null=True)
     phone = models.CharField(max_length=11, null=True)
     address = models.CharField(max_length=300, null=True)
