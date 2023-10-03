@@ -1,0 +1,107 @@
+{% extends 'base/main_base.html' %}
+{% load static %}
+{% block content %}
+<!-- Page Title -->
+<div class="industify_fn_pagetitle">
+    <div class="container">
+        <div class="title_holder">
+            <h3>Industries</h3>
+            <div class="industify_fn_breadcrumbs">
+                <ul>
+                    <li><a href="index.html" title="Home">Home</a></li>
+                    <li class="separator"><span></span></li>
+                    <li><span class="bread-current"> Industries</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Page Title -->
+<!-- Sidebar Page -->
+<div class="industify_fn_sidebarpage">
+    <div class="container">
+        <div class="s_inner">
+            <!-- Main Sidebar: Left -->
+            <div class="industify_fn_leftsidebar">
+                <ul class="industify_fn_service_list">
+                    {% for item in industry %}
+                    <li>
+                        <div class="item">
+                            <div class="item_in">
+                                <div class="img_holder">
+                                    <div class="img_abs" data-fn-bg-img="{{ item.image.url }}" style="background-image: url(&quot;{{ item.image.url }}&quot;);"></div>
+                                    <a href="#"></a>
+                                </div>
+                                <div class="title">
+                                    <h3><a href="#">{{ item.title }}</a></h3>
+                                    <p>{{ item.seo_description|safe }}</p>
+                                </div>
+                                <div class="read_more">
+                                    <a href="#">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <!-- /Main Sidebar: Left -->
+
+
+            <!-- Main Sidebar: Right -->
+            <div class="industify_fn_rightsidebar">
+
+
+                <!-- Service List -->
+                <div class="service_list_as_function">
+                    <div class="title">
+                        <h3>Sub-industries</h3>
+                    </div>
+                    <div class="list_holder">
+                        <ul>
+                            <li><a href="#">Steel Behzad</a></li>
+                            <li><a href="#">Foolad Shop</a></li>
+                            <li><a href="#">Radman Group</a></li>
+                            <li><a href="#">Smart System</a></li>
+                            <li><a href="#">Pedalica</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /Service List -->
+
+                <!-- Get Sidebar -->
+                <div class="industify_fn_sidebar">
+<div class="industify_fn_sidebar_in">
+
+<div class="widget_block">
+    <div class="industify_fn_widget_estimate">
+        <div class="img_holder">
+            <span class="helper1" style="border-left-width: 80px; border-top-width: 55px;"></span>
+            <span class="helper2" style="border-right-width: 220px; border-top-width: 55px;"></span>
+            <span class="helper3" style="border-left-width: 80px; border-top-width: 80px;"></span>
+            <span class="helper4" style="border-right-width: 220px; border-top-width: 80px;"></span>
+            <span class="helper5" style="border-left-width: 80px; border-top-width: 80px;"></span>
+            <span class="helper6" style="border-right-width: 220px; border-top-width: 80px;"></span>
+            <div class="abs_img" data-fn-bg-img="img/sidebar.jpg" style="background-image: url(&quot;img/sidebar.jpg&quot;);"></div>
+        </div>
+        <div class="bfwe_inner">
+            <p>Ehsan Group is a well-known brand with more than 30 years of brilliant history</p>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+                <!-- /Get Sidebar -->
+
+
+            </div>
+            <!-- Main Sidebar: Right -->
+
+        </div>
+    </div>
+</div>
+<!-- /Sidebar Page -->
+{% endblock %}
