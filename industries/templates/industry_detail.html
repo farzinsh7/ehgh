@@ -1,4 +1,5 @@
 {% extends 'base/main_base.html' %}
+{% load thumbnail %}
 {% load static %}
 {% block content %}
     <!-- Page Title -->
@@ -23,7 +24,11 @@
                 <li>
                     <div class="post has-post-thumbnail">
                         <div class="img_holder">
-                            <a href="#"><img src="{{ industry.image.url }}" alt="{{ industry.slug }}"></a>
+                            <a href="#">
+                                {% thumbnail industry.image "1170x600" as im %}
+                                    <img src="{{ im.url }}" alt="{{ industry.slug }}">
+                                {% endthumbnail %}
+                            </a>
                             <span class="shape1"></span><span class="shape2" style="border-left-width: 1070px;"></span>
                         </div>
                         <div class="content_holder">

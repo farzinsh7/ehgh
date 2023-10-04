@@ -1,4 +1,5 @@
 {% extends 'base/main_base.html' %}
+{% load thumbnail %}
 {% load static %}
 {% block content %}
 <!-- Page Title -->
@@ -29,7 +30,9 @@
                         <div class="item">
                             <div class="item_in">
                                 <div class="img_holder">
-                                    <div class="img_abs" data-fn-bg-img="{{ item.image.url }}" style="background-image: url(&quot;{{ item.image.url }}&quot;);"></div>
+                                    {% thumbnail item.image "500x500" as im %}
+                                        <div class="img_abs" data-fn-bg-img="{{ im.url }}" style="background-image: url({{ item.image.url }});"></div>
+                                    {% endthumbnail %}
                                     <a href="{% url 'industry:detail_view' item.slug %}"></a>
                                 </div>
                                 <div class="title">
