@@ -2,5 +2,74 @@
 {% load thumbnail %}
 {% load static %}
 {% block content %}
-    
+    <!-- Page Title -->
+    <div class="industify_fn_pagetitle">
+        <div class="container">
+            <div class="title_holder">
+                <h3>{{ company.title }}</h3>
+                <div class="industify_fn_breadcrumbs">
+                    <ul>
+                        <li><a href="index.html" title="Home">Home</a></li>
+                        <li class="separator"><span></span></li>
+                        <li><span class="bread-current">Company</span></li>
+                        <li class="separator"><span></span></li>
+                        <li><span class="bread-current">{{ company.title }}</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Page Title -->
+    <!-- Sidebar Page -->
+    <div class="industify_fn_sidebarpage">
+        <div class="container">
+            <div class="s_inner">
+                <!-- Main Sidebar: Left -->
+                <div class="industify_fn_leftsidebar">
+                    <!-- Single Blog -->
+                    <div class="industify_fn_blog_single">
+                        <div class="img_holder">
+                            {% thumbnail company.image "920x562" as im %}
+                                <img src="{{ im.url }}" alt="{{ company.slug }}">
+                            {% endthumbnail %}
+                        </div>
+                        <div class="desc_holder">
+                            <h5>{{ company.title }}</h5>
+                            <p>{{ company.description|safe }}</p>
+                        </div>
+                    </div>
+                    <!-- /Single Blog -->
+                </div>
+                <!-- /Main Sidebar: Left -->
+                <!-- Main Sidebar: Right -->
+                <div class="industify_fn_rightsidebar">
+                    <!-- Get Sidebar -->
+                    <div class="industify_fn_sidebar">
+<div class="industify_fn_sidebar_in">
+    <div class="widget_block">
+        <div class="industify_fn_widget_estimate">
+            <div class="img_holder">
+                <span class="helper1" style="border-left-width: 80px; border-top-width: 55px;"></span>
+                <span class="helper2" style="border-right-width: 220px; border-top-width: 55px;"></span>
+                <span class="helper3" style="border-left-width: 80px; border-top-width: 80px;"></span>
+                <span class="helper4" style="border-right-width: 220px; border-top-width: 80px;"></span>
+                <span class="helper5" style="border-left-width: 80px; border-top-width: 80px;"></span>
+                <span class="helper6" style="border-right-width: 220px; border-top-width: 80px;"></span>
+                <div class="abs_img" data-fn-bg-img="{% static 'img/sidebar.jpg'%}" style="background-image: url({% static 'img/sidebar.jpg'%});"></div>
+            </div>
+            <div class="bfwe_inner">
+                <p>Ehsan Group is a well-known brand with more than 30 years of brilliant history</p>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+                    <!-- /Get Sidebar -->
+                </div>
+                <!-- Main Sidebar: Right -->
+            </div>
+        </div>
+    </div>
+    <!-- /Sidebar Page -->
 {% endblock %}

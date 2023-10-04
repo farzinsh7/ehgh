@@ -6,12 +6,12 @@
 <div class="industify_fn_pagetitle">
     <div class="container">
         <div class="title_holder">
-            <h3>Industries</h3>
+            <h3>Companies</h3>
             <div class="industify_fn_breadcrumbs">
                 <ul>
                     <li><a href="{% url 'page:home' %}" title="Home">Home</a></li>
                     <li class="separator"><span></span></li>
-                    <li><span class="bread-current"> Industries</span></li>
+                    <li><span class="bread-current"> Companies</span></li>
                 </ul>
             </div>
         </div>
@@ -25,7 +25,7 @@
             <!-- Main Sidebar: Left -->
             <div class="industify_fn_leftsidebar">
                 <ul class="industify_fn_service_list">
-                    {% for item in industry %}
+                    {% for item in company %}
                     <li>
                         <div class="item">
                             <div class="item_in">
@@ -33,14 +33,14 @@
                                     {% thumbnail item.image "500x500" as im %}
                                         <div class="img_abs" data-fn-bg-img="{{ im.url }}" style="background-image: url({{ im.url }});"></div>
                                     {% endthumbnail %}
-                                    <a href="{% url 'industry:detail_view' item.slug %}"></a>
+                                    <a href="{% url 'company:detail_view' item.slug %}"></a>
                                 </div>
                                 <div class="title">
-                                    <h3><a href="{% url 'industry:detail_view' item.slug %}">{{ item.title }}</a></h3>
-                                    <p>{{ item.seo_description|safe }}</p>
+                                    <h3><a href="{% url 'company:detail_view' item.slug %}">{{ item.title }}</a></h3>
+                                    <p>{{ item.description|safe|truncatewords:35 }}</p>
                                 </div>
                                 <div class="read_more">
-                                    <a href="{% url 'industry:detail_view' item.slug %}">Read More</a>
+                                    <a href="{% url 'company:detail_view' item.slug %}">Read More</a>
                                 </div>
                             </div>
                         </div>

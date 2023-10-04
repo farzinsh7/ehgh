@@ -4,7 +4,7 @@ from .models import Industry
 
 
 # Create your views here.
-class IndustryistView(ListView):
+class IndustryListView(ListView):
     queryset = Industry.objects.filter(status="p")
     model = Industry
     template_name = 'industry_list.html'
