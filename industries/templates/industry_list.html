@@ -9,7 +9,7 @@
             <h3>Industries</h3>
             <div class="industify_fn_breadcrumbs">
                 <ul>
-                    <li><a href="index.html" title="Home">Home</a></li>
+                    <li><a href="{% url 'page:home' %}" title="Home">Home</a></li>
                     <li class="separator"><span></span></li>
                     <li><span class="bread-current"> Industries</span></li>
                 </ul>
@@ -31,7 +31,7 @@
                             <div class="item_in">
                                 <div class="img_holder">
                                     {% thumbnail item.image "500x500" as im %}
-                                        <div class="img_abs" data-fn-bg-img="{{ im.url }}" style="background-image: url({{ item.image.url }});"></div>
+                                        <div class="img_abs" data-fn-bg-img="{{ im.url }}" style="background-image: url({{ im.url }});"></div>
                                     {% endthumbnail %}
                                     <a href="{% url 'industry:detail_view' item.slug %}"></a>
                                 </div>

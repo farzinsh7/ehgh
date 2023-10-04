@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView
 from .models import SiteInformation, HomeData
+from industries.models import Industry
 
 # Create your views here.
 class Index(ListView):
@@ -8,6 +9,11 @@ class Index(ListView):
     template_name = 'index.html'
     context_object_name = "home"
     queryset = HomeData.objects.first()
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['industry'] = Industry.objects.filter(status='p')[:4]
+        return context
 
 
 class SiteHeaderView(ListView):
