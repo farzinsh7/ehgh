@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView
 from .models import SiteInformation, HomeData
 from industries.models import Industry
+from company.models import Company
 
 # Create your views here.
 class Index(ListView):
@@ -13,6 +14,7 @@ class Index(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['industry'] = Industry.objects.filter(status='p')[:4]
+        context['company'] = Company.objects.filter(status='p')
         return context
 
 

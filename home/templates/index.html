@@ -274,19 +274,22 @@
                 <div class="right_part">
                     <div class="fn_cs_sticky_section">
                         <ul>
+                            {% for item in company %}
                             <li>
                                 <div class="item">
                                     <div class="img_holder">
                                         <img src="{% static 'img/thumb/700-500.jpg' %}" alt="">
-                                        <div class="abs_img" data-bg-img="{% static 'img/portfolio/1.jpg' %}" style="background-image: url({% static 'img/portfolio/1.jpg' %});"></div>
-                                        <a href="company-1.html"></a>
+                                        {% thumbnail item.image "885x690" as im %}
+                                        <div class="abs_img" data-fn-bg-img="{{ im.url }}" style="background-image: url({{ im.url }});"></div>
+                                        {% endthumbnail %}
+                                        <a href="{% url 'company:detail_view' item.slug %}"></a>
                                     </div>
                                     <div class="title_holder">
-                                        <h3><a href="company-1.html">Foolad Shop</a>
+                                        <h3><a href="{% url 'company:detail_view' item.slug %}">{{ item.title }}</a>
                                         </h3>
-                                        <span class="desc">Fooladshop is the online store of Steel Group, created with the aim of innovating to meet the needs of customers and developing complementary services in the industry.…</span>
+                                        <span class="desc">{{ item.seo_description|truncatewords:35 }}</span>
                                         <p>
-                                            <a href="company-1.html">
+                                            <a href="{% url 'company:detail_view' item.slug %}">
                                                 <span class="text">More Details</span>
                                                 <span class="arrow">
 										            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve" class="fn__svg replaced-svg">
@@ -298,79 +301,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
-                                <div class="item">
-                                    <div class="img_holder">
-                                        <img src="{% static 'img/thumb/700-500.jpg' %}" alt="">
-                                        <div class="abs_img" data-bg-img="{% static 'img/portfolio/2.jpg' %}" style="background-image: url({% static 'img/portfolio/2.jpg' %});"></div>
-                                        <a href="company-2.html"></a>
-                                    </div>
-                                    <div class="title_holder">
-                                        <h3><a href="company-2.html">Radman Group</a>
-                                        </h3>
-                                        <span class="desc">
-                                            Radman is one of the leading management consulting companies in Iran, which works with top managers and professionals to help them make better decisions, implement those decisions, and achieve consistent and desirable success.…</span>
-                                        <p>
-                                            <a href="company-2.html">
-                                                <span class="text">More Details</span>
-                                                <span class="arrow">
-										 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve" class="fn__svg replaced-svg">
-<path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111  C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587  c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
-</svg>
-									  </span>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item">
-                                    <div class="img_holder">
-                                        <img src="{% static 'img/thumb/700-500.jpg' %}" alt="">
-                                        <div class="abs_img" data-bg-img="{% static 'img/portfolio/3.jpg' %}" style="background-image: url({% static 'img/portfolio/3.jpg' %});"></div>
-                                        <a href="company-3.html"></a>
-                                    </div>
-                                    <div class="title_holder">
-                                        <h3><a href="company-3.html">Smart System</a>
-                                        </h3>
-                                        <span class="desc">Smart System was established in 2020 aiming at providing quality products with the help of information technology and artificial intelligence.…</span>
-                                        <p>
-                                            <a href="company-3.html">
-                                                <span class="text">More Details</span>
-                                                <span class="arrow">
-										 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve" class="fn__svg replaced-svg">
-<path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111  C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587  c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
-</svg>
-									  </span>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item">
-                                    <div class="img_holder">
-                                        <img src="{% static 'img/thumb/700-500.jpg' %}" alt="">
-                                        <div class="abs_img" data-bg-img="{% static 'img/portfolio/4.jpg' %}" style="background-image: url({% static 'img/portfolio/4.jpg' %});"></div>
-                                        <a href="company-4.html"></a>
-                                    </div>
-                                    <div class="title_holder">
-                                        <h3><a href="company-4.html">Pedalica</a>
-                                        </h3>
-                                        <span class="desc">Pedalica brand, utilizing the latest technologies in the world (Scorching, Engraving the originality label, electrostatic paint, etc.). Continuing its development program in the field of spare parts.…</span>
-                                        <p>
-                                            <a href="company-4.html">
-                                                <span class="text">More Details</span>
-                                                <span class="arrow">
-										 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve" class="fn__svg replaced-svg">
-<path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111  C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587  c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
-</svg>
-									  </span>
-                                            </a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
