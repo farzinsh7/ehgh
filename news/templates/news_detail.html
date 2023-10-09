@@ -1,0 +1,49 @@
+{% extends 'base/main_base.html' %}
+{% load thumbnail %}
+{% load static %}
+{% block content %}
+<!-- Page Title -->
+<div class="industify_fn_pagetitle">
+    <div class="container">
+        <div class="title_holder">
+            <h3>News</h3>
+            <div class="industify_fn_breadcrumbs">
+                <ul>
+                    <li><a href="{% url 'page:home' %}" title="Home">Home</a></li>
+                    <li class="separator"><span></span></li>
+                    <li><span class="bread-current">News</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Page Title -->
+<div class="industify_fn_blog_full">
+    <div class="container">
+        <ul class="industify_fn_postlist">
+            <li>
+                <div class="post has-post-thumbnail">
+                    <div class="time"><span></span>
+                        <h3>{{ news.publish|date:"d" }}</h3><h5>{{ news.publish|date:"M" }}</h5><h5>{{ news.publish|date:"Y" }}</h5></div>
+                    <div class="img_holder">
+                        <a href="#">
+                            {% thumbnail news.image "1170x600" as im %}
+                                <img src="{{ im.url }}" alt="{{ news.title }}"/>
+                            {% endthumbnail %}
+                        </a>
+                        <span class="shape1"></span><span class="shape2"></span>
+                    </div>
+                    <div class="content_holder">
+                        <div class="title">
+                            <h3><a href="#">{{ news.title }}</a></h3>
+                        </div>
+                        <div class="excerpt_holder">
+                            {{ news.description|safe }}
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
