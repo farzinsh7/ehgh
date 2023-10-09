@@ -3,6 +3,7 @@ from django.views.generic import ListView
 from .models import SiteInformation, HomeData
 from industries.models import Industry
 from company.models import Company
+from news.models import News
 
 # Create your views here.
 class Index(ListView):
@@ -15,6 +16,7 @@ class Index(ListView):
         context = super().get_context_data(**kwargs)
         context['industry'] = Industry.objects.filter(status='p')[:4]
         context['company'] = Company.objects.filter(status='p')
+        context['news'] = News.objects.published()[:3]
         return context
 
 

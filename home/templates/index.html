@@ -332,63 +332,27 @@
                     <div class="inner">
 
                         <ul>
+                            {% for item in news %}
                             <li>
                                 <div class="item">
-                                    <div class="img_holder" data-bg-img="{% static 'img/blog/1.jpg' %}" style="background-image: url({% static 'img/blog/1.jpg' %});">
+                                    <div class="img_holder" data-bg-img="{{ item.image.url }}" style="background-image: url({{ item.image.url }});">
                                         <div class="time">
                                             <span></span>
-                                            <h3>11</h3>
-                                            <h5>Apr</h5>
-                                            <h5>2022</h5>
+                                            <h3>{{ item.publish|date:"d" }}</h3><h5>{{ item.publish|date:"M" }}</h5><h5>{{ item.publish|date:"Y" }}</h5>
                                         </div>
-                                        <a href="news-1.html"></a>
-                                        <img src="{% static 'img/thumb/370-250.jpg' %}" alt="">
+                                        <a href="{% url 'news:detail_view' item.slug %}"></a>
+                                        {% thumbnail item.image "370x250" as im %}
+                                            <img src="{{ im.url }}" alt="{{ item.title }}" />
+                                        {% endthumbnail %}
                                     </div>
                                     <div class="title_holder">
-                                        <h3><a href="news-1.html">International Iron Ore 2022</a>
+                                        <h3><a href="{% url 'news:detail_view' item.slug %}">{{ item.title }}</a>
                                         </h3>
-                                        <p class="t_footer"><a href="news-1.html">Read More</a></p>
+                                        <p class="t_footer"><a href="{% url 'news:detail_view' item.slug %}">Read More</a></p>
                                     </div>
                                 </div>
                             </li>
-                            <li>
-                                <div class="item">
-                                    <div class="img_holder" data-bg-img="{% static 'img/blog/2.jpg' %}" style="background-image: url({% static 'img/blog/2.jpg' %});">
-                                        <div class="time">
-                                            <span></span>
-                                            <h3>10</h3>
-                                            <h5>Apr</h5>
-                                            <h5>2022</h5>
-                                        </div>
-                                        <a href="news-2.html"></a>
-                                        <img src="{% static 'img/thumb/370-250.jpg' %}" alt="">
-                                    </div>
-                                    <div class="title_holder">
-                                        <h3><a href="news-2.html">Employee Upskilling in 2022</a>
-                                        </h3>
-                                        <p class="t_footer"><a href="news-2.html">Read More</a></p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="item">
-                                    <div class="img_holder" data-bg-img="{% static 'img/blog/3.jpg' %}" style="background-image: url({% static 'img/blog/3.jpg' %});">
-                                        <div class="time">
-                                            <span></span>
-                                            <h3>7</h3>
-                                            <h5>Apr</h5>
-                                            <h5>2022</h5>
-                                        </div>
-                                        <a href="news-3.html"></a>
-                                        <img src="{% static 'img/thumb/370-250.jpg' %}" alt="">
-                                    </div>
-                                    <div class="title_holder">
-                                        <h3><a href="news-3.html">Lead Mining Market Share</a>
-                                        </h3>
-                                        <p class="t_footer"><a href="news-3.html">Read More</a></p>
-                                    </div>
-                                </div>
-                            </li>
+                            {% endfor %}
                         </ul>
 
                     </div>
