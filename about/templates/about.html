@@ -2,5 +2,46 @@
 {% load thumbnail %}
 {% load static %}
 {% block content %}
-
+            <!-- Page Title -->
+            <div class="industify_fn_pagetitle">
+                <div class="container">
+                    <div class="title_holder">
+                        <h3>About</h3>
+                        <div class="industify_fn_breadcrumbs">
+                            <ul>
+                                <li><a href="index.html" title="Home">Home</a></li>
+                                <li class="separator"><span></span></li>
+                                <li><span class="bread-current">About</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Page Title -->
+            <div class="industify_fn_blog_full">
+                <div class="container">
+                    <ul class="industify_fn_postlist">
+                        <li>
+                            <div class="post has-post-thumbnail">
+                                <div class="img_holder">
+                                    <a href="#">
+                                        {% thumbnail about.image "1170x600" as im %}
+                                            <img src="{{ im.url }}" alt="{{ about.title }}">
+                                        {% endthumbnail %}
+                                    </a>
+                                    <span class="shape1"></span><span class="shape2" style="border-left-width: 1070px;"></span>
+                                </div>
+                                <div class="content_holder">
+                                    <div class="title">
+                                        <h3><a href="#">{{ about.title }}</a></h3>
+                                    </div>
+                                    <div class="excerpt_holder">
+                                        {{ about.description|safe }}
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 {% endblock %}
