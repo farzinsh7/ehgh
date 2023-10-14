@@ -26,6 +26,7 @@ urlpatterns = [
     path('',include('industries.urls')),
     path('',include('company.urls')),
     path('',include('news.urls')),
+    path('',include('about.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
