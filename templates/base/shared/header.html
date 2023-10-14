@@ -28,7 +28,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="about.html">About</a>
+                                <a href="{% url `about:page` %}">About</a>
                             </li>
                             <li>
                                 <a href="contact.html">Contact</a>
@@ -81,7 +81,7 @@
                         <a href="{% url 'page:home' %}">Home</a>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="https://ehsan-group.com/industries.html">Industries</a>
+                        <a href="{% url 'industry:list_view' %}">Industries</a>
                         <ul class="sub-menu">
                             <li><a href="https://ehsan-group.com/industry-1.html">Investment in Mining</a></li>
                             <li><a href="https://ehsan-group.com/industry-2.html">Investment in Steel</a></li>
@@ -90,7 +90,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="https://ehsan-group.com/about.html">About</a>
+                        <a href="{% url `about:page` %}">About</a>
                     </li>
                     <li>
                         <a href="https://ehsan-group.com/contact.html">Contact</a>
