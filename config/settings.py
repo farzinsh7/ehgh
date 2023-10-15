@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'company.apps.CompanyConfig',
     'news.apps.NewsConfig',
     'about.apps.AboutConfig',
+    'contact_us.apps.ContactUsConfig',
     'sorl.thumbnail',
 ]
 
