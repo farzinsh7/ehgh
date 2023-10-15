@@ -1,0 +1,85 @@
+{% extends 'base/main_base.html' %}
+{% load thumbnail %}
+{% load static %}
+{% block content %}
+<!-- Page Title -->
+<div class="industify_fn_pagetitle">
+    <div class="container">
+        <div class="title_holder">
+            <h3>Get in Touch</h3>
+            <div class="industify_fn_breadcrumbs">
+                <ul>
+                    <li><a href="index.html" title="Home">Home</a></li>
+                    <li class="separator"><span></span></li>
+                    <li><span class="bread-current">Contact</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Page Title -->
+
+<!-- Contact -->
+<div class="industify_fn_contact">
+    <div class="container">
+        <div class="contact_in">
+            <div class="map_holder">
+                <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5444.990606518954!2d51.43091645506341!3d35.760370124941375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e0518e1df5727%3A0x736d3ad7dba91109!2sEhsan%20Group!5e0!3m2!1sen!2s!4v1697369452067!5m2!1sen!2s" width="1170" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="contact_holder">
+                <div class="contact_left">
+                    <h3>Get in touch with us</h3>
+                    <form class="contact_form" action="/" method="post" autocomplete="off" data-email="frenifyteam@gmail.com">
+                        <div class="success" data-success="Your message has been received, we will contact you soon."></div>
+                        <div class="empty_notice"><span>Please Fill Required Fields</span></div>
+                        <div class="items">
+                            <div class="item">
+                                <input id="name" type="text" placeholder="Name">
+                            </div>
+                            <div class="item">
+                                <input id="email" type="email" placeholder="Email">
+                            </div>
+                            <div class="item">
+                                <textarea id="message" placeholder="Message"></textarea>
+                            </div>
+                            <div class="item">
+                                <a id="send_message" href="#">Send Message</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact_right">
+                    <div class="fn_cs_location_list">
+                        <ul class="list">
+                            <li class="location_item">
+                                <div class="item">
+                                    <div class="title_holder">
+                                        <span class="icon_wrapper">
+                                            <span class="icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" class="fn__svg replaced-svg"><path d="M256,0C156.748,0,76,80.748,76,180c0,33.534,9.289,66.26,26.869,94.652l142.885,230.257    c2.737,4.411,7.559,7.091,12.745,7.091c0.04,0,0.079,0,0.119,0c5.231-0.041,10.063-2.804,12.75-7.292L410.611,272.22    C427.221,244.428,436,212.539,436,180C436,80.748,355.252,0,256,0z M384.866,256.818L258.272,468.186l-129.905-209.34    C113.734,235.214,105.8,207.95,105.8,180c0-82.71,67.49-150.2,150.2-150.2S406.1,97.29,406.1,180    C406.1,207.121,398.689,233.688,384.866,256.818z"></path>
+                                                <path d="M256,90c-49.626,0-90,40.374-90,90c0,49.309,39.717,90,90,90c50.903,0,90-41.233,90-90C346,130.374,305.626,90,256,90z     M256,240.2c-33.257,0-60.2-27.033-60.2-60.2c0-33.084,27.116-60.2,60.2-60.2s60.1,27.116,60.1,60.2    C316.1,212.683,289.784,240.2,256,240.2z"></path>
+                                                </svg>
+                                            </span>
+                                            <span class="shape"></span>
+                                        </span>
+                                        <h3>Tehran Office</h3>
+                                    </div>
+                                    <div class="content_holder">
+                                        <ul>
+                                            <li>No. 206, Mirdamad Blvd, Tehran, Iran</li>
+                                            <li>Phone: +98 (21) 2225 8090</li>
+                                            <li>Email: <a href="mailto:info@ehsan-group.com">info@ehsan-group.com</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- /Contact -->
+{% endblock %}
