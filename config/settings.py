@@ -162,3 +162,5 @@ CKEDITOR_CONFIGS = {
         ),
     }
 }
+
+X_FRAME_OPTIONS = 'ALLOWALL'
