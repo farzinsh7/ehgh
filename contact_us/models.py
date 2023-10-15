@@ -14,7 +14,7 @@ class ContactUS(models.Model):
     title = models.CharField(max_length=200)
     address = models.CharField(max_length=200)
     phone = models.CharField(max_length=200)
-
+    google_map = models.URLField(null=True)
 
     def __str__(self):
         return self.title
