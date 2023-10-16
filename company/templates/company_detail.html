@@ -1,6 +1,8 @@
 {% extends 'base/main_base.html' %}
 {% load thumbnail %}
 {% load static %}
+{% block title %}Ehsan Group | {{ company.title }}{% endblock title %}
+{% block description %}{{ company.description|striptags|truncatewords:30 }}{% endblock description %}
 {% block content %}
     <!-- Page Title -->
     <div class="industify_fn_pagetitle">

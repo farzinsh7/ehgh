@@ -8,8 +8,8 @@
     <meta name="author" content="farzinshams.com">
     <meta property="og:site_name" content="Ehsan Group | Leading Economic Enterprise" />
     <link rel="icon"  href="{% static 'img/ehsan_group_favicon.png' %}">
-    <meta name="description" content="Ehsan Group, as a leading economic enterprise in Iran with over half a century experience in the fields of industry, mining, trade, and investment.">
-    <title>Ehsan Group | Leading Economic Enterprise</title>
+    <title>{% block title %}Ehsan Group | Leading Economic Enterprise{% endblock title %}</title>
+    <meta name="description" content="{% block description %}Ehsan Group, as a leading economic enterprise in Iran with over half a century experience in the fields of industry, mining, trade, and investment.{% endblock description %}">
 {% include 'base/_header_refrences.html'%}    
 </head>
 <body>
