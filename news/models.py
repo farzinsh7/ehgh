@@ -41,6 +41,7 @@ class News(models.Model):
     tags = models.ManyToManyField(Tags, related_name='news', blank=True)
     description = RichTextUploadingField()
     image = models.ImageField(upload_to='news')
+    thumbnail = models.ImageField(upload_to='news/thumb', null=True)
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

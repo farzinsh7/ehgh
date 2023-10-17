@@ -338,7 +338,7 @@
                                             <h3>{{ item.publish|date:"d" }}</h3><h5>{{ item.publish|date:"M" }}</h5><h5>{{ item.publish|date:"Y" }}</h5>
                                         </div>
                                         <a href="{% url 'news:detail_view' item.slug %}"></a>
-                                        {% thumbnail item.image "370x250" as im %}
+                                        {% thumbnail item.thumbnail "370x250" as im %}
                                             <img src="{{ im.url }}" alt="{{ item.title }}" />
                                         {% endthumbnail %}
                                     </div>
