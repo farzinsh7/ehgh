@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-25 13:05+0330\n"
+"POT-Creation-Date: 2023-10-25 15:02+0330\n"
 "PO-Revision-Date: 2023-10-25 11:55+0000\n"
 "Last-Translator:   <admin@ga.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,31 +28,31 @@ msgstr "لینک های مفید"
 
 #: .\templates\base\shared\footer.html:50
 #: .\templates\base\shared\header.html:20
-#: .\templates\base\shared\header.html:82
+#: .\templates\base\shared\header.html:81
 msgid "Home"
 msgstr "خانه"
 
 #: .\templates\base\shared\footer.html:51
 #: .\templates\base\shared\header.html:23
-#: .\templates\base\shared\header.html:85
+#: .\templates\base\shared\header.html:84
 msgid "Industries"
 msgstr "صنایع فرعی"
 
 #: .\templates\base\shared\footer.html:52
-#: .\templates\base\shared\header.html:32
-#: .\templates\base\shared\header.html:94
+#: .\templates\base\shared\header.html:31
+#: .\templates\base\shared\header.html:93
 msgid "About"
 msgstr "درباره ما"
 
 #: .\templates\base\shared\footer.html:53
-#: .\templates\base\shared\header.html:35
-#: .\templates\base\shared\header.html:97
+#: .\templates\base\shared\header.html:34
+#: .\templates\base\shared\header.html:96
 msgid "Contact"
 msgstr "تماس با ما"
 
 #: .\templates\base\shared\footer.html:54
-#: .\templates\base\shared\header.html:38
-#: .\templates\base\shared\header.html:100
+#: .\templates\base\shared\header.html:37
+#: .\templates\base\shared\header.html:99
 msgid "Career"
 msgstr "حرفه"
 

@@ -101,8 +101,7 @@
             <div class="abs_img" data-fn-bg-img="{% static 'img/sidebar.jpg'%}" style="background-image: url({% static 'img/sidebar.jpg'%});"></div>
         </div>
         <div class="bfwe_inner">
-            <p>{% trans "Ehsan Group is a well-known brand with more than 30 years of brilliant history" %}</p>
-            <a href="contact.html">{% trans "Contact Us" %}</a>
+            {% include 'base/shared/contact_sidebar.html'%}
         </div>
     </div>
 </div>
