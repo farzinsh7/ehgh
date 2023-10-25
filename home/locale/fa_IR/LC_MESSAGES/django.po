@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-25 11:51+0330\n"
+"POT-Creation-Date: 2023-10-25 13:05+0330\n"
 "PO-Revision-Date: 2023-10-25 11:55+0000\n"
 "Last-Translator:   <admin@ga.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,7 +35,6 @@ msgstr "خانه"
 #: .\templates\base\shared\footer.html:51
 #: .\templates\base\shared\header.html:23
 #: .\templates\base\shared\header.html:85
-#| msgid "Sub-industries"
 msgid "Industries"
 msgstr "صنایع فرعی"
 
@@ -52,6 +51,7 @@ msgid "Contact"
 msgstr "تماس با ما"
 
 #: .\templates\base\shared\footer.html:54
+#: .\templates\base\shared\header.html:38
 #: .\templates\base\shared\header.html:100
 msgid "Career"
 msgstr "حرفه"

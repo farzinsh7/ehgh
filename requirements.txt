@@ -4,6 +4,7 @@ charset-normalizer==3.3.1
 Django==4.2.4
 django-ckeditor==6.7.0
 django-js-asset==2.1.0
+django-modeltranslation==0.18.11
 django-render-partial==0.4
 django-rosetta==0.9.9
 idna==3.4
@@ -13,5 +14,6 @@ polib==1.2.0
 requests==2.31.0
 sorl-thumbnail==12.9.0
 sqlparse==0.4.4
+typing_extensions==4.8.0
 tzdata==2023.3
 urllib3==2.0.7
