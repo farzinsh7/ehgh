@@ -1,0 +1,243 @@
+@import 'font.css';
+@import 'rtl-menu.css';
+@import 'footer.css';
+*{
+    text-align: right;
+	font-family: 'persian' !important;
+}
+/*------------------------------------------------------------------*/ 
+/*	Shortcode #1 SLIDER ALPHA
+/*------------------------------------------------------------------*/
+.industify_slider_alpha[data-box-pos="cr"] .title_holder{
+	left: 0;
+	right: auto;
+    direction: rtl;
+}
+/*------------------------------------------------------------------*/
+/*	Shortcode #2 PRINCIPLES MODERN
+/*------------------------------------------------------------------*/
+.fn_cs_principles_modern{
+    direction: rtl;
+}
+.fn_cs_principles_modern .item .icon{
+	right: 50px;
+}
+.fn_cs_principles_modern .item .icon svg,
+.fn_cs_principles_modern .item .icon img{
+    transform: rotate(180deg);
+}
+/*------------------------------------------------------------------*/
+/*	Shortcode #3 About
+/*------------------------------------------------------------------*/
+.fn_cs_about{
+	direction: rtl;
+}
+.fn_cs_about .rightpart{
+	margin-left: 0px;
+}
+.fn_cs_about .leftpart{
+	margin-left: 180px;
+}
+.fn_cs_about .leftpart h3.title:after{
+	right: 0px;
+}
+/*------------------------------------------------------------------*/
+/*	Shortcode #4 SERVICE QUERY
+/*------------------------------------------------------------------*/
+.fn_cs_service_query .top_bar{
+	direction: rtl;
+}
+.fn_cs_service_query .t_inner{
+	padding-right: 0px;
+	padding-left: 100px;
+}
+.fn_cs_service_query .t_inner span{
+	margin-left: 0px;
+	margin-right: 62px;
+}
+.fn_cs_service_query .t_inner span:after{
+	right: -8%;
+	margin-right: 0px !important;
+	margin-left: 30px !important;
+}
+@media(max-width: 1040px){
+	.fn_cs_service_query .t_inner span{
+		margin-right: 0px;
+		padding-right: 0px;
+	}
+	.fn_cs_service_query .t_inner span:after{
+		right: 0px;
+	}
+}
+.fn_cs_service_query .item .view_more .more_link{
+	padding: 0px 20px 0px 47px;
+}
+.fn_cs_service_query .item .view_more .fn__svg{
+	left: 20px;
+	transform: rotate(180deg);
+}
+.fn_cs_service_query .item:hover .view_more .fn__svg{
+	left: 15px;
+}
+.fn_cs_service_query .item .title{
+	direction: rtl;
+}
+/*------------------------------------------------------------------*/
+/*	Shortcode #5 ABOUT with RATING
+/*------------------------------------------------------------------*/
+.service_section{
+    direction: rtl;
+}
+.fn_cs_about_with_rating .title_holder h3:after{
+    right: 3px;
+}
+.fn_cs_about_with_rating .right_part{
+	padding-left: 0%;
+    padding-right: 15%;
+}
+.fn_cs_about_with_rating .badge_left .year{
+	margin-left: 14px;
+    margin-right: 0;
+}
+.fn_cs_about_with_rating .bottom_section .item{
+	padding-right: 50px;
+    padding-left: 0;
+}
+.fn_cs_about_with_rating .bottom_section .icon{
+    right: 0px;
+}
+@media(max-width: 1200px){
+	.fn_cs_about_with_rating .right_part{padding-right: 0px;}
+}
+/*------------------------------------------------------------------*/
+/*	Shortcode #6 CALL TO ACTION
+/*------------------------------------------------------------------*/
+.cta_holder{
+    direction: rtl;
+}
+.fn_cs_call_to_action .link_holder{
+	margin-right: auto;
+    margin-left: 0;
+}
+.fn_cs_call_to_action .title_holder{
+	margin-right: 0px;
+	margin-left: 50px;
+}
+/*------------------------------------------------------------------*/
+/*	Shortcode #7 Single Testimonial
+/*------------------------------------------------------------------*/
+.fn_cs_single_testimonial .inner{
+    direction: rtl;
+}.fn_cs_single_testimonial .inner svg,
+.fn_cs_single_testimonial .inner img{
+	right: 60px;
+	left: 0px;
+}
+.fn_cs_single_testimonial .inner h5{
+	float: left;
+	padding-left: 15px;
+}
+@media(max-width: 1200px){
+	.fn_cs_single_testimonial .inner{padding: 41px 100px 41px 80px;}
+	.fn_cs_single_testimonial .inner svg, .fn_cs_single_testimonial .inner img{
+		left: 0px;
+		right: 40px;
+	}
+}
+@media(max-width: 768px){
+	.fn_cs_single_testimonial .inner{padding: 30px;}
+	.fn_cs_single_testimonial .inner h3,
+	.fn_cs_single_testimonial .inner h5{
+		padding-right: 0px;
+		padding-left: 50px;
+	}
+}
+/*------------------------------------------------------------------*/
+/*	Shortcode #8 PROJECT STICKY FULL
+/*------------------------------------------------------------------*/
+.fn_cs_project_sticky_full .inner{
+    direction: rtl;
+}
+.fn_cs_project_sticky_full .left_part h3:after{
+    right: 3px;
+}
+.fn_cs_project_sticky_full .right_part .title_holder p a{
+	padding-right: 0px;
+	padding-left: 29px;
+}
+.fn_cs_project_sticky_full .right_part .title_holder p a svg,
+.fn_cs_project_sticky_full .right_part .title_holder p a img{
+	right: 105px;
+	transform: rotate(180deg);
+}
+.fn_cs_project_sticky_full .right_part .title_holder p a:hover svg,
+.fn_cs_project_sticky_full .right_part .title_holder p a:hover img{
+	right: 110px;
+}
+/*------------------------------------------------------------------*/
+/*	Shortcode #9 MAIN TITLE
+/*------------------------------------------------------------------*/
+.fn_cs_main_title{
+    direction: rtl;
+}
+.fn_cs_main_title .title_holder{
+	float: right;
+}
+.fn_cs_main_title .title_holder h3:after{
+    left: 295px;
+}
+/*------------------------------------------------------------------*/ 
+/*	05) PAGE TITLE
+/*------------------------------------------------------------------*/
+.industify_fn_breadcrumbs ul li{
+	float: right;
+}
+.industify_fn_breadcrumbs .separator span:after{
+	transform: rotate(135deg);
+}
+.industify_fn_breadcrumbs .separator span:before{
+	transform: rotate(45deg);
+}
+.industify_fn_pagetitle{
+	direction: rtl;
+}
+.industify_fn_pagetitle .title_holder:after{
+	right: 0;
+}
+.industify_fn_pagetitle .title_holder:before{
+	right: 0;	
+}
+/*------------------------------------------------------------------*/
+/*	18) CONTACT PAGE
+/*------------------------------------------------------------------*/
+.contact_holder{
+	direction: rtl;
+}
+.contact_holder .contact_right{
+	padding-left: 0px;
+	padding-right: 20px;
+}
+/*------------------------------------------------------------------*/
+/*	06) SIDEBAR PAGE
+/*------------------------------------------------------------------*/
+.industify_fn_leftsidebar{
+	direction: rtl;
+	float: right;
+	padding-right: 0px;
+    padding-left: 50px;
+}
+.bfwe_inner{
+	direction: rtl;
+}
+/*------------------------------------------------------------------*/ 
+/*	17) BLOG POST LIST
+/*------------------------------------------------------------------*/
+.industify_fn_postlist{
+	direction: rtl;
+}
+/*------------------------------------------------------------------*/
+/*	20) BLOG SINGLE
+/*------------------------------------------------------------------*/
+.industify_fn_blog_single{
+	direction: rtl;
+}

@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'persian';
+	src: url('../css/font/persian/IRANSansXFaNum-Bold.woff') format('woff'),
+		url('../css/font/persian/IRANSansXFaNum-Bold.woff2') format('woff2'),
+		url('../css/font/persian/IRANSansXFaNum-Regular.woff') format('woff'),
+		url('../css/font/persian/IRANSansXFaNum-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}

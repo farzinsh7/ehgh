@@ -11,7 +11,10 @@
     <link rel="icon"  href="{% static 'img/ehsan_group_favicon.png' %}">
     <title>{% block title %}{% trans "Ehsan Group | Leading Economic Enterprise" %}{% endblock title %}</title>
     <meta name="description" content="{% block description %}Ehsan Group, as a leading economic enterprise in Iran with over half a century experience in the fields of industry, mining, trade, and investment.{% endblock description %}">
-{% include 'base/_header_refrences.html'%}    
+{% include 'base/_header_refrences.html'%}
+{% if request.LANGUAGE_CODE == 'fa' %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style-rtl.css' %}"/>
+{% endif %} 
 </head>
 <body>
 {% include 'base/shared/preloader.html' %}  

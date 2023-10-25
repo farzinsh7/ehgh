@@ -1,0 +1,30 @@
+.industify_fn_header .header_inner{
+	flex-direction: row-reverse;
+}
+.industify_fn_header .menu_logo{
+	margin: 0px 50px 0px 60px;
+}
+.industify_fn_header .menu_nav{
+	padding-right: 15px;
+}
+.industify_fn_header .vert_nav > li{
+	float: right;
+}
+.industify_fn_header .toll_free_lang{
+	margin-right: auto;
+	margin-left: 15px;
+}
+.industify_fn_mobilemenu_wrap .vert_menu_list ul{
+	margin-right: 20px;
+}
+.industify_fn_mobilemenu_wrap .vert_menu_list .menu-item-has-children > a:after{
+    right: 45px;
+    top: 45%;
+	transform: rotate(90deg);
+}
+.industify_fn_header .vert_nav > .menu-item-has-children > a:after{
+    top: 53%;
+}
+.lang_switcher .click:after{
+	top: 11px;
+}
