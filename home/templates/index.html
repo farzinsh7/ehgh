@@ -1,5 +1,6 @@
 {% extends 'base/main_base.html' %}
 {% load thumbnail %}
+{% load i18n %}
 {% load static %}
 {% block content %}
         <!-- Alpha Slider -->
@@ -75,7 +76,7 @@
                     <div class="a_inner">
                         <div class="leftpart">
                             <div class="title_holder">
-                                <h3 class="title">Vision of Ehsan Group</h3>
+                                <h3 class="title">{% trans "Vision of Ehsan Group" %}</h3>
                                 {{ home.about|safe }}
                             </div>
                         </div>
@@ -108,8 +109,8 @@
         <div class="fn_cs_service_query" data-mobile="disable" data-column-count="4">
             <div class="top_bar">
                 <div class="t_inner">
-                    <h3>Ehsan Group Investment</h3>
-                    <span>Ehsan Group start invest in start-ups in seed stage in 2020</span>
+                    <h3>{% trans "Ehsan Group Investment" %}</h3>
+                    <span>{% trans "Ehsan Group start invest in start-ups in seed stage in 2020" %}</span>
                 </div>
             </div>
             <div class="service_part">
@@ -131,7 +132,7 @@
                                 </div>
                                 <div class="view_more">
                                     <span class="more_link">
-                                        <span class="text">View More</span>
+                                        <span class="text">{% trans "View More" %}</span>
                                         <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve" class="fn__svg replaced-svg">
                                             <path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111  C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587  c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
                                             </svg></span>
@@ -157,7 +158,7 @@
                     <div class="awr_inner">
                         <div class="left_part">
                             <div class="title_holder">
-                                <h3>Mission of Ehsan Group</h3>
+                                <h3>{% trans "Mission of Ehsan Group" %}</h3>
                                 {{ home.mission|safe }}
                             </div>
                         </div>
@@ -167,9 +168,9 @@
                                     <div class="badge_holder">
                                         <div class="badge_left">
                                             <div class="b_title">
-                                                <h3>One of the regional leading<br>Corporations</h3>
+                                                <h3>{% trans "One of the regional leading" %}<br>{% trans "Corporations" %}</h3>
                                             </div>
-                                            <div class="b_desc"><span class="year">50</span><span class="text">Years of Experience</span>
+                                            <div class="b_desc"><span class="year">{% trans "50" %}</span><span class="text">{% trans "Years of Experience" %}</span>
                                             </div>
                                         </div>
                                         <div class="badge_right" data-bg-img="{% static 'img/service/right-image.jpg' %}" style="background-image: url({% static 'img/service/right-image.jpg' %});"></div>
@@ -185,7 +186,7 @@
   <path d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z"></path>
 </svg>
 													</span>
-                                                    <p>Always be HONEST</p>
+                                                    <p>{% trans "Always be HONEST" %}</p>
                                                 </div>
                                             </li>
                                             <li>
@@ -195,7 +196,7 @@
   <path d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z"></path>
 </svg>
 										  			</span>
-                                                    <p>Always be LEARNING</p>
+                                                    <p>{% trans "Always be LEARNING" %}</p>
                                                 </div>
                                             </li>
                                             <li>
@@ -205,7 +206,7 @@
   <path d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z"></path>
 </svg>
 										 			</span>
-                                                    <p>Show RESPECT</p>
+                                                    <p>{% trans "Show RESPECT" %}</p>
                                                 </div>
                                             </li>
                                         </ul>
@@ -224,11 +225,11 @@
             <div class="container">
                 <div class="cta_holder">
                     <div class="title_holder">
-                        <h3>We will Make Your Dream Come True</h3>
-                        <p>We are focused on sustainable business that delivers the best possible project results.</p>
+                        <h3>{% trans "We will Make Your Dream Come True" %}</h3>
+                        <p>{% trans "We are focused on sustainable business that delivers the best possible project results." %}</p>
                     </div>
                     <div class="link_holder">
-                        <a href="{% url 'contact:page' %}">Our Responsibility</a>
+                        <a href="{% url 'contact:page' %}">{% trans "Our Responsibility" %}</a>
                     </div>
                 </div>
             </div>
@@ -247,7 +248,7 @@
     </svg>
                         <div class="content_holder">
                             {{ home.quote|safe }}
-                            <h5>CEO of Ehsan Group.</h5>
+                            <h5>{% trans "CEO of Ehsan Group." %}</h5>
                         </div>
                     </div>
                 </div>
@@ -263,7 +264,7 @@
             <div class="inner">
                 <div class="left_part">
                     <div class="fn_cs_sticky_section">
-                        <h3>Sub-industries</h3>
+                        <h3>{% trans "Sub-industries" %}</h3>
                         {{ home.sub_industries|safe }}
                     </div>
                 </div>
@@ -287,7 +288,7 @@
                                         <span class="desc">{{ item.seo_description|truncatewords:35 }}</span>
                                         <p>
                                             <a href="{% url 'company:detail_view' item.slug %}">
-                                                <span class="text">More Details</span>
+                                                <span class="text">{% trans "View More" %}More Details</span>
                                                 <span class="arrow">
 										            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve" class="fn__svg replaced-svg">
 <path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111  C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587  c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path>
@@ -317,7 +318,7 @@
             <div class="fn_cs_main_title">
                 <div class="container">
                     <div class="title_holder">
-                        <h3>News</h3>
+                        <h3>{% trans "News" %}</h3>
                     </div>
                 </div>
             </div>
@@ -345,7 +346,7 @@
                                     <div class="title_holder">
                                         <h3><a href="{% url 'news:detail_view' item.slug %}">{{ item.title }}</a>
                                         </h3>
-                                        <p class="t_footer"><a href="{% url 'news:detail_view' item.slug %}">Read More</a></p>
+                                        <p class="t_footer"><a href="{% url 'news:detail_view' item.slug %}">{% trans "Read More" %}</a></p>
                                     </div>
                                 </div>
                             </li>
