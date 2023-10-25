@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'ckeditor',
     'ckeditor_uploader',
+    'rosetta',
     'django_render_partial',
     'home.apps.HomeConfig',
     'industries.apps.IndustriesConfig',
@@ -127,6 +128,11 @@ USE_TZ = True
 LANGUAGES = [
     ('fa', 'فارسی'),
     ('en', 'English')
+]
+
+ROSETTA_LANGUAGES = [
+    ('fa_IR', 'فارسی'),
+    ('en_US', 'English')
 ]
 
 LOCALE_PATHS = [

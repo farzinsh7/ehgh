@@ -33,6 +33,7 @@ urlpatterns += i18n_patterns(
     path('',include('news.urls')),
     path('',include('about.urls')),
     path('',include('contact_us.urls')),
+    path('rosetta/',include('rosetta.urls')),
 
     prefix_default_language=False
 )
