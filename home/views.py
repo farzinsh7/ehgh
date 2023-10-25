@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, CreateView
 from .models import SiteInformation, HomeData
 from industries.models import Industry
 from company.models import Company
