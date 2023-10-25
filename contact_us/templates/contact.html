@@ -1,7 +1,8 @@
 {% extends 'base/main_base.html' %}
 {% load thumbnail %}
+{% load i18n %}
 {% load static %}
-{% block title %}Ehsan Group | Contact US{% endblock title %}
+{% block title %}{% trans "Ehsan Group | Contact US" %}{% endblock title %}
 {% block content %}
 <!-- Page Title -->
 <div class="industify_fn_pagetitle">
@@ -10,9 +11,9 @@
             <h3>Get in Touch</h3>
             <div class="industify_fn_breadcrumbs">
                 <ul>
-                    <li><a href="{% url 'page:home' %}" title="Home">Home</a></li>
+                    <li><a href="{% url 'page:home' %}" title="Home">{% trans "Home" %}</a></li>
                     <li class="separator"><span></span></li>
-                    <li><span class="bread-current">Contact</span></li>
+                    <li><span class="bread-current">{% trans "Contact" %}</span></li>
                 </ul>
             </div>
         </div>
@@ -27,7 +28,7 @@
                 <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12950.849866989212!2d51.42836303701783!3d35.75787140732483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e0518e1df5727%3A0x736d3ad7dba91109!2sEhsan%20Group!5e0!3m2!1sen!2s!4v1697371844673!5m2!1sen!2s" width="1170" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="contact_holder">
                 <div class="contact_left">
-                    <h3>Get in touch with us</h3>
+                    <h3>{% trans "Get in touch with us" %}</h3>
                     <form class="contact_form" action="#" method="post">
                         {% csrf_token %}
                             <div class="item">
@@ -40,7 +41,7 @@
                                 {{ form.message }}
                             </div>
                             <div class="item">
-                                <button class="submit-btn" type="submit">Send Message</button>
+                                <button class="submit-btn" type="submit">{% trans "Send Message" %}</button>
                             </div>
                     </form>
                 </div>
@@ -63,8 +64,8 @@
                                     <div class="content_holder">
                                         <ul>
                                             <li>{{ contact.address }}</li>
-                                            <li>Phone: <a href="tel:{{ contact.phone }}">{{ contact.phone }}</a></li>
-                                            <li>Email: <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></li>
+                                            <li>{% trans "Phone:" %} <a href="tel:{{ contact.phone }}">{{ contact.phone }}</a></li>
+                                            <li>{% trans "Email:" %} <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></li>
                                         </ul>
                                     </div>
                                 </div>

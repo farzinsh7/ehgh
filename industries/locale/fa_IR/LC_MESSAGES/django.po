@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-25 11:51+0330\n"
+"PO-Revision-Date: 2023-10-25 11:56+0000\n"
+"Last-Translator:   <admin@ga.co>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
+
+#: .\industries\templates\industry_detail.html:5
+msgid "Ehsan Group"
+msgstr "گروه احسان"
+
+#: .\industries\templates\industry_detail.html:15
+#: .\industries\templates\industry_list.html:14
+msgid "Home"
+msgstr "خانه"
+
+#: .\industries\templates\industry_detail.html:17
+msgid "Industry"
+msgstr "صنعت"
+
+#: .\industries\templates\industry_list.html:5
+msgid "Ehsan Group | Industries"
+msgstr "گروه احسان | صنایع"
+
+#: .\industries\templates\industry_list.html:11
+msgid "Industries"
+msgstr "صنایع"
+
+#: .\industries\templates\industry_list.html:16
+msgid " Industries"
+msgstr "صنایع"
+
+#: .\industries\templates\industry_list.html:60
+msgid "Sub-industries"
+msgstr "صنایع فرعی"
+
+#: .\industries\templates\industry_list.html:89
+msgid ""
+"Ehsan Group is a well-known brand with more than 30 years of brilliant "
+"history"
+msgstr "گروه احسان برندی شناخته شده با بیش از 30 سال سابقه درخشان است"
+
+#: .\industries\templates\industry_list.html:90
+msgid "Contact Us"
+msgstr "تماس با ما"

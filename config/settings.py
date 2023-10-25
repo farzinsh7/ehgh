@@ -137,6 +137,11 @@ ROSETTA_LANGUAGES = [
 
 LOCALE_PATHS = [
     BASE_DIR / 'home' / 'locale',
+    BASE_DIR / 'about' / 'locale',
+    BASE_DIR / 'company' / 'locale',
+    BASE_DIR / 'contact_us' / 'locale',
+    BASE_DIR / 'industries' / 'locale',
+    BASE_DIR / 'news' / 'locale',
 ]
 
 # Static files (CSS, JavaScript, Images)

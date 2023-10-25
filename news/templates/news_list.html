@@ -1,7 +1,8 @@
 {% extends 'base/main_base.html' %}
 {% load thumbnail %}
+{% load i18n %}
 {% load static %}
-{% block title %}Ehsan Group | News{% endblock title %}
+{% block title %}{% trans "Ehsan Group | News" %}{% endblock title %}
 {% block content %}
 <!-- ALL PAGES -->
 <div class="industify_fn_all_pages">
@@ -12,15 +13,15 @@
                 <!-- PAGE TITLE -->
                 <div class="industify_fn_pagetitle">
                     <div class="title_holder">
-                        <h3>News &#038; Articles</h3>
+                        <h3>{% trans "News" %} &#038; {% trans "Articles" %}</h3>
                         <div class="industify_fn_breadcrumbs">
                             <ul id="breadcrumbs" class="breadcrumbs">
                                 <li class="item-home"><a class="bread-link bread-home"
                                         href="{% url 'page:home' %}"
-                                        title="Home">Home</a></li>
+                                        title="Home">{% trans "Home" %}</a></li>
                                 <li class="separator separator-home"> <span></span> </li>
                                 <li class="item-current item-72"><span
-                                        class="bread-current bread-72"> News &#038; Articles</span>
+                                        class="bread-current bread-72"> {% trans "News" %} &#038; {% trans "Articles" %}</span>
                                 </li>
                             </ul>
                         </div>
@@ -47,8 +48,8 @@
                                     <div class="content_holder">
                                         <div class="info_holder">
                                             <p>
-                                                <span class="t_author">By <a href="#"
-                                                                             target="_blank">Ehsan Group</a></span>
+                                                <span class="t_author">{% trans "By" %} <a href="#"
+                                                                             target="_blank">{% trans "Ehsan Group" %}</a></span>
                                                 <span class="t_category">{% for cat in item.category.all %} {{ cat.title }}{% endfor %}</span>
                                             </p>
                                         </div>
@@ -59,7 +60,7 @@
                                             {{ item.description|safe|truncatewords:40 }}
                                         </div>
                                         <div class="read_holder">
-                                            <p><a href="{% url 'news:detail_view' item.slug %}">Read More</a></p>
+                                            <p><a href="{% url 'news:detail_view' item.slug %}">{% trans "Read More" %}</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -72,7 +73,7 @@
                 <!-- Service List -->
                 <div class="service_list_as_function">
                     <div class="title">
-                        <h3>Latest News</h3>
+                        <h3>{% trans "Latest News" %}</h3>
                     </div>
                     <div class="list_holder">
                         <ul>
@@ -100,8 +101,8 @@
             <div class="abs_img" data-fn-bg-img="{% static 'img/sidebar.jpg'%}" style="background-image: url({% static 'img/sidebar.jpg'%});"></div>
         </div>
         <div class="bfwe_inner">
-            <p>Ehsan Group is a well-known brand with more than 30 years of brilliant history</p>
-            <a href="contact.html">Contact Us</a>
+            <p>{% trans "Ehsan Group is a well-known brand with more than 30 years of brilliant history" %}</p>
+            <a href="contact.html">{% trans "Contact Us" %}</a>
         </div>
     </div>
 </div>

@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-25 11:51+0330\n"
+"PO-Revision-Date: 2023-10-25 11:54+0000\n"
+"Last-Translator:   <admin@ga.co>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
+
+#: .\contact_us\templates\contact.html:5
+msgid "Ehsan Group | Contact US"
+msgstr "گروه احسان | تماس با ما"
+
+#: .\contact_us\templates\contact.html:14
+msgid "Home"
+msgstr "خانه"
+
+#: .\contact_us\templates\contact.html:16
+msgid "Contact"
+msgstr "تماس با ما"
+
+#: .\contact_us\templates\contact.html:31
+msgid "Get in touch with us"
+msgstr "با ما در تماس باشید"
+
+#: .\contact_us\templates\contact.html:44
+msgid "Send Message"
+msgstr "ارسال پیام"
+
+#: .\contact_us\templates\contact.html:67
+msgid "Phone:"
+msgstr "تلفن:"
+
+#: .\contact_us\templates\contact.html:68
+msgid "Email:"
+msgstr "ایمیل:"

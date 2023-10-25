@@ -1,7 +1,8 @@
 {% extends 'base/main_base.html' %}
 {% load thumbnail %}
+{% load i18n %}
 {% load static %}
-{% block title %}Ehsan Group | {{ company.title }}{% endblock title %}
+{% block title %}{% trans "Ehsan Group" %} | {{ company.title }}{% endblock title %}
 {% block description %}{{ company.description|striptags|truncatewords:30 }}{% endblock description %}
 {% block content %}
     <!-- Page Title -->
@@ -11,9 +12,9 @@
                 <h3>{{ company.title }}</h3>
                 <div class="industify_fn_breadcrumbs">
                     <ul>
-                        <li><a href="index.html" title="Home">Home</a></li>
+                        <li><a href="index.html" title="Home">{% trans "Home" %}</a></li>
                         <li class="separator"><span></span></li>
-                        <li><span class="bread-current">Company</span></li>
+                        <li><span class="bread-current">{% trans "Company" %}</span></li>
                         <li class="separator"><span></span></li>
                         <li><span class="bread-current">{{ company.title }}</span></li>
                     </ul>
@@ -60,8 +61,8 @@
                 <div class="abs_img" data-fn-bg-img="{% static 'img/sidebar.jpg'%}" style="background-image: url({% static 'img/sidebar.jpg'%});"></div>
             </div>
             <div class="bfwe_inner">
-                <p>Ehsan Group is a well-known brand with more than 30 years of brilliant history</p>
-                <a href="contact.html">Contact Us</a>
+                <p>{% trans "Ehsan Group is a well-known brand with more than 30 years of brilliant history" %}</p>
+                <a href="contact.html">{% trans "Contact Us" %}</a>
             </div>
         </div>
     </div>

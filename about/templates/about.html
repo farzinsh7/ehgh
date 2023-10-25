@@ -1,17 +1,18 @@
 {% extends 'base/main_base.html' %}
 {% load thumbnail %}
+{% load i18n %}
 {% load static %}
 {% block content %}
             <!-- Page Title -->
             <div class="industify_fn_pagetitle">
                 <div class="container">
                     <div class="title_holder">
-                        <h3>About</h3>
+                        <h3>{% trans "About" %}</h3>
                         <div class="industify_fn_breadcrumbs">
                             <ul>
-                                <li><a href="{% url 'page:home' %}" title="Home">Home</a></li>
+                                <li><a href="{% url 'page:home' %}" title="Home">{% trans "Home" %}</a></li>
                                 <li class="separator"><span></span></li>
-                                <li><span class="bread-current">About</span></li>
+                                <li><span class="bread-current">{% trans "About" %}</span></li>
                             </ul>
                         </div>
                     </div>

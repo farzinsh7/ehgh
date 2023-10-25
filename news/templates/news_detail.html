@@ -1,19 +1,20 @@
 {% extends 'base/main_base.html' %}
 {% load thumbnail %}
+{% load i18n %}
 {% load static %}
-{% block title %}Ehsan Group | {{ news.title }}{% endblock title %}
+{% block title %}{% trans "Ehsan Group" %} | {{ news.title }}{% endblock title %}
 {% block description %}{{ news.description|striptags|truncatewords:30 }}{% endblock description %}
 {% block content %}
 <!-- Page Title -->
 <div class="industify_fn_pagetitle">
     <div class="container">
         <div class="title_holder">
-            <h3>News</h3>
+            <h3>{% trans "News" %}</h3>
             <div class="industify_fn_breadcrumbs">
                 <ul>
-                    <li><a href="{% url 'page:home' %}" title="Home">Home</a></li>
+                    <li><a href="{% url 'page:home' %}" title="Home">{% trans "Home" %}</a></li>
                     <li class="separator"><span></span></li>
-                    <li><span class="bread-current">News</span></li>
+                    <li><span class="bread-current">{% trans "News" %}</span></li>
                 </ul>
             </div>
         </div>
