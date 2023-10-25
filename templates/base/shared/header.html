@@ -22,10 +22,9 @@
                             <li class="menu-item-has-children">
                                 <a href="{% url 'industry:list_view' %}">{% trans "Industries" %}</a>
                                 <ul class="sub-menu">
-                                    <li><a href="industry-1.html">Investment in Mining</a></li>
-                                    <li><a href="industry-2.html">Investment in Steel</a></li>
-                                    <li><a href="industry-3.html">Modern Investment</a></li>
-                                    <li><a href="industry-4.html">International Investment</a></li>
+                                    {% for item in industry %}
+                                    <li><a href="{% url 'industry:detail_view' item.slug %}">{{ item.title }}</a></li>
+                                    {% endfor %}
                                 </ul>
                             </li>
                             <li>
