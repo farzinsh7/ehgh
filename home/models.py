@@ -55,3 +55,12 @@ class SocialLinks(models.Model):
 
     def __str__(self):
         return self.label
+
+
+class NewsLetter(models.Model):
+    email = models.EmailField(null=True)
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.email
+    
