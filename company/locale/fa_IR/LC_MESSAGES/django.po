@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-25 11:51+0330\n"
-"PO-Revision-Date: 2023-10-25 11:53+0000\n"
+"POT-Creation-Date: 2023-10-28 15:19+0330\n"
+"PO-Revision-Date: 2023-10-28 15:16+0000\n"
 "Last-Translator:   <admin@ga.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -31,18 +31,6 @@ msgstr "خانه"
 msgid "Company"
 msgstr "شرکت"
 
-#: .\company\templates\company_detail.html:64
-#: .\company\templates\company_list.html:94
-msgid ""
-"Ehsan Group is a well-known brand with more than 30 years of brilliant "
-"history"
-msgstr "گروه احسان برندی شناخته شده با بیش از 30 سال سابقه درخشان است"
-
-#: .\company\templates\company_detail.html:65
-#: .\company\templates\company_list.html:95
-msgid "Contact Us"
-msgstr "تماس با ما"
-
 #: .\company\templates\company_list.html:5
 msgid "Ehsan Group | Companies"
 msgstr "گروه احسان | شرکت ها"
@@ -62,3 +50,11 @@ msgstr "ادامه مطلب"
 #: .\company\templates\company_list.html:64
 msgid "Sub-industries"
 msgstr "صنایع فرعی"
+
+#~ msgid ""
+#~ "Ehsan Group is a well-known brand with more than 30 years of brilliant "
+#~ "history"
+#~ msgstr "گروه احسان برندی شناخته شده با بیش از 30 سال سابقه درخشان است"
+
+#~ msgid "Contact Us"
+#~ msgstr "تماس با ما"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-25 11:51+0330\n"
-"PO-Revision-Date: 2023-10-25 11:56+0000\n"
+"POT-Creation-Date: 2023-10-28 15:19+0330\n"
+"PO-Revision-Date: 2023-10-28 15:23+0000\n"
 "Last-Translator:   <admin@ga.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -49,14 +49,12 @@ msgstr "ادامه مطلب"
 
 #: .\news\templates\news_list.html:76
 msgid "Latest News"
-msgstr "Latest News"
+msgstr "آخرین خبر"
 
-#: .\news\templates\news_list.html:104
-msgid ""
-"Ehsan Group is a well-known brand with more than 30 years of brilliant "
-"history"
-msgstr "گروه احسان برندی شناخته شده با بیش از 30 سال سابقه درخشان است"
+#~ msgid ""
+#~ "Ehsan Group is a well-known brand with more than 30 years of brilliant "
+#~ "history"
+#~ msgstr "گروه احسان برندی شناخته شده با بیش از 30 سال سابقه درخشان است"
 
-#: .\news\templates\news_list.html:105
-msgid "Contact Us"
-msgstr "تماس با ما"
+#~ msgid "Contact Us"
+#~ msgstr "تماس با ما"

@@ -40,20 +40,25 @@
                     </div>
                     <div class="toll_free_lang">
                         <div class="lang_switcher">
+                            {% if request.LANGUAGE_CODE == 'fa' %}
                             <span class="click">En</span>
                             <ul>
-                                <li class="active"><span>En</span></li>
-                                <!-- <li><a href="#"><span>Ar</span></a></li> -->
-                                <li><a href="https://ehsan-group.com/fa"><span>Fa</span></a></li>
+                                <li><a href=""><span>En</span></a></li>
+                                <li class="active"><span>Fa</span></li>
                             </ul>
+                            {% else %}
+                            <span class="click">Fa</span>
+                            <ul>
+                                <li class="active"><span>En</span></li>
+                                <li><a href=""><span>Fa</span></a></li>
+                            </ul>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
                 <!-- /Header: Bottom Panel -->
-            
             </div>
             <!-- /Header: Bottom Panel -->
-
         </div>
                 <!-- /Header -->
 

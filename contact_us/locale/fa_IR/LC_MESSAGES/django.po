@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-25 11:51+0330\n"
-"PO-Revision-Date: 2023-10-25 11:54+0000\n"
+"POT-Creation-Date: 2023-10-28 15:21+0330\n"
+"PO-Revision-Date: 2023-10-28 15:21+0000\n"
 "Last-Translator:   <admin@ga.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -21,6 +21,11 @@ msgstr ""
 #: .\contact_us\templates\contact.html:5
 msgid "Ehsan Group | Contact US"
 msgstr "گروه احسان | تماس با ما"
+
+#: .\contact_us\templates\contact.html:11
+#| msgid "Get in touch with us"
+msgid "Get in Touch"
+msgstr "با ما در تماس باشید"
 
 #: .\contact_us\templates\contact.html:14
 msgid "Home"
