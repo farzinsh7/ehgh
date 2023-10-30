@@ -35,7 +35,7 @@ urlpatterns += i18n_patterns(
     path('',include('contact_us.urls')),
     path('rosetta/',include('rosetta.urls')),
 
-    prefix_default_language=False
+    # prefix_default_language=False
 )
 
 
