@@ -26,10 +26,9 @@
                                   <div class="wid-title"><span>{% trans "Helpful Links" %}</span></div>
                                   <div class="widget_nav_menu">
                                       <ul class="menu">
-                                          <li><a href="https://smartsystemco.com">Smart System Co</a></li>
-                                          <li><a href="https://fooladshop.com">Foolad Shop</a></li>
-                                          <li><a href="https://radmangroup.com">Radman</a></li>
-                                          <li><a href="#">Steel Behzad</a></li>
+                                        {% for link in info.links.all %}
+                                        <li><a href="{{ link.link }}">{{ link.title }}</a></li>
+                                        {% endfor %}
                                       </ul>
                                   </div>
                               </div>

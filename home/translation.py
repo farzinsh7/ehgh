@@ -1,5 +1,5 @@
 from modeltranslation.translator import TranslationOptions, register
-from .models import HomeData, Slider, Features, SiteInformation
+from .models import HomeData, Slider, Features, SiteInformation, HelpfulLinks
 
 @register(HomeData)
 class HomeDataTranslationOptions(TranslationOptions):
@@ -18,3 +18,8 @@ class FeaturesTranslationOptions(TranslationOptions):
 @register(SiteInformation)
 class SiteInformationTranslationOptions(TranslationOptions):
     fields = ['title', 'description', 'address']
+
+
+@register(HelpfulLinks)
+class HelpfulLinksTranslationOptions(TranslationOptions):
+    fields = ['title',]

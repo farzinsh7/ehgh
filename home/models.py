@@ -54,4 +54,13 @@ class SocialLinks(models.Model):
     main_data = models.ForeignKey(SiteInformation, null=True, on_delete=models.SET_NULL, related_name='socials')
 
     def __str__(self):
-        return self.label
+        return self.label if self.label else "No Label"
+
+
+class HelpfulLinks(models.Model):
+    title = models.CharField(max_length=120, null=True)
+    link = models.CharField(max_length=200,blank=True,null=True)
+    main_data = models.ForeignKey(SiteInformation, null=True, on_delete=models.SET_NULL, related_name='links')
+
+    def __str__(self):
+        return self.title if self.title else "No Title"
