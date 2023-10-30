@@ -829,7 +829,6 @@ window.addEventListener("load", function(){
 	});
 	
 	
-	
 	// LOAD Functions
 	$(window).on('load',function(){
 		
@@ -845,5 +844,25 @@ window.addEventListener("load", function(){
 			Industify.isotope();
 		},600);
 	});
+
+	$(document).ready(function() {
+        var currentURL = window.location.href;
+        var newURL = currentURL.replace(/\/(en|fa)\//, '/fa/');
+        $('#switch-language').attr('href', newURL);
+        
+        $('.fa').on('click', function(event) {
+            event.preventDefault();  // Prevent the default link behavior
+            var currentURL = window.location.href;
+            var newURL = currentURL.replace(/\/(en|fa)\//, '/fa/');
+            window.location.href = newURL;
+        });
+
+		$('.en').on('click', function(event) {
+            event.preventDefault();  // Prevent the default link behavior
+            var currentURL = window.location.href;
+            var newURL = currentURL.replace(/\/(en|fa)\//, '/en/');
+            window.location.href = newURL;
+        });
+    });
   
 })(jQuery);
