@@ -32,7 +32,7 @@ LOGIN_REDIRECT_URL = 'account:dash'
 
 LOGIN_URL = 'account:login'
 
-# LOGOUT_REDIRECT_URL = 'page:home'
+LOGOUT_REDIRECT_URL = 'page:home'
 
 # Application definition
 
