@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-LOGIN_REDIRECT_URL = 'page:home'
+LOGIN_REDIRECT_URL = 'account:dash'
 
 LOGIN_URL = 'account:login'
 
