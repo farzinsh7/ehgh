@@ -28,6 +28,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_REDIRECT_URL = 'page:home'
+
+LOGIN_URL = 'account:login'
+
+# LOGOUT_REDIRECT_URL = 'page:home'
 
 # Application definition
 
@@ -51,6 +56,7 @@ INSTALLED_APPS = [
     'about.apps.AboutConfig',
     'contact_us.apps.ContactUsConfig',
     'sorl.thumbnail',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

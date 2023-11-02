@@ -7,6 +7,7 @@ django-js-asset==2.1.0
 django-modeltranslation==0.18.11
 django-render-partial==0.4
 django-rosetta==0.9.9
+django-widget-tweaks==1.5.0
 idna==3.4
 mysqlclient==2.2.0
 Pillow==10.0.1
