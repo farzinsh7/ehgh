@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-10 10:27+0000\n"
-"PO-Revision-Date: 2023-11-10 10:29+0000\n"
+"POT-Creation-Date: 2023-11-10 10:49+0000\n"
+"PO-Revision-Date: 2023-11-10 10:49+0000\n"
 "Last-Translator:   <admin@ga.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -67,6 +67,10 @@ msgid ""
 msgstr ""
 "© 1934 – 2022 کلیه حقوق این وب سایت محفوظ و متعلق به گروه احسان می‌باشد. "
 "طراحی و پیاده سازی"
+
+#: templates/base/shared/footer.html:64
+msgid "To Top"
+msgstr "بالا"
 
 #: home/templates/index.html:79
 msgid "Vision of Ehsan Group"
