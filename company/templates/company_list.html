@@ -65,11 +65,9 @@
                     </div>
                     <div class="list_holder">
                         <ul>
-                            <li><a href="#">Steel Behzad</a></li>
-                            <li><a href="#">Foolad Shop</a></li>
-                            <li><a href="#">Radman Group</a></li>
-                            <li><a href="#">Smart System</a></li>
-                            <li><a href="#">Pedalica</a></li>
+                            {% for each in company|slice:":5" %}
+                                <li><a href="{% url 'company:detail_view' each.slug %}">{{ each.title }}</a></li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>

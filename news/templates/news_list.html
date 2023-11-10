@@ -77,7 +77,7 @@
                     </div>
                     <div class="list_holder">
                         <ul>
-                            {% for each in news %}
+                            {% for each in news|slice:":5" %}
                                 <li><a href="{% url 'news:detail_view' each.slug %}">{{ each.title }}</a></li>
                             {% endfor %}
                         </ul>

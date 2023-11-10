@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-28 15:19+0330\n"
-"PO-Revision-Date: 2023-11-02 18:33+0000\n"
+"POT-Creation-Date: 2023-11-10 10:27+0000\n"
+"PO-Revision-Date: 2023-11-10 10:29+0000\n"
 "Last-Translator:   <admin@ga.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,36 +18,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: .\industries\templates\industry_detail.html:5
+#: industries/templates/industry_detail.html:5
 msgid "Ehsan Group"
 msgstr "گروه احسان"
 
-#: .\industries\templates\industry_detail.html:15
-#: .\industries\templates\industry_list.html:14
+#: industries/templates/industry_detail.html:15
+#: industries/templates/industry_list.html:14
 msgid "Home"
 msgstr "خانه"
 
-#: .\industries\templates\industry_detail.html:17
+#: industries/templates/industry_detail.html:17
 msgid "Industry"
 msgstr "صنعت"
 
-#: .\industries\templates\industry_list.html:5
+#: industries/templates/industry_list.html:5
 msgid "Ehsan Group | Industries"
 msgstr "گروه احسان | صنایع"
 
-#: .\industries\templates\industry_list.html:11
+#: industries/templates/industry_list.html:11
 msgid "Industries"
 msgstr "صنایع"
 
-#: .\industries\templates\industry_list.html:16
+#: industries/templates/industry_list.html:16
 msgid " Industries"
 msgstr "صنایع"
 
-#: .\industries\templates\industry_list.html:45
+#: industries/templates/industry_list.html:45
 msgid "Read More"
 msgstr "ادامه مطلب"
 
-#: .\industries\templates\industry_list.html:60
+#: industries/templates/industry_list.html:60
 msgid "Sub-industries"
 msgstr "صنایع فرعی"
 

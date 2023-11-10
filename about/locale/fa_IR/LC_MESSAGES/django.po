@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-25 11:51+0330\n"
-"PO-Revision-Date: 2023-11-02 18:32+0000\n"
+"POT-Creation-Date: 2023-11-10 10:27+0000\n"
+"PO-Revision-Date: 2023-11-10 10:29+0000\n"
 "Last-Translator:   <admin@ga.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,10 +18,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: .\about\templates\about.html:10 .\about\templates\about.html:15
+#: about/templates/about.html:10 about/templates/about.html:15
 msgid "About"
 msgstr "درباره ما"
 
-#: .\about\templates\about.html:13
+#: about/templates/about.html:13
 msgid "Home"
 msgstr "خانه"
