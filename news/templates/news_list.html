@@ -67,6 +67,13 @@
                             </li>
                             {% endfor %}
                         </ul>
+                        <div class="center">
+                            <ul class="page">
+                                {% for page in paginator.page_range %}
+                                <li><a class="page-btn{% if page == request.GET.page|default:1|add:0 %} active-page{% endif %}" href="?page={{ page }}">{{ forloop.counter }}</a></li>
+                            {% endfor %}
+                            </ul>
+                        </div>
                     </div>
               <!-- Main Sidebar: Right -->
             <div class="industify_fn_rightsidebar">
@@ -77,7 +84,7 @@
                     </div>
                     <div class="list_holder">
                         <ul>
-                            {% for each in news|slice:":5" %}
+                            {% for each in latest %}
                                 <li><a href="{% url 'news:detail_view' each.slug %}">{{ each.title }}</a></li>
                             {% endfor %}
                         </ul>

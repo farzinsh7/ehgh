@@ -8,8 +8,12 @@ class NewsListView(ListView):
     model = News
     template_name = 'news_list.html'
     context_object_name = 'news'
-    # paginate_by = 6
+    paginate_by = 5
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['latest'] = News.objects.published()[:5]
+        return context
 
 class NewsDetailView(DetailView):
     model = News

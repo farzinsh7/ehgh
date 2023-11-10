@@ -3146,6 +3146,37 @@ a:focus {
 	outline: 1px dashed #444;
 }
 
+.page-btn {
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	display: inline-block;
+	height: 44px;
+	line-height: 44px;
+	padding: 0 20px;
+	background-color: #7c7c7c;
+	color: #fff;
+	border: 1px;
+	border-radius: 3px;
+	margin-right: 5px;
+	text-decoration: none;
+}
+
+.active-page {
+	background-color: #D24E1A !important;
+}
+
+.page-btn:focus {
+	outline: 1px dashed #444;
+}
+
+.page {
+	list-style-type: none;
+	display: inline-flex;
+}
+
+.center { 
+	text-align-last: center;
+}
+
 @media(max-width: 1040px) {
 	.contact_holder {
 		flex-wrap: wrap;

@@ -8,7 +8,12 @@ class CompanyListView(ListView):
     model = Company
     template_name = 'company_list.html'
     context_object_name = 'company'
+    paginate_by = 5
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['latest'] = Company.objects.filter(status="p")[:5]
+        return context
 
 class CompanyDetailView(DetailView):
     model = Company
