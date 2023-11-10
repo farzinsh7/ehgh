@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-10 10:27+0000\n"
+"POT-Creation-Date: 2023-11-10 11:40+0000\n"
 "PO-Revision-Date: 2023-11-10 10:30+0000\n"
 "Last-Translator:   <admin@ga.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,7 +47,7 @@ msgstr "توسط"
 msgid "Read More"
 msgstr "ادامه مطلب"
 
-#: news/templates/news_list.html:76
+#: news/templates/news_list.html:83
 msgid "Latest News"
 msgstr "آخرین خبر"
 

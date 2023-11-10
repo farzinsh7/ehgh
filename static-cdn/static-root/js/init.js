@@ -866,3 +866,5 @@ window.addEventListener("load", function(){
     });
   
 })(jQuery);
+
+console.log('Coded by: https://FarzinShams.com');

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-10 10:27+0000\n"
+"POT-Creation-Date: 2023-11-10 11:40+0000\n"
 "PO-Revision-Date: 2023-11-10 10:29+0000\n"
 "Last-Translator:   <admin@ga.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,6 +36,7 @@ msgid "Ehsan Group | Companies"
 msgstr "گروه احسان | شرکت ها"
 
 #: company/templates/company_list.html:11
+#: company/templates/company_list.html:71
 msgid "Companies"
 msgstr "شرکت ها"
 
@@ -47,9 +48,8 @@ msgstr "شرکت ها"
 msgid "Read More"
 msgstr "ادامه مطلب"
 
-#: company/templates/company_list.html:64
-msgid "Sub-industries"
-msgstr "صنایع فرعی"
+#~ msgid "Sub-industries"
+#~ msgstr "صنایع فرعی"
 
 #~ msgid ""
 #~ "Ehsan Group is a well-known brand with more than 30 years of brilliant "
