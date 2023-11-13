@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-10 11:40+0000\n"
-"PO-Revision-Date: 2023-11-10 10:29+0000\n"
+"POT-Creation-Date: 2023-11-13 13:55+0330\n"
+"PO-Revision-Date: 2023-11-13 13:52+0000\n"
 "Last-Translator:   <admin@ga.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,33 +18,33 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: company/templates/company_detail.html:5
+#: .\company\templates\company_detail.html:5
 msgid "Ehsan Group"
 msgstr "گروه احسان"
 
-#: company/templates/company_detail.html:15
-#: company/templates/company_list.html:14
+#: .\company\templates\company_detail.html:15
+#: .\company\templates\company_list.html:14
 msgid "Home"
 msgstr "خانه"
 
-#: company/templates/company_detail.html:17
+#: .\company\templates\company_detail.html:17
 msgid "Company"
 msgstr "شرکت"
 
-#: company/templates/company_list.html:5
+#: .\company\templates\company_list.html:5
 msgid "Ehsan Group | Companies"
 msgstr "گروه احسان | شرکت ها"
 
-#: company/templates/company_list.html:11
-#: company/templates/company_list.html:71
+#: .\company\templates\company_list.html:11
+#: .\company\templates\company_list.html:71
 msgid "Companies"
 msgstr "شرکت ها"
 
-#: company/templates/company_list.html:16
+#: .\company\templates\company_list.html:16
 msgid " Companies"
 msgstr "شرکت ها"
 
-#: company/templates/company_list.html:45
+#: .\company\templates\company_list.html:45
 msgid "Read More"
 msgstr "ادامه مطلب"
 
