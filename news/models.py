@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from account.models import User
 from ckeditor_uploader.fields import RichTextUploadingField
+from django.utils.translation import gettext_lazy as _
 
 
 
@@ -41,7 +42,8 @@ class News(models.Model):
     tags = models.ManyToManyField(Tags, related_name='news', blank=True)
     description = RichTextUploadingField()
     image = models.ImageField(upload_to='news')
-    thumbnail = models.ImageField(upload_to='news/thumb', null=True)
+    thumbnail = models.ImageField(upload_to='news/thumb', null=True,
+                            help_text=_('Best size: 370*250 PX'))
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

@@ -163,7 +163,7 @@
 }
 .fn_cs_project_sticky_full .right_part .title_holder p a{
 	padding-right: 0px;
-	padding-left: 29px;
+	padding-left: 50px;
 }
 .fn_cs_project_sticky_full .right_part .title_holder p a svg,
 .fn_cs_project_sticky_full .right_part .title_holder p a img{
@@ -240,4 +240,9 @@
 /*------------------------------------------------------------------*/
 .industify_fn_blog_single{
 	direction: rtl;
+}
+/*------------------------------------------------------------------*/
+.service_list_as_function li a:after{
+    left: unset !important;
+    right: 0 !important;
 }

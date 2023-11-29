@@ -12,9 +12,9 @@
                 <h3>{{ company.title }}</h3>
                 <div class="industify_fn_breadcrumbs">
                     <ul>
-                        <li><a href="index.html" title="Home">{% trans "Home" %}</a></li>
+                        <li><a href="{% url 'page:home' %}" title="Home">{% trans "Home" %}</a></li>
                         <li class="separator"><span></span></li>
-                        <li><span class="bread-current">{% trans "Company" %}</span></li>
+                        <li><span class="bread-current"><a href="{% url 'company:list_view' %}" >{% trans "Company" %}</a></span></li>
                         <li class="separator"><span></span></li>
                         <li><span class="bread-current">{{ company.title }}</span></li>
                     </ul>

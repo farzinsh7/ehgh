@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-10 11:40+0000\n"
-"PO-Revision-Date: 2023-11-10 10:30+0000\n"
+"POT-Creation-Date: 2023-11-13 13:55+0330\n"
+"PO-Revision-Date: 2023-11-13 13:52+0000\n"
 "Last-Translator:   <admin@ga.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,36 +18,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: news/templates/news_detail.html:5 news/templates/news_list.html:52
+#: .\news\templates\news_detail.html:5 .\news\templates\news_list.html:52
 msgid "Ehsan Group"
 msgstr "گروه احسان"
 
-#: news/templates/news_detail.html:12 news/templates/news_detail.html:17
-#: news/templates/news_list.html:16 news/templates/news_list.html:24
+#: .\news\templates\news_detail.html:12 .\news\templates\news_detail.html:17
+#: .\news\templates\news_list.html:16 .\news\templates\news_list.html:24
 msgid "News"
 msgstr "اخبار"
 
-#: news/templates/news_detail.html:15 news/templates/news_list.html:21
+#: .\news\templates\news_detail.html:15 .\news\templates\news_list.html:21
 msgid "Home"
 msgstr "خانه"
 
-#: news/templates/news_list.html:5
+#: .\news\templates\news_list.html:5
 msgid "Ehsan Group | News"
 msgstr "گروه احسان | اخبار"
 
-#: news/templates/news_list.html:16 news/templates/news_list.html:24
+#: .\news\templates\news_list.html:16 .\news\templates\news_list.html:24
 msgid "Articles"
 msgstr "مقالات"
 
-#: news/templates/news_list.html:51
+#: .\news\templates\news_list.html:51
 msgid "By"
 msgstr "توسط"
 
-#: news/templates/news_list.html:63
+#: .\news\templates\news_list.html:63
 msgid "Read More"
 msgstr "ادامه مطلب"
 
-#: news/templates/news_list.html:83
+#: .\news\templates\news_list.html:83
 msgid "Latest News"
 msgstr "آخرین خبر"
 

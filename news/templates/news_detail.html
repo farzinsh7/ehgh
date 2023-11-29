@@ -14,7 +14,9 @@
                 <ul>
                     <li><a href="{% url 'page:home' %}" title="Home">{% trans "Home" %}</a></li>
                     <li class="separator"><span></span></li>
-                    <li><span class="bread-current">{% trans "News" %}</span></li>
+                    <li><span class="bread-current"><a href="{% url 'news:list_view' %}" >{% trans "News" %}</a></span></li>
+                    <li class="separator"><span></span></li>
+                    <li><span class="bread-current">{{ news.title }}</span></li>
                 </ul>
             </div>
         </div>

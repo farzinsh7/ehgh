@@ -5,11 +5,9 @@
 {% block content %}
         <!-- Alpha Slider -->
         <div class="industify_slider_alpha swiper-container-horizontal" data-desc-show="yes" data-category-show="yes" data-nav-types="square" data-autoplay-switch="enabled" data-autoplay-time="8000" data-effect="cards" data-progress="enabled" data-box-pos="cr" data-img-effect="enabled" data-text-effect="enabled">
-
             <!-- Alpha Slider: pagination -->
             <div class="swiper-pagination swiper-pagination-progressbar"><span class="swiper-pagination-progressbar-fill" style="transform: translate3d(0px, 0px, 0px) scaleX(0.75) scaleY(1); transition-duration: 1000ms;"></span></div>
             <!-- /Alpha Slider: pagination -->
-
             <!-- Alpha Slider: wrapper -->
                 <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-5709px, 0px, 0px);">
                     {% for slide in home.sliders.all %}
@@ -33,11 +31,8 @@
                     {% endfor %}
                 </div>
             <!-- Alpha Slider: wrapper -->
-
         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
         <!-- /Alpha Slider -->
-
-
         <!-- Principles Modern -->
         <div class="fn_cs_principles_modern">
             <div class="container">
@@ -65,11 +60,8 @@
             </div>
         </div>
         <!-- /Principles Modern -->
-
-
         <!-- About Section -->
         <div class="about_section">
-
             <!-- About Shortcode -->
             <div class="fn_cs_about">
                 <div class="container">
@@ -89,7 +81,7 @@
                                 </div>
                                 <div class="img_holder layer" data-depth="0.5" style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(10.125px, -31.6198px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
                                     <img src="{% static 'img/thumb/500-560.jpg' %}" alt="">
-                                    <div class="abs_img" data-bg-img="{% static 'img/about/right.jpg' %}" style="background-image: url({% static 'img/about/right.jpg' %});"></div>
+                                    <div class="abs_img" data-bg-img="{% static 'img/about/about.webp' %}" style="background-image: url({% static 'img/about/about.webp' %});"></div>
                                 </div>
                                 <div class="dots layer" data-switch="disable" data-depth="0.9" style="position: absolute; display: block; left: 0px; top: 0px; transform: translate3d(18.225px, -56.9156px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
                                     <img src="{% static 'img/thumb/500-560.jpg' %}" alt="">
@@ -100,11 +92,8 @@
                 </div>
             </div>
             <!-- /About Shortcode -->
-
         </div>
         <!-- /About Section -->
-
-
         <!-- Service Query Shortcode -->
         <div class="fn_cs_service_query" data-mobile="disable" data-column-count="4">
             <div class="top_bar">
@@ -123,9 +112,7 @@
                                 <a class="full_link" href="{% url 'industry:detail_view' item.slug %}"></a>
                                 <div class="img_holder">
                                     <img src="{% static 'img/thumb/480-700.jpg' %}" alt="">
-                                    {% thumbnail item.image "800x1080" as im %}
-                                        <div class="abs_img" data-fn-bg-img="{{ im.url }}" style="background-image: url({{ im.url }});"></div>
-                                    {% endthumbnail %}
+                                        <div class="abs_img" data-fn-bg-img="{{ item.image_thumbnail.url }}" style="background-image: url({{ item.image_thumbnail.url }});"></div>
                                 </div>
                                 <div class="title">
                                     <h3>{{ item.title }}</h3>
@@ -147,11 +134,8 @@
         </div>
     </div>
         <!-- /Service Query Shortcode -->
-
-
         <!-- Service Section -->
         <div class="service_section">
-
             <!-- About with Rating Shortcode -->
             <div class="fn_cs_about_with_rating">
                 <div class="container">
@@ -235,7 +219,6 @@
             </div>
         </div>
         <!-- /Call to Action -->
-
         <!-- Testimonial Section -->
         <div class="testimonial_section">
             <div class="overlay"></div>
@@ -254,11 +237,8 @@
                 </div>
             </div>
             <!-- /Single Testimonial Shortcode -->
-
         </div>
         <!-- /Testimonial Section -->
-
-
         <!-- Project Sticky Full -->
         <div class="fn_cs_project_sticky_full">
             <div class="inner">
@@ -268,7 +248,6 @@
                         {{ home.sub_industries|safe }}
                     </div>
                 </div>
-
                 <div class="right_part">
                     <div class="fn_cs_sticky_section">
                         <ul>
@@ -276,10 +255,7 @@
                             <li>
                                 <div class="item">
                                     <div class="img_holder">
-                                        <img src="{% static 'img/thumb/700-500.jpg' %}" alt="">
-                                        {% thumbnail item.image "885x690" as im %}
-                                        <div class="abs_img" data-fn-bg-img="{{ im.url }}" style="background-image: url({{ im.url }});"></div>
-                                        {% endthumbnail %}
+                                        <div class="abs_img" data-fn-bg-img="{{ item.image_thumbnail.url }}" style="background-image: url({{ item.image_thumbnail.url }});"></div>
                                         <a href="{% url 'company:detail_view' item.slug %}"></a>
                                     </div>
                                     <div class="title_holder">
@@ -307,13 +283,9 @@
             </div>
         </div>
         <!-- /Project Sticky Full -->
-
-
         <!-- Blog Section -->
         <div class="blog_section">
-
             <div class="overlay" data-bg-img="{% static 'img/blog/map.png' %}" style="background-image: url({% static 'img/blog/map.png' %});"></div>
-
             <!-- Main Title -->
             <div class="fn_cs_main_title">
                 <div class="container">
@@ -323,25 +295,21 @@
                 </div>
             </div>
             <!-- /Main Title -->
-
             <!-- Triple Blog Modern Shortcode -->
             <div class="fn_cs_triple_blog_modern fn_alpha">
                 <div class="container">
                     <div class="inner">
-
                         <ul>
                             {% for item in news %}
                             <li>
                                 <div class="item">
-                                    <div class="img_holder" data-bg-img="{{ item.image.url }}" style="background-image: url({{ item.image.url }});">
+                                    <div class="img_holder" data-bg-img="{{ item.thumbnail.url }}" style="background-image: url({{ item.thumbnail.url }});">
                                         <div class="time">
                                             <span></span>
                                             <h3>{{ item.publish|date:"d" }}</h3><h5>{{ item.publish|date:"M" }}</h5><h5>{{ item.publish|date:"Y" }}</h5>
                                         </div>
                                         <a href="{% url 'news:detail_view' item.slug %}"></a>
-                                        {% thumbnail item.thumbnail "370x250" as im %}
-                                            <img src="{{ im.url }}" alt="{{ item.title }}" />
-                                        {% endthumbnail %}
+                                            <img src="{{ item.thumbnail.url }}" alt="{{ item.title }}" />
                                     </div>
                                     <div class="title_holder">
                                         <h3><a href="{% url 'news:detail_view' item.slug %}">{{ item.title }}</a>
@@ -352,12 +320,10 @@
                             </li>
                             {% endfor %}
                         </ul>
-
                     </div>
                 </div>
             </div>
             <!-- /Triple Blog Modern Shortcode -->
-
         </div>
         <!-- /Blog Section -->
 {% endblock %}
