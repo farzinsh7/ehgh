@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'ckeditor',
     'ckeditor_uploader',
+    'crispy_forms',
+    'crispy_bootstrap4',
     'rosetta',
     'modeltranslation',
     'django_render_partial',
@@ -191,3 +193,7 @@ CKEDITOR_CONFIGS = {
 }
 
 X_FRAME_OPTIONS = 'ALLOWALL'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"

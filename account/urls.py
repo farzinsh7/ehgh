@@ -1,6 +1,6 @@
 from django.contrib.auth import views
 from django.urls import path
-from .views import Account, CompanyList
+from .views import Account, CompanyList, CompanyCreate, CompanyUpdate
 
 
 app_name = "account"
@@ -16,6 +16,8 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    path("dashboard/", Account.as_view(), name="dash"),
+    path("", Account.as_view(), name="dash"),
     path("companies/", CompanyList.as_view(), name="company"),
+    path("companies/create", CompanyCreate.as_view(), name="company_create"),
+    path('companies/update/<int:pk>', CompanyUpdate.as_view(), name='company_update'),
 ]

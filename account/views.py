@@ -6,6 +6,7 @@ from industries.models import Industry
 from news.models import News
 from contact_us.models import ContactUS
 from company.models import Company
+from .mixins import FieldsMixin
 # Create your views here.
 
 class Account(LoginRequiredMixin, ListView):
@@ -28,3 +29,15 @@ class CompanyList(LoginRequiredMixin, ListView):
     template_name = 'registration/companies_list.html'
     paginate_by = 10
     queryset = Company.objects.all().order_by("-created")
+
+
+
+class CompanyCreate(LoginRequiredMixin, FieldsMixin, CreateView):
+    model = Company
+    template_name = 'registration/company_create.html'
+
+
+class CompanyUpdate(LoginRequiredMixin, FieldsMixin, UpdateView):
+    template_name = 'registration/company_create.html'
+    model = Company
+    
