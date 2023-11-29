@@ -21,3 +21,10 @@ class Account(LoginRequiredMixin, ListView):
         context['contact'] = ContactUS.objects.all().count
 
         return context
+
+
+class CompanyList(LoginRequiredMixin, ListView):
+    model = Company
+    template_name = 'registration/companies_list.html'
+    paginate_by = 10
+    queryset = Company.objects.all().order_by("-created")

@@ -1,6 +1,6 @@
 from django.contrib.auth import views
 from django.urls import path
-from .views import Account
+from .views import Account, CompanyList
 
 
 app_name = "account"
@@ -17,4 +17,5 @@ urlpatterns = [
 
 urlpatterns += [
     path("dashboard/", Account.as_view(), name="dash"),
+    path("companies/", CompanyList.as_view(), name="company"),
 ]
