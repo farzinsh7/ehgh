@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    path("__debug__/", include("debug_toolbar.urls")),
 ]
 
 urlpatterns += i18n_patterns(
