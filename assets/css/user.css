@@ -1,0 +1,38 @@
+/* prettier-ignore */
+/*# sourceMappingURL=user.css.map */
+.center{
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    #top-logo {
+        display: none;
+    }
+      
+    #top-logo2 {
+        display: block;
+        opacity: 1;
+    }
+}
+
+
+#top-logo, #top-logo2 {
+    transition: opacity 200ms ease-in-out;
+}
+
+.hidden-opacity {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hidden-display {
+    display: none;
+}
+  
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 60%!important;
+        /* margin: 1.75rem auto; */
+    }
+}
