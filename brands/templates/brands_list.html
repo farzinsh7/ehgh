@@ -3,7 +3,7 @@
 {% block content %}
 <section class="text-center overflow-hidden py-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
 
-    <div class="bg-holder overlay  parallax" style="background-image:url(../assets/img/headers/header-9.jpg);">
+    <div class="bg-holder overlay  parallax" style="background-image:url({% static 'img/header-9.jpg' %});">
     </div>
     <!--/.bg-holder-->
 
@@ -51,100 +51,31 @@
           <div class="row sortable sortable-container-gutter-fix" data-rp-isotope='{"layoutMode":"packery"}'>
             <div class="col-lg-10 order-1 order-lg-0 position-relative">
               <div class="row gx-3">
-                <div class="col-6 mb-3 isotope-item design" data-zanim-xs='{"delay":0}'>
-                  <div class="hoverdir-item my-0" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'>
-                    <div class="hoverdir-item-content"><a class="d-block" href="../assets/img/projects/1.jpg" data-gallery="gallery-1"><img class="img-fluid rounded" src="../assets/img/projects/1.jpg" alt="" />
-                        <div class="hoverdir-text">
-                          <h3 class="text-white lh-1 fs-2">Website Design</h3>
-                          <p class="ls-1 mb-0 text-700">Multipurpose HTML template <br> with bootstrap 5</p>
-                        </div>
-                      </a></div>
-                  </div>
-                </div>
+                {% for brand in brands %}
                 <div class="col-6 mb-3 isotope-item photography" data-zanim-xs='{"delay":0.3}'>
-                  <div class="hoverdir-item my-0" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'>
-                    <div class="hoverdir-item-content"><a class="d-block" href="../assets/img/projects/2.jpg" data-gallery="gallery-1"><img class="img-fluid rounded" src="../assets/img/projects/2.jpg" alt="" />
-                        <div class="hoverdir-text">
-                          <h3 class="text-white lh-1 fs-2">UI/UX Design</h3>
-                          <p class="ls-1 mb-0 text-700">Most user friendly user <br> interface design</p>
+                    <div class="hoverdir-item my-0" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'>
+                        <div class="hoverdir-item-content">
+                            <a class="d-block" href="{% url "brands:detail_view" brand.slug %}">
+                            <img class="img-fluid rounded" src="{{ brand.image.url }}" alt="{{ brand.title }}"/>
+                            <div class="hoverdir-text">
+                                <h3 class="text-white lh-1 fs-2">{{ brand.title }}</h3>
+                                <p class="ls-1 mb-0 text-700">More than 50K happy <br> real state clients</p>
+                            </div>
+                            </a>
                         </div>
-                      </a></div>
-                  </div>
+                    </div>
                 </div>
-                <div class="col-6 mb-3 isotope-item mobile" data-zanim-xs='{"delay":0.2}'>
-                  <div class="hoverdir-item my-0" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'>
-                    <div class="hoverdir-item-content"><a class="d-block" href="../assets/img/projects/3.jpg" data-gallery="gallery-1"><img class="img-fluid rounded" src="../assets/img/projects/3.jpg" alt="" />
-                        <div class="hoverdir-text">
-                          <h3 class="text-white lh-1 fs-2">Mobile Accessories</h3>
-                          <p class="ls-1 mb-0 text-700">Popular mobile accessories <br> in 2021</p>
-                        </div>
-                      </a></div>
-                  </div>
-                </div>
-                <div class="col-6 mb-3 isotope-item photography" data-zanim-xs='{"delay":0.3}'>
-                  <div class="hoverdir-item my-0" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'>
-                    <div class="hoverdir-item-content"><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="../assets/img/projects/4.jpg" alt="" />
-                        <div class="hoverdir-text">
-                          <h3 class="text-white lh-1 fs-2">Interior Photography</h3>
-                          <p class="ls-1 mb-0 text-700">More than 50K happy <br> real state clients</p>
-                        </div>
-                      </a></div>
-                  </div>
-                </div>
-                <div class="col-6 mb-3 isotope-item mobile" data-zanim-xs='{"delay":0.4}'>
-                  <div class="hoverdir-item my-0" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'>
-                    <div class="hoverdir-item-content"><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="../assets/img/projects/5.jpg" alt="" />
-                        <div class="hoverdir-text">
-                          <h3 class="text-white lh-1 fs-2">App Development</h3>
-                          <p class="ls-1 mb-0 text-700">Most secured and optimized <br> mobile app development</p>
-                        </div>
-                      </a></div>
-                  </div>
-                </div>
-                <div class="col-6 mb-3 isotope-item marketing" data-zanim-xs='{"delay":0.5}'>
-                  <div class="hoverdir-item my-0" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'>
-                    <div class="hoverdir-item-content"><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="../assets/img/projects/6.jpg" alt="" />
-                        <div class="hoverdir-text">
-                          <h3 class="text-white lh-1 fs-2">Content Writing</h3>
-                          <p class="ls-1 mb-0 text-700"> More than 50K blog posts <br> on different subjects</p>
-                        </div>
-                      </a></div>
-                  </div>
-                </div>
-                <div class="col-6 mb-3 isotope-item design" data-zanim-xs='{"delay":0.6}'>
-                  <div class="hoverdir-item my-0" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'>
-                    <div class="hoverdir-item-content"><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="../assets/img/projects/7.jpg" alt="" />
-                        <div class="hoverdir-text">
-                          <h3 class="text-white lh-1 fs-2">Packaging Designing</h3>
-                          <p class="ls-1 mb-0 text-700">Beautiful packaging design done <br> by our designers</p>
-                        </div>
-                      </a></div>
-                  </div>
-                </div>
-                <div class="col-6 mb-3 isotope-item photography" data-zanim-xs='{"delay":0.35}'>
-                  <div class="hoverdir-item my-0" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'>
-                    <div class="hoverdir-item-content"><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="../assets/img/projects/8.jpg" alt="" />
-                        <div class="hoverdir-text">
-                          <h3 class="text-white lh-1 fs-2">Model Photography</h3>
-                          <p class="ls-1 mb-0 text-700">Exclusive model photography by <br> award winning photographers</p>
-                        </div>
-                      </a></div>
-                  </div>
-                </div>
-                <div class="col-6 mb-3 isotope-item design" data-zanim-xs='{"delay":0.4}'>
-                  <div class="hoverdir-item my-0" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'>
-                    <div class="hoverdir-item-content"><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="../assets/img/projects/9.jpg" alt="" />
-                        <div class="hoverdir-text">
-                          <h3 class="text-white lh-1 fs-2">Digital Marketing</h3>
-                          <p class="ls-1 mb-0 text-700">We spread your digital products <br> all over the world</p>
-                        </div>
-                      </a></div>
-                  </div>
-                </div>
+                {% endfor %}
               </div>
             </div>
             <div class="col-lg-2 order-0 order-lg-1 position-relative">
-              <div class="menu mb-3 flex-lg-column text-start justify-content-center sticky-top work-alt-sticky-nav" data-filter-nav><a class="isotope-nav text-uppercase active" href="#work-alt" data-filter="*">all</a><a class="isotope-nav text-uppercase" href="#work-alt" data-filter=".photography">Photography</a><a class="isotope-nav text-uppercase" href="#work-alt" data-filter=".design">Design</a><a class="isotope-nav text-uppercase" href="#work-alt" data-filter=".mobile">Mobile</a><a class="isotope-nav text-uppercase" href="#work-alt" data-filter=".marketing">Marketing</a></div>
+                <div class="menu mb-3 flex-lg-column text-start justify-content-center sticky-top work-alt-sticky-nav" data-filter-nav>
+                    <a class="isotope-nav text-uppercase active" href="#work-alt" data-filter="*">all</a>
+                    <a class="isotope-nav text-uppercase" href="#work-alt" data-filter=".photography">Photography</a>
+                    <a class="isotope-nav text-uppercase" href="#work-alt" data-filter=".design">Design</a>
+                    <a class="isotope-nav text-uppercase" href="#work-alt" data-filter=".mobile">Mobile</a>
+                    <a class="isotope-nav text-uppercase" href="#work-alt" data-filter=".marketing">Marketing</a>
+                </div>
             </div>
           </div>
         </div>
@@ -152,5 +83,5 @@
     </div>
     <!-- end of .container-->
   </section>
-  <!-- <section> close ============================-->
+<!-- <section> close ============================-->
 {% endblock content %}
