@@ -16,7 +16,7 @@ class SliderAdmin(admin.TabularInline):
 @admin.register(Brands)
 class BrandsAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
-    list_display = ('thumbnail_tag', 'title', 'line', 'status')
+    list_display = ('thumbnail_tag', 'title', 'status')
     search_fields = ('title', 'description')
     inlines = [SliderAdmin, SocialLinksAdmin]
     ordering = ['-created']

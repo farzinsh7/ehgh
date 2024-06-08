@@ -1,5 +1,137 @@
 {% extends 'base/main_base.html' %}
 {% load static %}
 {% block content %}
+<!-- <section> begin ============================-->
+<section class="text-center overflow-hidden py-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+    <div class="bg-holder overlay  parallax" style="background-image:url({{ brand.image.url }});">
+    </div>
+    <!--/.bg-holder-->
+    <div class="container-fluid">
+        <div class="header-overlay"></div>
+        <div class="position-relative pt-10 pb-8">
+        <div class="header-text">
+            <div class="overflow-hidden">
+            <h1 class="display-3 fs-7 text-white fw-lighter ls-2" data-zanim-xs='{"duration":2,"delay":0}'>{{ brand.title }}</h1>
+            </div>
+            <div class="overflow-hidden">
+            <div class="d-flex justify-content-center" data-zanim-xs='{"duration":2,"delay":0.1}'>
+                <nav aria-label="breadcrumb">
+                <ol class="breadcrumb text-uppercase ls-2">
+                    <li class="breadcrumb-item"><a class="text-400 hover-color-white" href="{% url "page:home" %}">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ brand.title }}</li>
+                </ol>
+                </nav>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- end of .container-->
+</section>
+    <!-- <section> close ============================-->
 
+    <!-- <section> begin ============================-->
+<section>
+    <div class="container">
+        <div class="row">
+        <div class="col-12 mb-4">
+            <div class="swiper theme-slider" data-swiper='{"autoplay":true,"spaceBetween":5,"loop":true,"loopedSlides":5,"slideToClickedSlide":true}'>
+            <div class="swiper-wrapper">
+                {% for item in brand.sliders.all  %}<div class="swiper-slide"><img class="img-fluid" src="{{ item.image.url }}" alt="{{ item.title }}" /></div>{% endfor %}
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-nav">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="col-lg pe-lg-5 mb-4 mb-lg-0 position-relative">
+            <h4 class="fw-normal font-base">Bootstrap 5 Template Design</h4>
+            {{ brand.description|safe }}
+            <div class="vertical-line"></div>
+        </div>
+        <div class="col-lg-4 ps-lg-5">
+            <h5 class="fw-normal mb-1">Informations</h5>
+            <table class="table table-borderless mb-0">
+            <tr>
+                <td class="py-1 ps-0 text-dark">Website: </td>
+                <td class="py-1"><a class="text-600" href="https://{{ brand.website }}">{{ brand.website }}</a></td>
+            </tr>
+            <tr>
+                <td class="py-1 ps-0 text-dark">Category:</td>
+                <td class="py-1 text-600">{% for item in brand.line.all  %}{% if forloop.first %}{% else %}, {% endif %}{{ item.title }} {% endfor %}</td>
+            </tr>
+            <tr>
+                <td class="py-1 ps-0 text-dark">Founded:</td>
+                <td class="py-1 text-600">05 Jan, 2022</td>
+            </tr>
+            <tr>
+                <td class="py-1 ps-0 text-dark">Address:</td>
+                <td class="py-1 text-600">{{ brand.address }}</td>
+            </tr>
+            <tr>
+                <td class="py-1 ps-0 text-dark">Socials:</td>
+                <td class="py-1 text-600">
+                    <li class="list-inline-item me-0">
+                        {% for item in brand.socials.all  %}<a class="text-900 hover-color-white pe-2" href="{{ item.link }}"><span class="{{ item.icon }}"></span></a>{% endfor %}
+                    </li>
+                </td>
+            </tr>
+            <tr>
+                <td class="py-1 ps-0 text-dark">Tags:</td>
+                <td class="py-1 text-600">
+                    {% for item in brand.tags.all  %}<a class="btn btn-dark btn-sm hvr-sweep-top me-1 mb-1" href="#!">{{ item.title }}</a>{% endfor %}
+                </td>
+            </tr>
+            </table>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-12">
+            <hr class="mt-5 mb-4" />
+            <h4 class="fw-normal mb-3">Related Projects</h4>
+        </div>
+        <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="card border border-light h-100">
+            <div class="overflow-hidden"><a href="../pages/work-single.html"><img class="card-img-top" src="../assets/img/projects/13.jpg" alt="" /></a></div>
+            <div class="card-body bg-light">
+                <h5 class="card-title mb-2 fs-0 text-transform-none font-base lh-sm fw-medium"><a class="text-900" href="../pages/work-single.html">Premium corporate agency html5 template design</a></h5>
+                <p class="mb-0"> <a class="text-700" href="../pages/work.html">Html5</a>, <a class="text-700" href="../pages/work.html">Bootstrap 5</a>, <a class="text-700" href="../pages/work.html">CSS3</a></p>
+            </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="card border border-light h-100">
+            <div class="overflow-hidden"> <a href="../pages/work-single.html"><img class="card-img-top" src="../assets/img/projects/15.jpg" alt="" /></a></div>
+            <div class="card-body bg-light">
+                <h5 class="card-title mb-2 fs-0 text-transform-none font-base lh-sm fw-medium"><a class="text-900" href="../pages/work-single.html">Multipurpose bootstrap 5 business template</a></h5>
+                <p class="mb-0"> <a class="text-700" href="../pages/work.html">Bootstrap 5</a>, <a class="text-700" href="../pages/work.html">Html5</a>, <a class="text-700" href="../pages/work.html">Javascript</a></p>
+            </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
+            <div class="card border border-light h-100">
+            <div class="overflow-hidden"> <a href="../pages/work-single.html"><img class="card-img-top" src="../assets/img/projects/12.jpg" alt="" /></a></div>
+            <div class="card-body bg-light">
+                <h5 class="card-title mb-2 fs-0 text-transform-none font-base lh-sm fw-medium"><a class="text-900" href="../pages/work-single.html">Responsive event planning html5 one-page template</a></h5>
+                <p class="mb-0"> <a class="text-700" href="../pages/work.html">Jquery</a>, <a class="text-700" href="../pages/work.html">Bootstrap 5</a>, <a class="text-700" href="../pages/work.html">CSS3</a></p>
+            </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <div class="card border border-light h-100">
+            <div class="overflow-hidden"> <a href="../pages/work-single.html"><img class="card-img-top" src="../assets/img/projects/18.jpg" alt="" /></a></div>
+            <div class="card-body bg-light">
+                <h5 class="card-title mb-2 fs-0 text-transform-none font-base lh-sm fw-medium"><a class="text-900" href="../pages/work-single.html">Animated material dashboard design for web app</a></h5>
+                <p class="mb-0"> <a class="text-700" href="../pages/work.html">Material Design</a>, <a class="text-700" href="../pages/work.html">Bootstrap 5</a></p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- end of .container-->
+</section>
+<!-- <section> close ============================-->
 {% endblock content %}
