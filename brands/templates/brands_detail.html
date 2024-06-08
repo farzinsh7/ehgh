@@ -28,9 +28,9 @@
     </div>
     <!-- end of .container-->
 </section>
-    <!-- <section> close ============================-->
+<!-- <section> close ============================-->
 
-    <!-- <section> begin ============================-->
+<!-- <section> begin ============================-->
 <section>
     <div class="container">
         <div class="row">
@@ -47,12 +47,12 @@
             <div class="swiper-pagination"></div>
             </div>
         </div>
-        <div class="col-lg pe-lg-5 mb-4 mb-lg-0 position-relative">
+        <div class="col-lg-8 pe-lg-5 mb-4 mb-lg-0 position-relative">
             <h4 class="fw-normal font-base">Bootstrap 5 Template Design</h4>
             {{ brand.description|safe }}
             <div class="vertical-line"></div>
         </div>
-        <div class="col-lg-4 ps-lg-5">
+        <div class="col-lg-4 ps-lg-4">
             <h5 class="fw-normal mb-1">Informations</h5>
             <table class="table table-borderless mb-0">
             <tr>
@@ -93,16 +93,26 @@
                 <hr class="mt-5 mb-4" />
                 <h4 class="fw-normal mb-3">Latest Brands</h4>
             </div>
-            {% for item in latest %}
-            <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
-                <div class="card border border-light h-100">
-                    <div class="overflow-hidden"><a href="{% url "brands:detail_view" item.slug %}"><img class="card-img-top" src="{{ item.image.url }}" alt="" /></a></div>
-                    <div class="card-body bg-light">
-                        <h5 class="card-title mb-2 fs-0 text-transform-none font-base lh-sm fw-medium"><a class="text-900" href="{% url "brands:detail_view" item.slug %}">{{ item.title }}</a></h5>
-                    </div>
+            <div class="swiper theme-slider" data-swiper='{"spaceBetween":30,"loop":true,"slidesPerView":1,"breakpoints":{"670":{"slidesPerView":2},"1200":{"slidesPerView":3}}}'>
+                <div class="swiper-wrapper">
+                    {% for item in latest %}
+                        <div class="swiper-slide">
+                            <div class="h-100 mb-4">
+                                <a href="{% url "brands:detail_view" item.slug %}">
+                                    <img class="img-fluid rounded-top" src="{{ item.image.url }}" alt="{{ item.title }}">
+                                </a>
+                                <div class="p-3 border rounded-bottom border-top-0">
+                                    <h5 class="font-base text-transform-none fw-medium lh-1"><a class="text-black" href="pages/single-post.html">{{ item.title }}</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-nav">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
                 </div>
             </div>
-            {% endfor %}
         </div>
     </div>
     <!-- end of .container-->
