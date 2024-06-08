@@ -4,6 +4,26 @@ from tinymce.models import HTMLField
 from django.utils.html import format_html
 
 # Create your models here.
+class Line(models.Model):
+    title = models.CharField(max_length=300)
+    slug = models.SlugField(max_length=200, unique=True)
+    status = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.title
+
+
+class Tags(models.Model):
+    title = models.CharField(max_length=300)
+    slug = models.SlugField(max_length=200, unique=True)
+    status = models.BooleanField(default=True)
+
+
+    def __str__(self):
+        return self.title
+
+
+
 class Brands(models.Model):
     STATUS_CHOICES = (
         ('d', 'Draft'),
@@ -11,9 +31,10 @@ class Brands(models.Model):
     )
     title = models.CharField(max_length=300)
     slug = models.SlugField(max_length=200, unique=True)
+    tags = models.ManyToManyField(Tags, related_name='brands', blank=True)
     description = HTMLField()
     founded = models.DateTimeField(default=timezone.now)
-    line = models.CharField(max_length=300,blank=True,null=True)
+    line = models.ManyToManyField(Line, related_name='brands')
     website = models.CharField(max_length=300,blank=True,null=True)
     address = models.CharField(max_length=500,blank=True,null=True)
     image = models.ImageField(upload_to='brands')
