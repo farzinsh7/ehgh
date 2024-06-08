@@ -13,7 +13,6 @@ class BrandsListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['lines'] = Line.objects.all()
-        context['latest'] = Brands.objects.filter(status="p").order_by('-created')[:5]
         return context
 
 
@@ -28,4 +27,5 @@ class BrandsDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context['lines'] = Line.objects.filter(status=True)
         context['tags'] = Tags.objects.filter(status=True)
+        context['latest'] = Brands.objects.filter(status="p").order_by('-created')[:4]
         return context
