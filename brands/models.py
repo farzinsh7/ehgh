@@ -30,3 +30,23 @@ class Brands(models.Model):
     def thumbnail_tag(self):
         return format_html(
             "<img width=100 height=75 style='border-radius: 5px;' src='{}'>".format(self.image_thumbnail.url))
+        
+
+class Slider(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField(null=True)
+    image = models.ImageField(upload_to='slider')
+    home_data = models.ForeignKey(Brands, null=True, on_delete=models.SET_NULL, related_name='sliders')
+
+    def __str__(self):
+        return self.title
+    
+
+class SocialLinks(models.Model):
+    label = models.CharField(max_length=120, null=True)
+    icon = models.CharField(null=True, max_length=200)
+    link = models.CharField(max_length=200,blank=True,null=True)
+    main_data = models.ForeignKey(Brands, null=True, on_delete=models.SET_NULL, related_name='socials')
+
+    def __str__(self):
+        return self.label if self.label else "No Label"
