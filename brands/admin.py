@@ -1,19 +1,19 @@
 from django.contrib import admin
-from .models import Brands, SocialLinks, Slider, Tags, Line
+from . import models
 
 class SocialLinksAdmin(admin.TabularInline):
-    model = SocialLinks
+    model = models.SocialLinks
     extra = 1
     max_num = 10
 
 
 class SliderAdmin(admin.TabularInline):
-    model = Slider
+    model = models.Slider
     extra = 1
     max_num = 10
 
 
-@admin.register(Brands)
+@admin.register(models.Brands)
 class BrandsAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
     list_display = ('thumbnail_tag', 'title', 'status')
@@ -23,5 +23,5 @@ class BrandsAdmin(admin.ModelAdmin):
     
 
 
-admin.site.register(Line)
-admin.site.register(Tags)
+admin.site.register(models.Line)
+admin.site.register(models.Tags)
