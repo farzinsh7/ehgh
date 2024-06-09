@@ -142,15 +142,23 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'account.User'
 
-
 TINYMCE_DEFAULT_CONFIG = {
     "entity_encoding": "raw",
     "menubar": "file edit view insert format tools table",
     "plugins": 'print preview paste importcss searchreplace autolink autosave save code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap emoticons quickbars',
     "toolbar": "fullscreen preview | undo redo | bold italic forecolor backcolor | formatselect | image link | "
-    "alignleft aligncenter alignright alignjustify | blocks | fonts | outdent indent |  numlist bullist checklist | fontsizeselect ",
+               "alignleft aligncenter alignright alignjustify | blocks | fonts | outdent indent |  numlist bullist checklist | fontsizeselect ",
     "custom_undo_redo_levels": 50,
+    "image_dimensions": False,
     "quickbars_insert_toolbar": False,
+    "setup": """function (editor) {
+        editor.on('SetContent', function (e) {
+            var imgs = editor.getDoc().getElementsByTagName('img');
+            for (var i = 0; i < imgs.length; i++) {
+                imgs[i].style.width = '90%';
+            }
+        });
+    }""",
     "file_picker_callback": """function (cb, value, meta) {
         var input = document.createElement("input");
         input.setAttribute("type", "file");
@@ -170,7 +178,12 @@ TINYMCE_DEFAULT_CONFIG = {
                 var base64 = reader.result.split(",")[1];
                 var blobInfo = blobCache.create(id, file, base64);
                 blobCache.add(blobInfo);
-                cb(blobInfo.blobUri(), { title: file.name });
+
+                if (meta.filetype == "image") {
+                    cb(blobInfo.blobUri(), { title: file.name, width: '90%' });
+                } else {
+                    cb(blobInfo.blobUri(), { title: file.name });
+                }
             };
             reader.readAsDataURL(file);
         };
