@@ -18,6 +18,7 @@
                 <nav aria-label="breadcrumb">
                 <ol class="breadcrumb text-uppercase ls-2">
                     <li class="breadcrumb-item"><a class="text-400 hover-color-white" href="{% url "page:home" %}">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-400 hover-color-white" href="{% url "brands:list_view" %}">Brands</a></li>
                     <li class="breadcrumb-item active" aria-current="page">{{ brand.title }}</li>
                 </ol>
                 </nav>
@@ -65,7 +66,7 @@
             </tr>
             <tr>
                 <td class="py-1 ps-0 text-dark">Founded:</td>
-                <td class="py-1 text-600">05 Jan, 2022</td>
+                <td class="py-1 text-600">{{ brand.founded|date:"M d, Y" }}</td>
             </tr>
             <tr>
                 <td class="py-1 ps-0 text-dark">Address:</td>
