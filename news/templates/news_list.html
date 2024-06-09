@@ -1,5 +1,79 @@
 {% extends 'base/main_base.html' %}
 {% load static %}
 {% block content %}
+<!-- <section> begin ============================-->
+<section class="text-center overflow-hidden py-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+<div class="bg-holder overlay  parallax" style="background-image:url({% static 'img/header-9.jpg' %});">
+</div>
+<!--/.bg-holder-->
+<div class="container-fluid">
+    <div class="header-overlay"></div>
+    <div class="position-relative pt-10 pb-8">
+    <div class="header-text">
+        <div class="overflow-hidden">
+        <h1 class="display-3 fs-7 text-white fw-lighter ls-2" data-zanim-xs='{"duration":2,"delay":0}'>News</h1>
+        </div>
+        <div class="overflow-hidden">
+        <div class="d-flex justify-content-center" data-zanim-xs='{"duration":2,"delay":0.1}'>
+            <nav aria-label="breadcrumb">
+            <ol class="breadcrumb text-uppercase ls-2">
+                <li class="breadcrumb-item"><a class="text-400 hover-color-white" href="{% url "page:home" %}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">News</li>
+            </ol>
+            </nav>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- end of .container-->
+</section>
+<!-- <section> close ============================-->
 
+<!-- <section> begin ============================-->
+<section id="blog">
+
+<div class="container">
+    <div class="row">
+        {% for blog in news %}
+        <div class="col-md-6 col-lg-4 h-100 mb-4 d-flex">
+            <div class="card-container">
+                <a href="{% url 'news:detail_view' blog.slug %}">
+                    <img class="img-fluid rounded-top" src="{{ blog.thumbnail.url }}" alt="" />
+                </a>
+                <div class="card-content p-3 border rounded-bottom border-top-0">
+                    <h5 class="card-title font-base text-transform-none fw-medium lh-1">
+                        <a class="text-black" href="{% url 'news:detail_view' blog.slug %}">{{ blog.title|truncatewords:5 }}</a>
+                    </h5>
+                    <div class="card-description">
+                        <p>{{ blog.seo_description|truncatechars:150 }}</p>
+                    </div>
+                    <a class="text-dark fw-semi-bold" href="{% url 'news:detail_view' blog.slug %}">
+                        Read more<span class="fas fa-angle-right ms-1 text-900" data-fa-transform="down-2"></span>
+                    </a>                    
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        
+    </div>
+    <div class="col-12 p-0">
+        <div class="d-flex justify-content-center mt-7">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-rounded">
+              <li class="page-item disabled ms-0"><a class="page-link" href="#"><svg class="svg-inline--fa fa-angle-left fa-w-8" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg><!-- <span class="fas fa-angle-left"></span> Font Awesome fontawesome.com --></a></li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item"><a class="page-link" href="#"><svg class="svg-inline--fa fa-angle-right fa-w-8" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg><!-- <span class="fas fa-angle-right"></span> Font Awesome fontawesome.com --></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+</div>
+<!-- end of .container-->
+</section>
+<!-- <section> close ============================-->
 {% endblock  %}
