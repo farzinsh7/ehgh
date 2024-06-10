@@ -19,7 +19,7 @@ class NewsDetailView(DetailView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['latest'] = models.News.objects.published()[:5]
-        context['lines'] = models.Category.objects.filter(status=True)
+        context['latest'] = models.News.objects.published()[:3]
+        context['category'] = models.Category.objects.filter(status=True)
         context['tags'] = models.Tags.objects.filter(status=True)
         return context

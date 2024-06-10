@@ -1,0 +1,123 @@
+{% extends 'base/main_base.html' %}
+{% load static %}
+{% block content %}
+<!-- ============================================-->
+<!-- <section> begin ============================-->
+<section class="text-center overflow-hidden py-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+  <div class="bg-holder overlay  parallax" style="background-image:url({% static 'img/header-9.jpg' %});">
+  </div>
+  <!--/.bg-holder-->
+  <div class="container-fluid">
+    <div class="header-overlay"></div>
+    <div class="position-relative pt-10 pb-8">
+      <div class="header-text">
+        <div class="overflow-hidden">
+          <h1 class="display-3 fs-7 text-white fw-lighter ls-2" data-zanim-xs='{"duration":2,"delay":0}'>{{ news.title }}</h1>
+        </div>
+        <div class="overflow-hidden">
+          <div class="d-flex justify-content-center" data-zanim-xs='{"duration":2,"delay":0.1}'>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb text-uppercase ls-2">
+                <li class="breadcrumb-item"><a class="text-400 hover-color-white" href="{% url "page:home" %}">Home</a></li>
+                <li class="breadcrumb-item"><a class="text-400 hover-color-white" href="{% url "news:list_view" %}">News</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ news.title }}</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of .container-->
+</section>
+<!-- <section> close ============================-->
+<!-- <section> begin ============================-->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 mb-4 mb-lg-0"><img class="img-fluid rounded" src="{{ news.image.url }}" alt="" />
+        <h2 class="mt-4 text-transform-none fw-medium">{{ news.title }}</h2>
+        <div class="mb-4">By<a class="text-700" href="#!"> {{ news.author|title }}</a><span class="mx-2 text-700">|</span>
+          <a class="text-700" href="#!">{{ news.publish|date:"d M, Y"  }}</a><span class="mx-2 text-700">|</span>
+          {% comment %} <a class="text-700" href="#!">3 Comments</a><span class="mx-2 text-700">|</span> {% endcomment %}
+          {% for cat in news.category.all %}<a class="text-700" href="#!">{{ cat.title }}</a>{% endfor %}
+        </div>
+        {{ news.description|safe }}
+        <div class="row">
+          <div class="col-auto">
+            <p class="fw-bold">Share on</p>
+          </div>
+          <div class="col">
+            <ul class="list-inline">
+              <li class="list-inline-item border-end pe-1"><a class="text-900 px-2" href="#!"><span class="fab fa-facebook-f" data-fa-transform="grow-5"></span></a></li>
+              <li class="list-inline-item border-end pe-1"><a class="text-900 px-2" href="#!"><span class="fab fa-twitter" data-fa-transform="grow-5"></span></a></li>
+              <li class="list-inline-item pe-1"><a class="text-900 px-2" href="#!"><span class="fab fa-linkedin-in" data-fa-transform="grow-5"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h4 class="font-base border-bottom pb-2 my-4 fw-normal">5 Comments</h4>
+            <div class="d-flex mb-4"><img class="rounded-circle me-3" src="../assets/img/team/1.jpg" width="60" height="60" alt="" />
+              <div class="flex-1">
+                <p class="mb-1 text-700"> <a class="fw-bold text-900" href="#!">Kin Herritage</a> Wow! Excellent. This post is very useful for me. I'm searching about this last four months but I couldn't manage.</p><a class="text-700 me-1 fs--1" href="#!">Like</a>&bull;<a class="text-700 ms-1 fs--1" href="#!">Reply</a><span class="fs--1 ps-1 text-600">Just Now</span>
+              </div>
+            </div>
+            <div class="d-flex"><img class="rounded-circle me-3" src="../assets/img/team/2.jpg" width="60" height="60" alt="" />
+              <div class="flex-1">
+                <p class="mb-1 text-700"><a class="fw-bold text-900" href="#!">Kin Herritage</a> Wow! Excellent. This post is very useful for me. I'm searching about this last four months but I couldn't manage.</p><a class="text-700 me-1 fs--1" href="#!">Like</a>&bull;<a class="text-700 ms-1 fs--1" href="#!">Reply</a><span class="fs--1 ps-1 text-600">1hr</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <form class="mt-5">
+              <h4 class="fw-normal mb-3 font-base">Leave a comment</h4>
+              <div class="row g-0">
+                <div class="col-md-6 pe-2 mb-3">
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Name" />
+                  </div>
+                </div>
+                <div class="col-md-6 ps-2 mb-3">
+                  <div class="form-group">
+                    <input class="form-control" type="email" placeholder="Email" />
+                  </div>
+                </div>
+                <div class="col-12 mb-3">
+                  <div class="form-group">
+                    <textarea class="form-control" rows="10" placeholder="Your Comment"></textarea>
+                  </div>
+                </div>
+                <div class="d-grid">
+                  <button class="btn btn-dark hvr-sweep-top" type="submit">Post</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 ps-lg-7">
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="Search..." />
+        </div>
+        <h4 class="mt-4 mb-3 fw-normal">Latest Posts</h4>
+        {% for blog in latest %}
+        <div class="d-flex mt-3"><a href="{% url "news:detail_view" blog.slug %}"><img class="rounded" src="{{ blog.thumbnail.url }}" width="120" alt="" /></a>
+          <div class="flex-1 ms-3">
+            <h5 class="lh-sm mt-0 text-transform-none fs-0 mb-1 fw-semi-bold font-base"><a class="text-900" href="{% url "news:detail_view" blog.slug %}">Materials Science May Be The Most Important.</a></h5>
+            <p class="text-600 mb-0">{{ news.publish|date:"d M, Y"  }}</p>
+          </div>
+        </div>
+        {% endfor %}
+        <h4 class="mt-5 mb-3 fw-normal">Tags</h4>
+        {% for tag in news.tags.all %}
+        <a class="btn btn-dark btn-sm hvr-sweep-top me-1 mb-1" href="#!">{{ tag.title }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <!-- end of .container-->
+</section>
+<!-- <section> close ============================-->
+<!-- ============================================-->
+{% endblock  %}
