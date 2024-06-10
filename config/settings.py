@@ -152,6 +152,9 @@ TINYMCE_DEFAULT_CONFIG = {
     "custom_undo_redo_levels": 50,
     "image_dimensions": False,
     "quickbars_insert_toolbar": False,
+    "formats": {
+        "p": {"block": "p", "classes": "", "styles": ""}
+    },
     "setup": """function (editor) {
         editor.on('SetContent', function (e) {
             var imgs = editor.getDoc().getElementsByTagName('img');

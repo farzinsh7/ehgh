@@ -104,7 +104,7 @@
         {% for blog in latest %}
         <div class="d-flex mt-3"><a href="{% url "news:detail_view" blog.slug %}"><img class="rounded" src="{{ blog.thumbnail.url }}" width="120" alt="" /></a>
           <div class="flex-1 ms-3">
-            <h5 class="lh-sm mt-0 text-transform-none fs-0 mb-1 fw-semi-bold font-base"><a class="text-900" href="{% url "news:detail_view" blog.slug %}">Materials Science May Be The Most Important.</a></h5>
+            <h5 class="lh-sm mt-0 text-transform-none fs-0 mb-1 fw-semi-bold font-base"><a class="text-900" href="{% url "news:detail_view" blog.slug %}">{{ blog.title }}</a></h5>
             <p class="text-600 mb-0">{{ news.publish|date:"d M, Y"  }}</p>
           </div>
         </div>
@@ -119,5 +119,4 @@
   <!-- end of .container-->
 </section>
 <!-- <section> close ============================-->
-<!-- ============================================-->
 {% endblock  %}
