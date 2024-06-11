@@ -10,11 +10,6 @@ class BrandsListView(ListView):
     template_name = 'brands_list.html'
     context_object_name = 'brands'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['lines'] = Line.objects.all()
-        return context
-
 
 
 class BrandsDetailView(DetailView):
