@@ -45,37 +45,33 @@
             <hr class="hr-short bg-black opacity-100" data-zanim-xs='{"duration":1.5,"delay":0.2}'>
           </div>
         </div>
-        <div class="col-12">
-          <div class="row sortable sortable-container-gutter-fix" data-rp-isotope='{"layoutMode":"packery"}'>
-            <div class="col-lg-10 order-1 order-lg-0 position-relative">
-              <div class="row gx-3">
-                {% for brand in brands %}
-                  <div class="col-6 mb-3 isotope-item {% for item in brand.line.all  %}{{ item.slug }} {% endfor %}" data-zanim-xs='{"delay":0.3}'>
-                      <div class="hoverdir-item my-0" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'>
-                          <div class="hoverdir-item-content">
-                              <a class="d-block" href="{% url "brands:detail_view" brand.slug %}">
-                              <img class="img-fluid rounded" src="{{ brand.image.url }}" alt="{{ brand.title }}"/>
-                              <div class="hoverdir-text">
-                                  <h3 class="text-white lh-1 fs-2">{{ brand.title }}</h3>
-                                  {% comment %} <p class="ls-1 mb-0 text-700"> {{ brand.title }}</p> {% endcomment %}
-                              </div>
-                              </a>
-                          </div>
+            <div class="row g-2 position-relative thumbnail-grid-container" id="selector">
+              {% for item in brands %}
+              <div class="col-12 col-sm-6 col-lg-4 thumbnail-grid-item" style="margin-bottom: unset; z-index: 10;">
+                <img class="thumbnail-gridder collapsed" src="{{ item.image.url }}" alt="" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse-{{ forloop.counter }}">
+                <div class="position-absolute start-0">
+                  <div class="thumbnail-grid-content collapse" data-bs-parent="#selector" id="collapse-{{ forloop.counter }}" style="">
+                    <div class="card card-body border-0 bg-100 m-1 px-4">
+                      <div class="row align-items-center">
+                        <div class="thumbnail-grid-navigation">
+                          <a class="thumbnail-close" href="#!"><svg class="svg-inline--fa fa-times fa-w-11" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" data-fa-i2svg=""><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg></a>
+                          <a class="thumbnail-grid-nav prev {% if forloop.first %}disabled{% endif %}" href="#!" data-grid-target="#collapse-{{ forloop.counter|add:-1 }}" data-thumbnail-grid-nav="data-thumbnail-grid-nav"><svg class="svg-inline--fa fa-angle-left fa-w-8" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg></a>
+                          <a class="thumbnail-grid-nav next {% if forloop.last %}disabled{% endif %}" href="#!" data-grid-target="#collapse-{{ forloop.counter|add:1 }}" data-thumbnail-grid-nav="data-thumbnail-grid-nav"><svg class="svg-inline--fa fa-angle-right fa-w-8" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></a></div>
+                        <div class="col-7">
+                          <div class="d-none d-lg-block p-0"><img class="w-100 img-fluid rounded" src="{{ item.image.url }}" alt=""></div>
+                        </div>
+                        <div class="col-lg-5">
+                          <h5 class="ls-1">{{ item.title }}</h5>
+                          <p>{{ item.description|safe|truncatewords:50 }}</p><a class="btn btn-outline-dark btn-sm hvr-sweep-top hover-color-white mt-2" href="{% url "brands:detail_view" item.slug %}">read more</a>
+                        </div>
                       </div>
+                    </div>
                   </div>
-                {% endfor %}
-              </div>
-            </div>
-            <div class="col-lg-2 order-0 order-lg-1 position-relative">
-                <div class="menu mb-3 flex-lg-column text-start justify-content-center sticky-top work-alt-sticky-nav" data-filter-nav>
-                    <a class="isotope-nav text-uppercase active" href="#work-alt" data-filter="*">all</a>
-                    {% for line in lines %}
-                    <a class="isotope-nav text-uppercase" href="#work-alt" data-filter=".{{ line.slug }}">{{ line.title }}</a>
-                    {% endfor %}
                 </div>
+              </div>
+              {% endfor %}
             </div>
-          </div>
-        </div>
+          <!-- end of .container-->
       </div>
     </div>
     <!-- end of .container-->
