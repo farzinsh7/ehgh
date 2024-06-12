@@ -1,4 +1,5 @@
 {% extends 'base/main_base.html' %}
+{% load thumbnail %}
 {% load static %}
 {% block content %}
 <!-- <section> begin ============================-->
@@ -38,7 +39,9 @@
         <div class="col-md-6 col-lg-4 h-100 mb-4 d-flex">
             <div class="card-container">
                 <a href="{% url 'news:detail_view' blog.slug %}">
-                    <img class="img-fluid rounded-top" src="{{ blog.thumbnail.url }}" alt="" />
+                    {% thumbnail blog.thumbnail "340x210" crop="center" as im %}
+                    <img class="img-fluid rounded-top" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ blog.slug }}">
+                    {% endthumbnail %}
                 </a>
                 <div class="card-content p-3 border rounded-bottom border-top-0">
                     <h5 class="card-title font-base text-transform-none fw-medium lh-1">

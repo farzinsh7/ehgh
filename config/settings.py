@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'account.apps.AccountConfig',
     'tinymce',
-    
+    'sorl.thumbnail',
     
     # Custom Apps
     'home.apps.HomeConfig',

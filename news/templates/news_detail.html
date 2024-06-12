@@ -1,4 +1,5 @@
 {% extends 'base/main_base.html' %}
+{% load thumbnail %}
 {% load static %}
 {% block content %}
 <!-- ============================================-->
@@ -102,7 +103,12 @@
         </div>
         <h4 class="mt-4 mb-3 fw-normal">Latest Posts</h4>
         {% for blog in latest %}
-        <div class="d-flex mt-3"><a href="{% url "news:detail_view" blog.slug %}"><img class="rounded" src="{{ blog.thumbnail.url }}" width="120" alt="" /></a>
+        <div class="d-flex mt-3">
+          <a href="{% url "news:detail_view" blog.slug %}">
+            {% thumbnail blog.thumbnail "120x74" crop="center" as im %}
+            <img class="rounded" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ blog.slug }}">
+            {% endthumbnail %}
+          </a>
           <div class="flex-1 ms-3">
             <h5 class="lh-sm mt-0 text-transform-none fs-0 mb-1 fw-semi-bold font-base"><a class="text-900" href="{% url "news:detail_view" blog.slug %}">{{ blog.title }}</a></h5>
             <p class="text-600 mb-0">{{ news.publish|date:"d M, Y"  }}</p>
