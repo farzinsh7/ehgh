@@ -1,4 +1,5 @@
 {% extends 'base/main_base.html' %}
+{% load thumbnail %}
 {% load static %}
 {% block content %}
 <section class="text-center overflow-hidden py-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
@@ -48,7 +49,9 @@
             <div class="row g-2 position-relative thumbnail-grid-container" id="selector">
               {% for item in brands %}
               <div class="col-12 col-sm-6 col-lg-4 thumbnail-grid-item" style="margin-bottom: unset; z-index: 10;">
-                <img class="thumbnail-gridder collapsed" src="{{ item.image.url }}" alt="" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse-{{ forloop.counter }}">
+                {% thumbnail item.image "367x207" crop="center" as im %}
+                <img class="thumbnail-gridder collapsed" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ item.slug }}" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse-{{ forloop.counter }}">
+                {% endthumbnail %}
                 <div class="position-absolute start-0">
                   <div class="thumbnail-grid-content collapse" data-bs-parent="#selector" id="collapse-{{ forloop.counter }}" style="">
                     <div class="card card-body border-0 bg-100 m-1 px-4">
@@ -58,7 +61,11 @@
                           <a class="thumbnail-grid-nav prev {% if forloop.first %}disabled{% endif %}" href="#!" data-grid-target="#collapse-{{ forloop.counter|add:-1 }}" data-thumbnail-grid-nav="data-thumbnail-grid-nav"><svg class="svg-inline--fa fa-angle-left fa-w-8" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg></a>
                           <a class="thumbnail-grid-nav next {% if forloop.last %}disabled{% endif %}" href="#!" data-grid-target="#collapse-{{ forloop.counter|add:1 }}" data-thumbnail-grid-nav="data-thumbnail-grid-nav"><svg class="svg-inline--fa fa-angle-right fa-w-8" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg></a></div>
                         <div class="col-7">
-                          <div class="d-none d-lg-block p-0"><img class="w-100 img-fluid rounded" src="{{ item.image.url }}" alt=""></div>
+                          <div class="d-none d-lg-block p-0">
+                            {% thumbnail item.image "596x336" crop="center" as im %}
+                            <img class="w-100 img-fluid rounded" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ item.slug }}">
+                            {% endthumbnail %}
+                          </div>
                         </div>
                         <div class="col-lg-5">
                           <h5 class="ls-1">{{ item.title }}</h5>
