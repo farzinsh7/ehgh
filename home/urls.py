@@ -1,7 +1,9 @@
 from django.urls import path
-from home.views import IndexView
+from . import views
 
 app_name = "page"
 urlpatterns = [
-    path('', IndexView.as_view(), name="home"),
+    path('', views.IndexView.as_view(), name="home"),
+    path('header/', views.SiteHeaderView.as_view(), name="head"),
+    path('footer/', views.SiteFooterView.as_view(), name="footer"),
 ]
