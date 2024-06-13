@@ -14,6 +14,12 @@ class HelpfulLinksAdmin(admin.TabularInline):
     max_num = 10
 
 
+class HelpfulLinks_2Admin(admin.TabularInline):
+    model = models.HelpfulLinks_2
+    extra = 1
+    max_num = 10
+
+
 @admin.register(models.SiteInformation)
 class SiteInformationAdmin(admin.ModelAdmin):
-    inlines = [SocialLinksAdmin, HelpfulLinksAdmin]
+    inlines = [SocialLinksAdmin, HelpfulLinksAdmin, HelpfulLinks_2Admin]

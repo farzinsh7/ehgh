@@ -33,3 +33,12 @@ class HelpfulLinks(models.Model):
 
     def __str__(self):
         return self.title if self.title else "No Title"
+    
+
+class HelpfulLinks_2(models.Model):
+    title = models.CharField(max_length=120, null=True)
+    link = models.CharField(max_length=200,blank=True,null=True)
+    main_data = models.ForeignKey(SiteInformation, null=True, on_delete=models.SET_NULL, related_name='links2')
+
+    def __str__(self):
+        return self.title if self.title else "No Title"
