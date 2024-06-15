@@ -26,6 +26,7 @@ class Slider(models.Model):
 class Brands(models.Model):
     title = models.CharField(max_length=200)
     image = models.ImageField(upload_to='home/brands')
+    link = models.CharField(max_length=300, blank=True, null=True)
     home_data = models.ForeignKey(HomeData, null=True, on_delete=models.SET_NULL, related_name='brands')
 
     def __str__(self):
@@ -35,6 +36,7 @@ class Brands(models.Model):
 class Statistics(models.Model):
     title = models.CharField(max_length=200)
     icon = models.ImageField(upload_to='home/icons')
+    data = models.CharField(max_length=300, blank=True, null=True)
     home_data = models.ForeignKey(HomeData, null=True, on_delete=models.SET_NULL, related_name='statistics')
 
     def __str__(self):
