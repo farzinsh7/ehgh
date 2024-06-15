@@ -4,12 +4,11 @@
     <div class="row">
       <div class="col-lg-4 pe-lg-4 mb-4 mb-lg-0">
         <h5 class="text-white mb-3">Our Mission</h5>
-        <p class="text-700">Our mission is to deliver optimal solutions with quality and services at reasonable prices. For us customer satisfaction is given top place. We are very friendly in our dealings to the customers and it helps us retain existing clients and expand customer circle. We always try to improve the quality of our products by exploring innovative ideas and our service.</p>
+        <p class="text-700">{{ info.mission|truncatewords:40 }}</p>
         <ul class="list-inline mb-0">
-          <li class="list-inline-item me-0"><a class="text-900 hover-color-white pe-2" href="#!"><span class="fab fa-facebook-f"></span></a></li>
-          <li class="list-inline-item me-0"><a class="text-900 hover-color-white px-2" href="#!"><span class="fab fa-twitter"></span></a></li>
-          <li class="list-inline-item me-0"><a class="text-900 hover-color-white px-2" href="#!"><span class="fab fa-linkedin-in"></span></a></li>
-          <li class="list-inline-item me-0"><a class="text-900 hover-color-white px-2" href="#!"><span class="fab fa-google-plus-g"></span></a></li>
+          {% for social in info.socials.all %}
+            <li class="list-inline-item me-0"><a class="text-900 hover-color-white pe-2" href="#!"><span class="{{ social.icon }}"></span></a></li>
+          {% endfor %}
         </ul>
       </div>
       <div class="col-lg-8">
@@ -17,36 +16,27 @@
           <div class="col-6 col-md-3 ps-lg-4 mb-4 mb-lg-0">
             <h5 class="text-white mb-3">Company</h5>
             <ul class="list-unstyled mb-0">
-              <li class="mb-1"><a class="text-700 hover-color-white" href="pages/about.html">Home</a></li>
-              <li class="mb-1"><a class="text-700 hover-color-white" href="pages/contact.html">Houses</a></li>
-              <li class="mb-1"><a class="text-700 hover-color-white" href="pages/contact.html">Talent</a></li>
-              <li class="mb-1"><a class="text-700 hover-color-white" href="pages/blog.html">About</a></li>
-              <li class="mb-1"><a class="text-700 hover-color-white" href="pages/gallery.html">Contact</a></li>
+              {% for item in info.links.all %}
+              <li class="mb-1"><a class="text-700 hover-color-white" href="{{ item.link }}">{{ item.title }}</a></li>
+              {% endfor %}
             </ul>
           </div>
           <div class="col-6 col-md-3 ps-4 mb-4 mb-lg-0">
             <h5 class="text-white mb-3">Product</h5>
             <ul class="list-unstyled mb-0">
-              <li class="mb-1"><a class="text-700 hover-color-white" href="pages/work.html">Work</a></li>
-              <li class="mb-1"><a class="text-700 hover-color-white" href="pages/service.html">Services</a></li>
-              <li class="mb-1"><a class="text-700 hover-color-white" href="pages/pricing.html">Pricing</a></li>
-              <li class="mb-1"><a class="text-700 hover-color-white" href="#">Features</a></li>
-              <li class="mb-1"><a class="text-700 hover-color-white" href="#">Docs</a></li>
-              <li class="mb-1"><a class="text-700 hover-color-white" href="#">Agencies</a></li>
+              {% for item in info.links2.all %}
+              <li class="mb-1"><a class="text-700 hover-color-white" href="{{ item.link }}">{{ item.title }}</a></li>
+              {% endfor %}
             </ul>
           </div>
           <div class="col-md-6 ps-md-4">
             <h5 class="text-white mb-3">FROM THE BLOG</h5>
             <ul class="list-unstyled mb-0">
-              <li class="mb-3"><a class="text-700 hover-color-white" href="pages/single-post.html"> Testing Working Robots at the Canadian Agency.</a>
-                <p class="text-900 hover-color-white mb-0">Jan 15, 2022</p>
+              {% for news in latest %}
+              <li class="mb-3"><a class="text-700 hover-color-white" href="pages/single-post.html">{{ news.title }}</a>
+                <p class="text-900 hover-color-white mb-0">{{ news.publish|date:"d M, Y" }}</p>
               </li>
-              <li class="mb-3"><a class="text-700 hover-color-white" href="pages/single-post.html">How to start your new business with limited budget?</a>
-                <p class="text-900 hover-color-white mb-0">Jan 15, 2022</p>
-              </li>
-              <li class="mb-3"><a class="text-700 hover-color-white" href="pages/single-post.html">Do we need more Javascript Framework?</a>
-                <p class="text-900 hover-color-white mb-0">Jan 15, 2022</p>
-              </li>
+              {% endfor %}
             </ul>
           </div>
         </div>
