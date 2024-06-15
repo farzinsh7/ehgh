@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'tinymce',
     'sorl.thumbnail',
+    'django_render_partial',
     
     # Custom Apps
     'home.apps.HomeConfig',
