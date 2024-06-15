@@ -1,3 +1,4 @@
+{% load render_partial %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
@@ -16,10 +17,10 @@
     <!--    Main Content-->
     <main class="main" id="top">
     {% include "base/shared/preloader.html" %}
-    {% include "base/shared/header.html" %}
+    {% render_partial 'page:head' %}
     {% block content %}{% endblock content %}
     <!--    Footer-->
-    {% include "base/shared/footer.html" %}
+    {% render_partial 'page:footer' %}
     <footer class="footer text-center bg-black py-3 position-absolute w-100 bottom-0">
       <div class="container">
         <div class="row justify-content-between">
