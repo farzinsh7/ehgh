@@ -39,24 +39,11 @@
         </div>
       </div>
       <div class="row g-2 position-relative thumbnail-grid-container" id="selector">
+        {% for brand in home.brands.all %}
         <div class="col-12 col-sm-6 col-lg-4 thumbnail-grid-item">
-          <img class="w-100 rounded" src="{% static 'img/gallery/g1.jpg' %}" alt="">
+          <img class="w-100 rounded" src="{{ brand.image.url }}" alt="{{ brand.title }}">
         </div>  
-        <div class="col-12 col-sm-6 col-lg-4 thumbnail-grid-item">
-          <img class="w-100 rounded" src="{% static 'img/gallery/g2.jpg' %}" alt="">
-        </div>
-        <div class="col-12 col-sm-6 col-lg-4 thumbnail-grid-item">
-          <img class="w-100 rounded" src="{% static 'img/gallery/g3.jpg' %}" alt="">
-        </div>
-        <div class="col-12 col-sm-6 col-lg-4 thumbnail-grid-item">
-          <img class="w-100 rounded" src="{% static 'img/gallery/g4.jpg' %}" alt="">
-        </div>
-        <div class="col-12 col-sm-6 col-lg-4 thumbnail-grid-item">
-          <img class="w-100 rounded" src="{% static 'img/gallery/g5.jpg' %}" alt="">
-        </div>
-        <div class="col-12 col-sm-6 col-lg-4 thumbnail-grid-item">
-          <img class="w-100 rounded" src="{% static 'img/gallery/g6.jpg' %}" alt="">
-        </div>         
+        {% endfor %}  
       </div>
     </div>
     <!-- end of .container-->
@@ -139,12 +126,12 @@
       <div class="row align-items-center">
         <div class="col-md-4 text-md-end">
           <h5 class="ls-2 mb-3">we're creative</h5>
-          <p class="mb-0">We are full-service digital marketing agency<br class="d-none d-xl-block"> in Atlanta, and we’re also one of the top<br class="d-none d-xl-block">graphic design firms because we<br class="d-none d-xl-block"> draw to projects that challenge<br class="d-none d-sm-block"> our creative work.</p>
+          <p class="mb-0">{{ home.about|safe }}</p>
         </div>
-        <div class="col-md-4 px-lg-4 my-4 my-md-0"><img class="rounded w-100 w-sm-75 w-md-100" src="{% static 'img/about-us-5.jpg' %}" alt=""></div>
+        <div class="col-md-4 px-lg-4 my-4 my-md-0"><img class="rounded w-100 w-sm-75 w-md-100" src="{{ home.about_img.url }}" alt="About-EHGH"></div>
         <div class="col-md-4 text-md-start">
           <h5 class="ls-2 mb-3">We're friendly</h5>
-          <p class="mb-0">We’re proud of our work to accomplish and<br class="d-none d-xl-block"> much of the credit goes to our amazing<br class="d-none d-xl-block"> and unique culture which helps us to<br class="d-none d-xl-block"> come together to overcome all of<br class="d-none d-xl-block"> our challanging times.</p>
+          <p class="mb-0">{{ home.about2|safe }}</p>
         </div>
       </div>
     </div>
@@ -153,7 +140,7 @@
   </section>
   
   <section class="py-8 py-md-10 text-center">
-    <div class="bg-holder" style="background-image:url({% static 'img/backgrounds/our-video-bg.jpg' %});background-position: 63% 50%;">
+    <div class="bg-holder" style="background-image:url({{ home.video_banner.url }});background-position: 63% 50%;">
     </div>
     <!--/.bg-holder-->
     <div class="container">
@@ -175,7 +162,7 @@
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
-                      <video src="{% static 'video/shoes.mp4' %}" poster="" controls="" controlslist="noremoteplayback noplaybackrate" class="w-100 video-height rounded-2" __idm_id__="532481"></video>
+                      <video src="{{ home.video.url }}" poster="" controls="" controlslist="noremoteplayback noplaybackrate" class="w-100 video-height rounded-2" __idm_id__="532481"></video>
                     </div>
                   </div>
                 </div>
