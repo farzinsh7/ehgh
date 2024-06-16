@@ -1,7 +1,7 @@
-from django.shortcuts import render
 from django.views.generic import ListView
 from . import models
 from news.models import News
+
 
 class IndexView(ListView):
     model = models.HomeData
