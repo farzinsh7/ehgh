@@ -8,6 +8,7 @@ class HomeData(models.Model):
     about = HTMLField()
     about2 = HTMLField()
     video = models.FileField(upload_to="home/video", blank=True,null=True)
+    video_banner = models.ImageField(upload_to='home/banner', null=True)
 
     def __str__(self):
         return self.title
