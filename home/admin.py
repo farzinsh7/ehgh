@@ -26,12 +26,6 @@ class SiteInformationAdmin(admin.ModelAdmin):
     
 
 
-class SliderAdmin(admin.TabularInline):
-    model = models.Slider
-    extra = 1
-    max_num = 3
-
-
 class BrandsAdmin(admin.TabularInline):
     model = models.Brands
     extra = 1
@@ -47,4 +41,4 @@ class StatisticsAdmin(admin.TabularInline):
 
 @admin.register(models.HomeData)
 class SiteInformationAdmin(admin.ModelAdmin):
-    inlines = [SliderAdmin, BrandsAdmin, StatisticsAdmin]
+    inlines = [BrandsAdmin, StatisticsAdmin]

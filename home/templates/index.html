@@ -11,10 +11,10 @@
         <div class="header-overlay"></div>
         <div class="header-text">
           <div class="overflow-hidden">
-            <h1 class="display-3 text-white fs-5 fs-md-7" data-zanim-xs='{"duration":2,"delay":0}'>To begin begin</h1>
+            <h1 class="display-3 text-white fs-5 fs-md-7" data-zanim-xs='{"duration":2,"delay":0}'>{{ home.title }}</h1>
           </div>
           <div class="overflow-hidden">
-            <p class="text-uppercase text-400 ls-3 mt-2" data-zanim-xs='{"duration":2,"delay":0.1}'> that's how our life <br class="d-block d-md-none"> rolls everyday</p>
+            <p class="text-uppercase text-400 ls-3 mt-2" data-zanim-xs='{"duration":2,"delay":0.1}'>{{ home.description }}</p>
           </div>
         </div>
       </div>
@@ -51,7 +51,7 @@
   </section>
   <!--/end our brands-->
   <section class="py-7 text-center" data-zanim-timeline="{}">
-    <div class="bg-holder overlay" style="background-image:url({% static 'img/backgrounds/fun-fact.jpg' %});">
+    <div class="bg-holder overlay" style="background-image:url({{ home.statistics_banner.url }});">
     </div>
     <!--/.bg-holder-->
 
@@ -72,33 +72,17 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="row">
+            {% for item in home.statistics.all %}
             <div class="col-md-4 mb-4 mb-lg-0">
-              <div class="overflow-hidden"><img class="fun-fact-icon mb-2" src="{% static 'img/line-icons/icons/download.svg' %}" alt=""></div>
+              <div class="overflow-hidden"><img class="mb-2" src="{{ item.icon.url }}" alt="" ></div>
               <div class="overflow-hidden">
-                <h3 class="text-white font-base fw-normal mb-1" data-countup="{&quot;endValue&quot;:105}">105</h3>
+                <h3 class="text-white font-base fw-normal mb-1" data-countup="{&quot;endValue&quot;:{{ item.data }}}">{{ item.data }}</h3>
               </div>
               <div class="overflow-hidden">
-                <p class="text-uppercase text-white fw-semi-bold ls-2 mb-0">LEGACY HOUSES</p>
-              </div>
-            </div>
-            <div class="col-md-4 mb-4 mb-lg-0">
-              <div class="overflow-hidden"><img class="fun-fact-icon mb-2" src="{% static 'img/line-icons/icons/clock.svg' %}" alt=""></div>
-              <div class="overflow-hidden">
-                <h3 class="text-white font-base fw-normal mb-1" data-countup="{&quot;endValue&quot;:45}">45</h3>
-              </div>
-              <div class="overflow-hidden">
-                <p class="text-uppercase text-white fw-semi-bold ls-2 mb-0">HOUSES</p>
+                <p class="text-uppercase text-white fw-semi-bold ls-2 mb-0">{{ item.title }}</p>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="overflow-hidden"><img class="fun-fact-icon mb-2" src="{% static 'img/line-icons/icons/battery.svg' %}" alt=""></div>
-              <div class="overflow-hidden">
-                <h3 class="text-white font-base fw-normal mb-1" data-countup="{&quot;endValue&quot;:23}">23</h3>
-              </div>
-              <div class="overflow-hidden">
-                <p class="text-uppercase text-white fw-semi-bold ls-2 mb-0">BRANDS YOUNGER THAN 5 YEARS</p>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>
