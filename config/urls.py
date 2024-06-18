@@ -24,6 +24,7 @@ urlpatterns = [
     path('',include('home.urls')),
     path('',include('brands.urls')),
     path('',include('news.urls')),
+    path('',include('about.urls')),
 ]
 
 if settings.DEBUG:
