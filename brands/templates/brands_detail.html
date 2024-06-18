@@ -93,20 +93,20 @@
         <div class="row">
             <div class="col-12">
                 <hr class="mt-5 mb-4" />
-                <h4 class="fw-normal mb-3">Latest Brands</h4>
+                <h4 class="fw-normal mb-3">Latest News</h4>
             </div>
             <div class="swiper theme-slider" data-swiper='{"spaceBetween":30,"loop":true,"slidesPerView":1,"breakpoints":{"670":{"slidesPerView":2},"1200":{"slidesPerView":3}}}'>
                 <div class="swiper-wrapper">
                     {% for item in latest %}
                         <div class="swiper-slide">
                             <div class="h-100 mb-4">
-                                <a href="{% url "brands:detail_view" item.slug %}">
-                                    {% thumbnail item.image "347x195" crop="center" as im %}
+                                <a href="{% url "news:detail_view" item.slug %}">
+                                    {% thumbnail item.thumbnail "347x195" crop="center" as im %}
                                     <img class="img-fluid rounded-top" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ item.slug }}">
                                     {% endthumbnail %}
                                 </a>
                                 <div class="p-3 border rounded-bottom border-top-0">
-                                    <h5 class="font-base text-transform-none fw-medium lh-1"><a class="text-black" href="pages/single-post.html">{{ item.title }}</a></h5>
+                                    <h5 class="font-base text-transform-none fw-medium lh-1"><a class="text-black" href="{% url "news:detail_view" item.slug %}">{{ item.title }}</a></h5>
                                 </div>
                             </div>
                         </div>
