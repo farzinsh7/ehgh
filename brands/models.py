@@ -37,6 +37,7 @@ class Brands(models.Model):
     line = models.ManyToManyField(Line, related_name='brands')
     website = models.CharField(max_length=300,blank=True,null=True)
     address = models.CharField(max_length=500,blank=True,null=True)
+    thumbnail = models.ImageField(upload_to='brands/thumbnail', null=True)
     image = models.ImageField(upload_to='brands')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

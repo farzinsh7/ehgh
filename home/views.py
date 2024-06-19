@@ -1,6 +1,7 @@
 from django.views.generic import ListView
 from . import models
 from news.models import News
+from brands.models import Brands
 
 
 class IndexView(ListView):
@@ -12,6 +13,7 @@ class IndexView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['news'] = News.objects.filter(status='p').order_by('-publish')[:3]
+        context['brands'] = Brands.objects.filter(status='p')
         return context
 
 

@@ -17,16 +17,6 @@ class HomeData(models.Model):
         return self.title
 
 
-class Brands(models.Model):
-    title = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='home/brands')
-    link = models.CharField(max_length=300, blank=True, null=True)
-    home_data = models.ForeignKey(HomeData, null=True, on_delete=models.SET_NULL, related_name='brands')
-
-    def __str__(self):
-        return self.title
-
-
 class Statistics(models.Model):
     title = models.CharField(max_length=200)
     icon = models.ImageField(upload_to='home/icons', blank=True, null=True)

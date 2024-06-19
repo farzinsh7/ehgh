@@ -40,9 +40,9 @@
         </div>
       </div>
       <div class="row g-2 position-relative thumbnail-grid-container" id="selector">
-        {% for brand in home.brands.all %}
+        {% for brand in brands %}
         <div class="col-12 col-sm-6 col-lg-4 thumbnail-grid-item">
-          {% thumbnail brand.image "360x202" crop="center" as im %}
+          {% thumbnail brand.thumbnail "360x202" crop="center" as im %}
           <img class="w-100 rounded" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ brand.title }}">
           {% endthumbnail %}
         </div>  
