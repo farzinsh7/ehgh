@@ -51,7 +51,7 @@ class Brands(models.Model):
 
     def thumbnail_tag(self):
         return format_html(
-            "<img width=100 height=75 style='border-radius: 5px;' src='{}'>".format(self.image.url))
+            "<img width=100 height=75 style='border-radius: 5px;' src='{}'>".format(self.thumbnail.url))
         
 
 class Slider(models.Model):
