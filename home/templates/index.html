@@ -43,7 +43,7 @@
         {% for brand in brands %}
         <div class="col-12 col-sm-6 col-lg-4 thumbnail-grid-item">
           {% thumbnail brand.thumbnail "360x202" crop="center" as im %}
-          <img class="w-100 rounded" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ brand.title }}">
+          <img class="w-100 rounded img-fluid" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ brand.title }}">
           {% endthumbnail %}
         </div>  
         {% endfor %}  
@@ -117,7 +117,7 @@
         </div>
         <div class="col-md-4 px-lg-4 my-4 my-md-0">
           {% thumbnail home.about_img "300x285" crop="center" as im %}
-          <img class="rounded w-100 w-sm-75 w-md-100" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="About-EHGH">
+          <img class="rounded img-fluid w-100 w-sm-75 w-md-100" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="About-EHGH">
           {% endthumbnail %}
         </div>
         <div class="col-md-4 text-md-start">

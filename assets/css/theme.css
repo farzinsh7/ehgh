@@ -4824,7 +4824,6 @@ textarea.form-control-lg {
 .navbar-brand {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  margin-right: 1rem;
   font-size: calc(1.255rem + 0.06vw);
   white-space: nowrap;
 }

@@ -50,7 +50,7 @@
               {% for item in brands %}
               <div class="col-12 col-sm-6 col-lg-4 thumbnail-grid-item" style="margin-bottom: unset; z-index: 10;">
                 {% thumbnail item.thumbnail "367x207" crop="center" as im %}
-                <img class="thumbnail-gridder collapsed" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ item.slug }}" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse-{{ forloop.counter }}">
+                <img class="thumbnail-gridder img-fluid collapsed" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ item.slug }}" data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse-{{ forloop.counter }}">
                 {% endthumbnail %}
                 <div class="position-absolute start-0">
                   <div class="thumbnail-grid-content collapse" data-bs-parent="#selector" id="collapse-{{ forloop.counter }}" style="">
