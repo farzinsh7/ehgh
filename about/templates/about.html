@@ -2,134 +2,134 @@
 {% load thumbnail %}
 {% load static %}
 {% block content %}
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-        <section class="text-center overflow-hidden py-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-            <div class="bg-holder overlay  parallax" style="background-image:url({% static 'img/header-9.jpg' %});">
+<!-- ============================================-->
+<!-- <section> begin ============================-->
+<section class="text-center overflow-hidden py-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+  <div class="bg-holder overlay  parallax" style="background-image:url({% static 'img/header-9.jpg' %});">
+  </div>
+  <!--/.bg-holder-->
+  <div class="container-fluid">
+    <div class="header-overlay"></div>
+    <div class="position-relative pt-10 pb-8">
+      <div class="header-text">
+        <div class="overflow-hidden">
+          <h1 class="display-3 fs-7 text-white fw-lighter ls-2" data-zanim-xs='{"duration":2,"delay":0}'>{{ about.title }}</h1>
+        </div>
+        <div class="overflow-hidden">
+          <div class="d-flex justify-content-center" data-zanim-xs='{"duration":2,"delay":0.1}'>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb text-uppercase ls-2">
+                <li class="breadcrumb-item"><a class="text-400 hover-color-white" href="{% url "page:home" %}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ about.title }}</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of .container-->
+</section>
+<!-- <section> close ============================-->
+<!-- <section> begin ============================-->
+<section class="pt-3 pt-lg-5 pb-6 pb-lg-8 text-center" style="scroll-margin-top:-25px">
+  <div class="container">
+    <div class="row align-items-center">
+        <h3 class="ls-2 mb-3">we're creative</h3>
+        {{ about.description|safe }}
+    </div>
+  </div>
+  <!-- end of .container-->
+</section>
+<!-- <section> close ============================-->
+<!-- <section> close ============================-->
+<section class="text-center pt-0">
+  <div class="container">
+      <div class="row">
+      <div class="col-sm-6 col-lg-4 mb-3" data-zanim-timeline="{}">
+          <div class="overflow-hidden">
+          <div class="service-item p-3 p-md-4 h-100">
+              <div class="overflow-hidden">
+              <div class="px-4" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:&quot;0&quot;}" style="transform: translate(0px, 0px); opacity: 1;">
+                  <img class="service-icon" src="{% static 'img/line-icons/fountain-pen.svg' %}" alt="">
+              </div>
+              </div>
+              <div class="overflow-hidden">
+              <h5 class="fw-normal ls-3 mb-2" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:&quot;0.1&quot;}" style="transform: translate(0px, 0px); opacity: 1;">Mission</h5>
+              </div>
+              <div class="overflow-hidden">
+              <p class="fw-normal" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:&quot;0.2&quot;}" style="transform: translate(0px, 0px); opacity: 1;">{{ data.mission|truncatewords:50 }}</p>
+              </div>
+          </div>
+          </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-3" data-zanim-timeline="{}">
+          <div class="overflow-hidden">
+          <div class="service-item p-3 p-md-4 h-100">
+              <div class="overflow-hidden">
+              <div class="px-4" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:&quot;0.2&quot;}" style="transform: translate(0px, 0px); opacity: 1;"><img class="service-icon" src="{% static 'img/line-icons/pear.svg' %}" alt=""></div>
+              </div>
+              <div class="overflow-hidden">
+              <h5 class="fw-normal ls-3 mb-2" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:&quot;0.30000000000000004&quot;}" style="transform: translate(0px, 0px); opacity: 1;">Vision</h5>
+              </div>
+              <div class="overflow-hidden">
+              <p class="fw-normal" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:&quot;0.4&quot;}" style="transform: translate(0px, 0px); opacity: 1;">{{ data.vision|truncatewords:50 }}</p>
+              </div>
+          </div>
+          </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-3" data-zanim-timeline="{}">
+          <div class="overflow-hidden">
+          <div class="service-item p-3 p-md-4 h-100">
+              <div class="overflow-hidden">
+              <div class="px-4" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:&quot;0.3&quot;}" style="transform: translate(0px, 0px); opacity: 1;"><img class="service-icon" src="{% static 'img/line-icons/export.svg' %}" alt=""></div>
+              </div>
+              <div class="overflow-hidden">
+              <h5 class="fw-normal ls-3 mb-2" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:&quot;0.4&quot;}" style="transform: translate(0px, 0px); opacity: 1;">Value</h5>
+              </div>
+              <div class="overflow-hidden">
+              <p class="fw-normal" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:&quot;0.5&quot;}" style="transform: translate(0px, 0px); opacity: 1;">{{ data.value|truncatewords:50 }}</p>
+              </div>
+          </div>
+          </div>
+      </div>
+      </div>
+  </div>
+  <!-- end of .container-->
+</section>
+<!-- <section> begin ============================-->
+<!-- <section> begin ============================-->
+<section class="text-center pt-0" id="team">
+  <div class="container">
+    <div class="row">
+      <div class="col mb-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+        <div class="overflow-hidden">
+          <h2 class="fs-md-5" data-zanim-xs='{"delay":0}'>meet the team</h2>
+        </div>
+        <div class="overflow-hidden">
+          <p class="fs--1 text-uppercase text-black ls-1 mb-0" data-zanim-xs='{"delay":0.1}'>meet the reign team</p>
+        </div>
+        <div class="overflow-hidden">
+          <hr class="hr-short bg-black" data-zanim-xs='{"delay":0.2}' />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="row">
+          {% for member in about.members.all %}
+          <div class="col-6 col-md-3 col-lg-3 px-2 team-item mb-4">
+              <div class="hoverbox w-75 rounded-circle overflow-hidden mx-auto">
+                  <img class="img-fluid" src="{{ member.image.url }}" alt="{{ member.name }}" />
+              </div>
+              <h6 class="fw-bold mt-2 mb-1"><a class="text-black" href="#!">{{ member.name|title }}</a></h6>
+              <h6 class="ls-1">{{ member.position|title }}</h6>
             </div>
-            <!--/.bg-holder-->
-            <div class="container-fluid">
-              <div class="header-overlay"></div>
-              <div class="position-relative pt-10 pb-8">
-                <div class="header-text">
-                  <div class="overflow-hidden">
-                    <h1 class="display-3 fs-7 text-white fw-lighter ls-2" data-zanim-xs='{"duration":2,"delay":0}'>{{ about.title }}</h1>
-                  </div>
-                  <div class="overflow-hidden">
-                    <div class="d-flex justify-content-center" data-zanim-xs='{"duration":2,"delay":0.1}'>
-                      <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb text-uppercase ls-2">
-                          <li class="breadcrumb-item"><a class="text-400 hover-color-white" href="{% url "page:home" %}">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">{{ about.title }}</li>
-                        </ol>
-                      </nav>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- end of .container-->
-          </section>
-          <!-- <section> close ============================-->
-          <!-- <section> begin ============================-->
-            <section class="pt-3 pt-lg-5 pb-6 pb-lg-8 text-center" style="scroll-margin-top:-25px">
-              <div class="container">
-                <div class="row align-items-center">
-                    <h3 class="ls-2 mb-3">we're creative</h3>
-                    {{ about.description|safe }}
-                </div>
-              </div>
-              <!-- end of .container-->
-            </section>
-          <!-- <section> close ============================-->
-           <!-- <section> close ============================-->
-            <section class="text-center pt-0">
-                <div class="container">
-                    <div class="row">
-                    <div class="col-sm-6 col-lg-4 mb-3" data-zanim-timeline="{}">
-                        <div class="overflow-hidden">
-                        <div class="service-item p-3 p-md-4 h-100">
-                            <div class="overflow-hidden">
-                            <div class="px-4" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:&quot;0&quot;}" style="transform: translate(0px, 0px); opacity: 1;">
-                                <img class="service-icon" src="{% static 'img/line-icons/fountain-pen.svg' %}" alt="">
-                            </div>
-                            </div>
-                            <div class="overflow-hidden">
-                            <h5 class="fw-normal ls-3 mb-2" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:&quot;0.1&quot;}" style="transform: translate(0px, 0px); opacity: 1;">Mission</h5>
-                            </div>
-                            <div class="overflow-hidden">
-                            <p class="fw-normal" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:&quot;0.2&quot;}" style="transform: translate(0px, 0px); opacity: 1;">{{ data.mission|truncatewords:50 }}</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 mb-3" data-zanim-timeline="{}">
-                        <div class="overflow-hidden">
-                        <div class="service-item p-3 p-md-4 h-100">
-                            <div class="overflow-hidden">
-                            <div class="px-4" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:&quot;0.2&quot;}" style="transform: translate(0px, 0px); opacity: 1;"><img class="service-icon" src="{% static 'img/line-icons/pear.svg' %}" alt=""></div>
-                            </div>
-                            <div class="overflow-hidden">
-                            <h5 class="fw-normal ls-3 mb-2" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:&quot;0.30000000000000004&quot;}" style="transform: translate(0px, 0px); opacity: 1;">Vision</h5>
-                            </div>
-                            <div class="overflow-hidden">
-                            <p class="fw-normal" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:&quot;0.4&quot;}" style="transform: translate(0px, 0px); opacity: 1;">{{ data.vision|truncatewords:50 }}</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 mb-3" data-zanim-timeline="{}">
-                        <div class="overflow-hidden">
-                        <div class="service-item p-3 p-md-4 h-100">
-                            <div class="overflow-hidden">
-                            <div class="px-4" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:&quot;0.3&quot;}" style="transform: translate(0px, 0px); opacity: 1;"><img class="service-icon" src="{% static 'img/line-icons/export.svg' %}" alt=""></div>
-                            </div>
-                            <div class="overflow-hidden">
-                            <h5 class="fw-normal ls-3 mb-2" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:&quot;0.4&quot;}" style="transform: translate(0px, 0px); opacity: 1;">Value</h5>
-                            </div>
-                            <div class="overflow-hidden">
-                            <p class="fw-normal" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:&quot;0.5&quot;}" style="transform: translate(0px, 0px); opacity: 1;">{{ data.value|truncatewords:50 }}</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <!-- end of .container-->
-                </section>
-            <!-- <section> begin ============================-->
-          <!-- <section> begin ============================-->
-          <section class="text-center pt-0" id="team">
-            <div class="container">
-              <div class="row">
-                <div class="col mb-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                  <div class="overflow-hidden">
-                    <h2 class="fs-md-5" data-zanim-xs='{"delay":0}'>meet the team</h2>
-                  </div>
-                  <div class="overflow-hidden">
-                    <p class="fs--1 text-uppercase text-black ls-1 mb-0" data-zanim-xs='{"delay":0.1}'>meet the reign team</p>
-                  </div>
-                  <div class="overflow-hidden">
-                    <hr class="hr-short bg-black" data-zanim-xs='{"delay":0.2}' />
-                  </div>
-                </div>
-              </div>
-              <div class="row justify-content-center">
-                <div class="col-lg-10">
-                  <div class="row">
-                    {% for member in about.members.all %}
-                    <div class="col-6 col-md-3 col-lg-3 px-2 team-item mb-4">
-                        <div class="hoverbox w-75 rounded-circle overflow-hidden mx-auto">
-                            <img class="img-fluid" src="{{ member.image.url }}" alt="{{ member.name }}" />
-                        </div>
-                        <h6 class="fw-bold mt-2 mb-1"><a class="text-black" href="#!">{{ member.name|title }}</a></h6>
-                        <h6 class="ls-1">{{ member.position|title }}</h6>
-                      </div>
-                    {% endfor %}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- end of .container-->
-          </section>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of .container-->
+</section>
 {% endblock content %}
