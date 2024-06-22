@@ -39,7 +39,7 @@
             <div class="card-container">
                 <a href="{% url 'news:detail_view' blog.slug %}">
                     {% thumbnail blog.thumbnail "340x210" crop="center" as im %}
-                    <img class="img-fluid rounded-top" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ blog.slug }}">
+                    <img class="img-fluid w-100 rounded-top" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ blog.slug }}">
                     {% endthumbnail %}
                 </a>
                 <div class="card-content p-3 border rounded-bottom border-top-0">
