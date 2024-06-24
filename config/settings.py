@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'brands.apps.BrandsConfig',
     'news.apps.NewsConfig',
     'about.apps.AboutConfig',
+    'contact.apps.ContactConfig',
 ]
 
 MIDDLEWARE = [
