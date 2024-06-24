@@ -5,7 +5,7 @@ from . import models
 class ContactFormClass(forms.ModelForm):
     class Meta:
         model = models.ContactForm
-        fields = ('name', 'email', 'message', 'captcha')
+        fields = ('name', 'email', 'message')
         widgets = {
         'name': forms.TextInput(attrs={'id': 'name', 'placeholder':'Name', 'type':'text'}),
         'email': forms.EmailInput(attrs={'id': 'email', 'placeholder':'Email', 'type':'email'}),
