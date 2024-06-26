@@ -61,25 +61,22 @@
                 </div>
             </div>
             </div>
-            <div class="googlemap rounded data-map mt-4" data-latlng="48.8583701,2.2922873,17" data-scrollwheel="false" data-icon="../assets/img/map-marker.png" data-zoom="17" data-theme="Default" style="min-height: 14.63rem;">
-                <div class="marker-content py-3">
-                    <h5>Eiffel Tower</h5>
-                    <p>Gustave Eiffel's iconic, wrought-iron 1889 tower,<br /> with steps and elevators to observation decks.</p>
-                </div>
+            <div class="mt-4" >
+                {{ contact.iframe|safe }}
             </div>
         </div>
         <div class="col-lg-6">
             <h5 class="mb-3">Feel free to drop us a line!</h5>
-            <form class="zform text-left" method="post">
-            <input type="hidden" name="to" value="username@domain.extension" />
+            <form class="zform text-left" action="#" method="post">
+            {% csrf_token %}
             <div class="form-group mb-3">
-                <input class="fs-0 form-control" type="text" placeholder="Your Name" required="required" />
+                {{ form.name }}
             </div>
             <div class="form-group mb-3">
-                <input class="fs-0 form-control" type="email" placeholder="Email Address" required="required" />
+                {{ form.email }}
             </div>
             <div class="form-group mb-3">
-                <textarea class="fs-0 form-control contact-message" rows="8" placeholder="Type your message here" required="required"></textarea>
+                {{ form.message }}
             </div>
             <div class="zform-feedback d-grid">
                 <button class="btn btn-dark hvr-sweep-top" type="submit">Give us a shot</button>
