@@ -5,7 +5,7 @@
 <!-- ============================================-->
 <!-- <section> begin ============================-->
 <section class="text-center overflow-hidden py-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-    <div class="bg-holder overlay  parallax" style="background-image:url({% static 'img/header-9.jpg' %});">
+    <div class="bg-holder overlay  parallax" style="background-image:url({{ contact.image.url }});">
     </div>
     <!--/.bg-holder-->
     <div class="container-fluid">
@@ -13,14 +13,14 @@
         <div class="position-relative pt-10 pb-8">
         <div class="header-text">
             <div class="overflow-hidden">
-            <h1 class="display-3 fs-7 text-white fw-lighter ls-2" data-zanim-xs='{"duration":2,"delay":0}'>Contact Us</h1>
+            <h1 class="display-3 fs-7 text-white fw-lighter ls-2" data-zanim-xs='{"duration":2,"delay":0}'>{{ contact.title }}</h1>
             </div>
             <div class="overflow-hidden">
             <div class="d-flex justify-content-center" data-zanim-xs='{"duration":2,"delay":0.1}'>
                 <nav aria-label="breadcrumb">
                 <ol class="breadcrumb text-uppercase ls-2">
-                    <li class="breadcrumb-item"><a class="text-400 hover-color-white" href="../homes/header-static.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                    <li class="breadcrumb-item"><a class="text-400 hover-color-white" href="{% url "page:home" %}">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ contact.title }}</li>
                 </ol>
                 </nav>
             </div>
@@ -45,27 +45,27 @@
                 <div class="row">
                 <div class="col-1"><span class="fas fa-location-arrow text-700"></span></div>
                 <div class="col px-2">
-                    <p class="mb-1 text-700"><strong>Reign Studio</strong></p>
-                    <p class="mb-0 text-600">590, Castro St,<br />United States</p>
+                    <p class="mb-1 text-700"><strong>EHGH Company</strong></p>
+                    <p class="mb-0 text-600">{{ contact.address }}</p>
                 </div>
                 </div>
             </div>
             <div class="col-auto" style="width: 205px">
                 <div class="row mb-2 mb-sm-1">
                 <div class="col-1"><span class="fas fa-phone me-2 text-700"> </span></div>
-                <div class="col px-2"><a class="text-600" href="tel:526853300">526 853 300 </a><br /><a class="text-600" href="tel:526853300">478 484 500 </a></div>
+                <div class="col px-2"><a class="text-600" href="tel:526853300">{{ contact.phone }}</a></div>
                 </div>
                 <div class="row">
                 <div class="col-1"><span class="fas fa-envelope me-2 text-700"></span></div>
-                <div class="col px-2"><a class="text-600" href="mailto:contact@reign.com">contact@reign.com</a></div>
+                <div class="col px-2"><a class="text-600" href="mailto:{{ contact.email }}">{{ contact.email }}</a></div>
                 </div>
             </div>
             </div>
             <div class="googlemap rounded data-map mt-4" data-latlng="48.8583701,2.2922873,17" data-scrollwheel="false" data-icon="../assets/img/map-marker.png" data-zoom="17" data-theme="Default" style="min-height: 14.63rem;">
-            <div class="marker-content py-3">
-                <h5>Eiffel Tower</h5>
-                <p>Gustave Eiffel's iconic, wrought-iron 1889 tower,<br /> with steps and elevators to observation decks.</p>
-            </div>
+                <div class="marker-content py-3">
+                    <h5>Eiffel Tower</h5>
+                    <p>Gustave Eiffel's iconic, wrought-iron 1889 tower,<br /> with steps and elevators to observation decks.</p>
+                </div>
             </div>
         </div>
         <div class="col-lg-6">
