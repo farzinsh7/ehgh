@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'brands.apps.BrandsConfig',
     'news.apps.NewsConfig',
     'about.apps.AboutConfig',
+    'faq.apps.FaqConfig',
     'contact.apps.ContactConfig',
 ]
 

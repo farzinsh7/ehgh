@@ -1,0 +1,61 @@
+{% extends 'base/main_base.html' %}
+{% load thumbnail %}
+{% load static %}
+{% block content %}
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+        <section class="text-center overflow-hidden py-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+            <div class="bg-holder overlay  parallax" style="background-image:url({% static 'img/header-9.jpg' %});">
+            </div>
+            <!--/.bg-holder-->
+            <div class="container-fluid">
+              <div class="header-overlay"></div>
+              <div class="position-relative pt-10 pb-8">
+                <div class="header-text">
+                  <div class="overflow-hidden">
+                    <h1 class="display-3 fs-7 text-white fw-lighter ls-2" data-zanim-xs='{"duration":2,"delay":0}'>FAQ</h1>
+                  </div>
+                  <div class="overflow-hidden">
+                    <div class="d-flex justify-content-center" data-zanim-xs='{"duration":2,"delay":0.1}'>
+                      <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb text-uppercase ls-2">
+                          <li class="breadcrumb-item"><a class="text-400 hover-color-white" href="../homes/header-static.html">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">FAQ</li>
+                        </ol>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of .container-->
+          </section>
+          <!-- <section> close ============================-->
+          <!-- <section> begin ============================-->
+          <section>
+            <div class="container">
+              {% for ask in faq %}
+              <div class="row justify-content-center" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                <div class="col-lg-7">
+                  <div data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                    <div class="overflow-hidden">
+                      <h6 class="text-transform-none fs-0 fw-bold" data-zanim-xs='{"duration":1.5,"delay":0}'>{{ ask.question }}</h6>
+                    </div>
+                    <div class="overflow-hidden">
+                      <p class="mb-0" data-zanim-xs='{"duration":1.5,"delay":0.1}'>{{ ask.answer }}</p>
+                    </div>
+                    {% if forloop.last %}{% else %}
+                        <div class="overflow-hidden">
+                            <hr class="my-3 text-200" data-zanim-xs='{"duration":1.5,"delay":0.2}' />
+                        </div>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            <!-- end of .container-->
+          </section>
+          <!-- <section> close ============================-->
+          <!-- ============================================-->
+{% endblock content %}

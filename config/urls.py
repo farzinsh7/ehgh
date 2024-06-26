@@ -26,6 +26,7 @@ urlpatterns = [
     path('',include('news.urls')),
     path('',include('about.urls')),
     path('',include('contact.urls')),
+    path('',include('faq.urls')),
 ]
 
 if settings.DEBUG:
