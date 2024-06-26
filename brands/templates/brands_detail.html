@@ -98,14 +98,19 @@
                 <div class="swiper-wrapper">
                     {% for item in latest %}
                         <div class="swiper-slide">
-                            <div class="h-100 mb-4">
-                                <a href="{% url "news:detail_view" item.slug %}">
+                            <div class="card text-white" style="max-width: 30rem;">
+                                <div class="card-img overflow-hidden">
+                                    <div class="bg-holder overlay" data-rellax-percentage="0.5">
+                                    </div>
                                     {% thumbnail item.thumbnail "347x195" crop="center" as im %}
-                                    <img class="img-fluid w-100 rounded-top" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ item.slug }}">
+                                    <img class="img-fluid w-100" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ item.slug }}">
                                     {% endthumbnail %}
-                                </a>
-                                <div class="p-3 border rounded-bottom border-top-0">
-                                    <h5 class="font-base text-transform-none fw-medium lh-1"><a class="text-black" href="{% url "news:detail_view" item.slug %}">{{ item.title|truncatechars:20 }}</a></h5>
+                                </div>
+                                <div class="card-img-overlay d-flex align-items-end">
+                                  <div>
+                                    <h5 class="card-title text-white">{{ item.title|truncatechars:20 }}</h5>
+                                    <p class="card-text">{{ item.description|safe|truncatechars:60 }}</p>
+                                  </div>
                                 </div>
                             </div>
                         </div>
