@@ -34,5 +34,5 @@ class StatisticsAdmin(admin.TabularInline):
 
 
 @admin.register(models.HomeData)
-class SiteInformationAdmin(admin.ModelAdmin):
+class HomeAdmin(admin.ModelAdmin):
     inlines = [StatisticsAdmin]
