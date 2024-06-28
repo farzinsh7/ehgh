@@ -3,7 +3,7 @@ from tinymce.models import HTMLField
 
 
 # Create your models here.
-class Brands(models.Model):
+class Houses(models.Model):
     title = models.CharField(max_length=300)
     slug = models.SlugField(max_length=200, unique=True)
     image = models.ImageField(upload_to='houses')
