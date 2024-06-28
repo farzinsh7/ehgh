@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     'django_render_partial',
     
+    
     # Custom Apps
     'home.apps.HomeConfig',
     'brands.apps.BrandsConfig',
@@ -50,6 +51,7 @@ INSTALLED_APPS = [
     'about.apps.AboutConfig',
     'faq.apps.FaqConfig',
     'contact.apps.ContactConfig',
+    'houses.apps.HousesConfig',
 ]
 
 MIDDLEWARE = [
