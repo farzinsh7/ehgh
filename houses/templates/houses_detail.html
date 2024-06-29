@@ -2,5 +2,69 @@
 {% load thumbnail %}
 {% load static %}
 {% block content %}
+<!-- ============================================-->
+<!-- <section> begin ============================-->
+<section class="text-center overflow-hidden py-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+    <div class="bg-holder overlay  parallax" style="background-image:url({% static 'img/header-9.jpg' %});">
+    </div>
+    <!--/.bg-holder-->
+    <div class="container-fluid">
+        <div class="header-overlay"></div>
+        <div class="position-relative pt-10 pb-8">
+        <div class="header-text">
+            <div class="overflow-hidden">
+            <h1 class="display-3 fs-7 text-white fw-lighter ls-2" data-zanim-xs='{"duration":2,"delay":0}'>{{ house.title }}</h1>
+            </div>
+            <div class="overflow-hidden">
+            <div class="d-flex justify-content-center" data-zanim-xs='{"duration":2,"delay":0.1}'>
+                <nav aria-label="breadcrumb">
+                <ol class="breadcrumb text-uppercase ls-2">
+                    <li class="breadcrumb-item"><a class="text-400 hover-color-white" href="{% url "page:home" %}">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-400 hover-color-white" href="{% url "houses:list_view" %}">Houses</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ house.title }}</li>
+                </ol>
+                </nav>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- end of .container-->
+</section>
+<!-- <section> close ============================-->
 
+<!-- <section> begin ============================-->
+<section>
+<div class="container">
+    <div class="row">
+        <div class="col-lg pe-lg-5 mb-4 mb-lg-0 position-relative">
+            {% thumbnail house.image "1060x700" crop="center" as im %}
+            <img class="img-fluid mb-4" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ house.title }}">
+            {% endthumbnail %}
+        <h4 class="fw-normal font-base">{{ house.title }}</h4>
+        {{ house.description|safe }}
+    </div>
+    </div>
+    {% if brands %}
+    <div class="row">
+        <div class="col-12">
+            <hr class="mt-5 mb-4" />
+            <h4 class="fw-normal mb-3">Sub Brands</h4>
+        </div>
+        {% for brand in brands %}
+        <div class="col-12 col-sm-6 col-lg-4 thumbnail-grid-item">
+            <a href="{% url "brands:detail_view" brand.slug %}">
+            {% thumbnail brand.thumbnail "360x202" crop="center" as im %}
+            <img class="w-100 rounded img-fluid" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ brand.title }}">
+            {% endthumbnail %}
+            </a>
+        </div>  
+        {% endfor %}
+    </div>
+    {% endif %}  
+</div>
+<!-- end of .container-->
+</section>
+<!-- <section> close ============================-->
+<!-- ============================================-->
 {% endblock content %}
