@@ -8,6 +8,7 @@ class Houses(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     position = models.IntegerField(null=True)
     image = models.ImageField(upload_to='houses')
+    banner = models.ImageField(upload_to="houses/banner", null=True)
     description = HTMLField()
     keywords = models.CharField(max_length=300, null=True)
     seo_description = models.TextField(null=True)
