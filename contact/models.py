@@ -12,7 +12,7 @@ class ContactForm(models.Model):
 
 class ContactUS(models.Model):
     title = models.CharField(max_length=200)
-    image = models.ImageField(upload_to="contact", null=True)
+    banner = models.ImageField(upload_to="contact/banner", null=True)
     address = models.CharField(max_length=200)
     email = models.EmailField(null=True)
     phone = models.CharField(max_length=200)

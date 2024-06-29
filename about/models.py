@@ -5,6 +5,7 @@ from tinymce.models import HTMLField
 class AboutCompany(models.Model):
     title = models.CharField(max_length=300)
     image = models.ImageField(upload_to="about")
+    banner = models.ImageField(upload_to="about/banner", null=True)
     description = HTMLField()
     keywords = models.CharField(max_length=300, null=True)
     seo_description = models.TextField(null=True)
