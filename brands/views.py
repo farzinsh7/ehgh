@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from . import models
 from news.models import News
+from houses.models import Houses
 
 
 # Create your views here.
@@ -21,7 +22,7 @@ class BrandsDetailView(DetailView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['lines'] = models.Line.objects.filter(status=True)
+        context['lines'] = Houses.objects.all()
         context['tags'] = models.Tags.objects.filter(status=True)
         context['latest'] = News.objects.filter(status="p").order_by('-publish')[:4]
         return context

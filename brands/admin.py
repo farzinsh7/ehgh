@@ -20,8 +20,6 @@ class BrandsAdmin(admin.ModelAdmin):
     search_fields = ('title', 'description')
     inlines = [SliderAdmin, SocialLinksAdmin]
     ordering = ['-created']
-    
 
 
-admin.site.register(models.Line)
 admin.site.register(models.Tags)

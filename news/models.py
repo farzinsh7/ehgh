@@ -42,6 +42,7 @@ class News(models.Model):
     description = HTMLField()
     image = models.ImageField(upload_to='news')
     thumbnail = models.ImageField(upload_to='news/thumb', null=True)
+    banner = models.ImageField(upload_to="news/banner", null=True)
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

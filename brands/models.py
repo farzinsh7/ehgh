@@ -5,15 +5,6 @@ from django.utils.html import format_html
 from houses.models import Houses
 
 # Create your models here.
-class Line(models.Model):
-    title = models.CharField(max_length=300)
-    slug = models.SlugField(max_length=200, unique=True)
-    status = models.BooleanField(default=True)
-
-    def __str__(self):
-        return self.title
-
-
 class Tags(models.Model):
     title = models.CharField(max_length=300)
     slug = models.SlugField(max_length=200, unique=True)
@@ -38,8 +29,9 @@ class Brands(models.Model):
     line = models.ManyToManyField(Houses, related_name='brands')
     website = models.CharField(max_length=300,blank=True,null=True)
     address = models.CharField(max_length=500,blank=True,null=True)
-    thumbnail = models.ImageField(upload_to='brands/thumbnail', null=True)
     image = models.ImageField(upload_to='brands')
+    thumbnail = models.ImageField(upload_to='brands/thumbnail', null=True)
+    banner = models.ImageField(upload_to="brands/banner", null=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=1, choices=STATUS_CHOICES)
