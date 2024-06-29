@@ -2,6 +2,7 @@ from django.views.generic import ListView
 from . import models
 from news.models import News
 from brands.models import Brands
+from houses.models import Houses
 
 
 class IndexView(ListView):
@@ -23,6 +24,11 @@ class SiteHeaderView(ListView):
     template_name = 'base/shared/header.html'
     context_object_name = 'info'
     queryset = models.SiteInformation.objects.first()
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['houses'] = Houses.objects.all().order_by('position')
+        return context
 
 
 
