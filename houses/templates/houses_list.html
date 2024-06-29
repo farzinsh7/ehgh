@@ -2,5 +2,62 @@
 {% load thumbnail %}
 {% load static %}
 {% block content %}
+<section class="text-center overflow-hidden py-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+    <div class="bg-holder overlay  parallax" style="background-image:url({% static 'img/header-9.jpg' %});">
+    </div>
+    <!--/.bg-holder-->
+    <div class="container-fluid">
+      <div class="header-overlay"></div>
+      <div class="position-relative pt-10 pb-8">
+        <div class="header-text">
+          <div class="overflow-hidden">
+            <h1 class="display-3 fs-7 text-white fw-lighter ls-2" data-zanim-xs='{"duration":2,"delay":0}'>List of Houses</h1>
+          </div>
+          <div class="overflow-hidden">
+            <div class="d-flex justify-content-center" data-zanim-xs='{"duration":2,"delay":0.1}'>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb text-uppercase ls-2">
+                  <li class="breadcrumb-item"><a class="text-400 hover-color-white" href="{% url "page:home" %}">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Houses</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of .container-->
+  </section>
+  <!-- <section> close ============================-->
+<section class="text-center pb-3" id="portfolio">
 
+    <div class="container-fluid">
+      <div class="row justify-content-center" data-zanim-timeline="{}">
+        <div class="col-12 mb-4">
+          <div class="overflow-hidden">
+            <h2 class="fs-md-5 mb-2" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:0}" style="transform: translate(0px, 0px); opacity: 1;">Houses</h2>
+          </div>
+          <div class="overflow-hidden">
+            <hr class="hr-short bg-black opacity-100" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:0.2}" style="transform: translate(0px, 0px); opacity: 1;">
+          </div>
+        </div>
+      </div>
+      <div class="row g-3 mt-3" data-rp-isotope="{&quot;layoutMode&quot;:&quot;packery&quot;}" style="position: relative; height: 1085.39px;">
+        {% for house in houses %}
+        <div class="col-sm-6 col-lg-4 px-2 isotope-item photography" data-zanim-xs='{"delay":0.3}'>
+            <div class="hoverdir-item my-0" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'>
+              <div class="hoverdir-item-content">
+                <a class="d-block" href="{% url "houses:detail_view" house.slug %}">
+                    <img class="img-fluid rounded" src="{{ house.image.url }}" alt="" />
+                  <div class="hoverdir-text">
+                    <h3 class="text-white lh-1 fs-2">{{ house.title }}</h3>
+                  </div>
+                </a></div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end of .container-->
+  </section>
 {% endblock content %}
