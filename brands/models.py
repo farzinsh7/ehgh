@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from tinymce.models import HTMLField
 from django.utils.html import format_html
+from houses.models import Houses
 
 # Create your models here.
 class Line(models.Model):
@@ -34,7 +35,7 @@ class Brands(models.Model):
     tags = models.ManyToManyField(Tags, related_name='brands', blank=True)
     description = HTMLField()
     founded = models.DateTimeField(default=timezone.now)
-    line = models.ManyToManyField(Line, related_name='brands')
+    line = models.ManyToManyField(Houses, related_name='brands')
     website = models.CharField(max_length=300,blank=True,null=True)
     address = models.CharField(max_length=500,blank=True,null=True)
     thumbnail = models.ImageField(upload_to='brands/thumbnail', null=True)

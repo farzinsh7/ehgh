@@ -96,25 +96,27 @@
             </div>
             <div class="swiper theme-slider" data-swiper='{"spaceBetween":30,"loop":true,"slidesPerView":1,"breakpoints":{"670":{"slidesPerView":2},"1200":{"slidesPerView":3}}}'>
                 <div class="swiper-wrapper">
-                    {% for item in latest %}
-                        <div class="swiper-slide">
-                            <div class="card text-white" style="max-width: 30rem;">
-                                <div class="card-img overflow-hidden">
-                                    <div class="bg-holder overlay" data-rellax-percentage="0.5">
-                                    </div>
-                                    {% thumbnail item.thumbnail "347x195" crop="center" as im %}
-                                    <img class="img-fluid w-100" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ item.slug }}">
-                                    {% endthumbnail %}
+                {% for item in latest %}
+                    <div class="swiper-slide">
+                        <a href="{% url "news:detail_view" item.slug %}">
+                        <div class="card text-white" style="max-width: 30rem;">
+                            <div class="card-img overflow-hidden">
+                                <div class="bg-holder overlay" data-rellax-percentage="0.5">
                                 </div>
-                                <div class="card-img-overlay d-flex align-items-end">
-                                  <div>
-                                    <h5 class="card-title text-white">{{ item.title|truncatechars:20 }}</h5>
-                                    <p class="card-text">{{ item.description|safe|truncatechars:60 }}</p>
-                                  </div>
+                                {% thumbnail item.thumbnail "347x195" crop="center" as im %}
+                                <img class="img-fluid w-100" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ item.slug }}">
+                                {% endthumbnail %}
+                            </div>
+                            <div class="card-img-overlay d-flex align-items-end">
+                                <div>
+                                <h5 class="card-title text-white">{{ item.title|truncatechars:20 }}</h5>
+                                <p class="card-text">{{ item.description|safe|truncatechars:60 }}</p>
                                 </div>
                             </div>
                         </div>
-                    {% endfor %}
+                        </a>
+                    </div>
+                {% endfor %}
                 </div>
                 <div class="swiper-nav">
                   <div class="swiper-button-prev"></div>
