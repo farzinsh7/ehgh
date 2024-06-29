@@ -1,6 +1,16 @@
 {% extends 'base/main_base.html' %}
 {% load thumbnail %}
 {% load static %}
+{% block seo_tags %}
+    <meta name="description" content="The list of brands"/>
+    <meta property="og:locale" content="en"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Brands"/>
+    <meta property="og:description" content="The list of brands"/>
+    <meta property="og:url" content="{% url 'brands:list_view' %}"/>
+    <meta name="keywords" content="EHGH Brands">
+{% endblock seo_tags %}
+{% block title %}Brands{% endblock title %}
 {% block content %}
 <section class="text-center overflow-hidden py-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
   <div class="bg-holder overlay  parallax" style="background-image:url({% static 'img/header-9.jpg' %});">

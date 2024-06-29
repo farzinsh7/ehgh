@@ -1,6 +1,16 @@
 {% extends 'base/main_base.html' %}
 {% load thumbnail %}
 {% load static %}
+{% block seo_tags %}
+    <meta name="description" content="{{ brand.seo_description }}"/>
+    <meta property="og:locale" content="en"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="{{ brand.title }}"/>
+    <meta property="og:description" content="{{ brand.seo_description }}"/>
+    <meta property="og:url" content="{{ request.path }}"/>
+    <meta name="keywords" content="{{ brand.keywords }}">
+{% endblock seo_tags %}
+{% block title %}{{ brand.title }}{% endblock title %}
 {% block content %}
 <!-- <section> begin ============================-->
 <section class="text-center overflow-hidden py-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">

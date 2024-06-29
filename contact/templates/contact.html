@@ -1,6 +1,16 @@
 {% extends 'base/main_base.html' %}
 {% load thumbnail %}
 {% load static %}
+{% block seo_tags %}
+    <meta name="description" content="Contact EHGH"/>
+    <meta property="og:locale" content="en"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="{{ contact.title }}"/>
+    <meta property="og:description" content="Contact EHGH"/>
+    <meta property="og:url" content="{% url 'contact:page' %}"/>
+    <meta name="keywords" content="Contact EHGH">
+{% endblock seo_tags %}
+{% block title %}{{ contact.title }}{% endblock title %}
 {% block content %}
 <!-- ============================================-->
 <!-- <section> begin ============================-->

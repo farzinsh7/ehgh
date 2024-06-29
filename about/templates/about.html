@@ -1,6 +1,16 @@
 {% extends 'base/main_base.html' %}
 {% load thumbnail %}
 {% load static %}
+{% block seo_tags %}
+    <meta name="description" content="{{ about.seo_description|striptags }}"/>
+    <meta property="og:locale" content="en"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="{{ about.title }}"/>
+    <meta property="og:description" content="{{ about.seo_description|striptags }}"/>
+    <meta property="og:url" content="{% url 'about:page' %}"/>
+    <meta name="keywords" content="{{ about.keywords }}">
+{% endblock seo_tags %}
+{% block title %}{{ about.title }}{% endblock title %}
 {% block content %}
 <!-- ============================================-->
 <!-- <section> begin ============================-->

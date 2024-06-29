@@ -1,6 +1,16 @@
 {% extends 'base/main_base.html' %}
 {% load thumbnail %}
 {% load static %}
+{% block seo_tags %}
+    <meta name="description" content="{{ news.seo_description }}"/>
+    <meta property="og:locale" content="en"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="{{ news.title }}"/>
+    <meta property="og:description" content="{{ news.seo_description }}"/>
+    <meta property="og:url" content="{{ request.path }}"/>
+    <meta name="keywords" content="{{ news.keywords }}">
+{% endblock seo_tags %}
+{% block title %}{{ news.title }}{% endblock title %}
 {% block content %}
 <!-- ============================================-->
 <!-- <section> begin ============================-->

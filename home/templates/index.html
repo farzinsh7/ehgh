@@ -1,6 +1,16 @@
 {% extends 'base/main_base.html' %}
 {% load thumbnail %}
 {% load static %}
+{% block seo_tags %}
+    <meta name="description" content="{{ home.seo_description }}"/>
+    <meta property="og:locale" content="en"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="{{ home.title }}"/>
+    <meta property="og:description" content="{{ home.seo_description }}"/>
+    <meta property="og:url" content="{% url 'page:home' %}"/>
+    <meta name="keywords" content="{{ home.keywords }}">
+{% endblock seo_tags %}
+{% block title %}{{ home.title }}{% endblock title %}
 {% block content %}
 <section class="text-center overflow-hidden py-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
     <div class="bg-holder overlay overlay-2 parallax" style="background-image:url({{ home.header_img.url }});" data-rellax-percentage="0.5">

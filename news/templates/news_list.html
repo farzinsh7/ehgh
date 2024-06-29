@@ -1,6 +1,16 @@
 {% extends 'base/main_base.html' %}
 {% load thumbnail %}
 {% load static %}
+{% block seo_tags %}
+    <meta name="description" content="The list of News"/>
+    <meta property="og:locale" content="en"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="News"/>
+    <meta property="og:description" content="The list of News"/>
+    <meta property="og:url" content="{% url 'news:list_view' %}"/>
+    <meta name="keywords" content="EHGH News">
+{% endblock seo_tags %}
+{% block title %}News{% endblock title %}
 {% block content %}
 <!-- <section> begin ============================-->
 <section class="text-center overflow-hidden py-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
