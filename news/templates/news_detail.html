@@ -48,7 +48,7 @@
     <div class="row">
       <div class="col-lg-7 mb-4 mb-lg-0"><img class="img-fluid rounded" src="{{ news.image.url }}" alt="" />
         <h2 class="mt-4 text-transform-none fw-medium">{{ news.title }}</h2>
-        <div class="mb-4">By<a class="text-700" href="#!"> {{ news.author|title }}</a><span class="mx-2 text-700">|</span>
+        <div class="mb-4">By<a class="text-700" href="#!"> {{ news.author.first_name|title }}</a><span class="mx-2 text-700">|</span>
           <a class="text-700" href="#!">{{ news.publish|date:"d M, Y"  }}</a><span class="mx-2 text-700">|</span>
           {% for cat in news.category.all %}<a class="text-700" href="#!">{% if forloop.first %}{% else %}, {% endif %}{{ cat.title }}</a>{% endfor %}
         </div>
@@ -72,10 +72,12 @@
           </div>
         </div>
         {% endfor %}
+        {% if news.tags.all %}
         <h4 class="mt-5 mb-3 fw-normal">Tags</h4>
         {% for tag in news.tags.all %}
         <a class="btn btn-dark btn-sm hvr-sweep-top me-1 mb-1" href="#!">{{ tag.title }}</a>
         {% endfor %}
+        {% endif %}
       </div>
     </div>
   </div>
