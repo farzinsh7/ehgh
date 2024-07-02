@@ -61,9 +61,7 @@
         {% for brand in brands %}
         <div class="col-12 col-sm-6 col-lg-4 thumbnail-grid-item">
             <a href="{% url "brands:detail_view" brand.slug %}">
-            {% thumbnail brand.thumbnail "360x202" crop="center" as im %}
-            <img class="w-100 rounded img-fluid" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ brand.title }}">
-            {% endthumbnail %}
+                <img class="w-100 rounded img-fluid" src="{{ brand.thumbnail.url }}" alt="{{ brand.title }}">
             </a>
         </div>  
         {% endfor %}

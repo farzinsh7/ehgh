@@ -58,9 +58,7 @@
             <div class="hoverdir-item my-0" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'>
               <div class="hoverdir-item-content">
                 <a class="d-block" href="{% url "houses:detail_view" house.slug %}">
-                    {% thumbnail house.image "608x406" crop="center" as im %}
-                    <img class="img-fluid rounded" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ house.title }}">
-                    {% endthumbnail %}
+                  <img class="img-fluid rounded" src="{{ house.image.url }}" alt="{{ house.title }}">
                   <div class="hoverdir-text">
                     <h3 class="text-white lh-1 fs-2">{{ house.title }}</h3>
                   </div>

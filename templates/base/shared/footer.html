@@ -14,7 +14,7 @@
       <div class="col-lg-8">
         <div class="row">
           <div class="col-6 col-md-3 ps-lg-4 mb-4 mb-lg-0">
-            <h5 class="text-white mb-3">Company</h5>
+            <h5 class="text-white mb-3">Helpful Link</h5>
             <ul class="list-unstyled mb-0">
               {% for item in info.links.all %}
               <li class="mb-1"><a class="text-700 hover-color-white" href="{{ item.link }}">{{ item.title }}</a></li>
@@ -22,7 +22,7 @@
             </ul>
           </div>
           <div class="col-6 col-md-3 ps-4 mb-4 mb-lg-0">
-            <h5 class="text-white mb-3">Product</h5>
+            <h5 class="text-white mb-3">Helpful Link</h5>
             <ul class="list-unstyled mb-0">
               {% for item in info.links2.all %}
               <li class="mb-1"><a class="text-700 hover-color-white" href="{{ item.link }}">{{ item.title }}</a></li>
