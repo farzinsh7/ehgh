@@ -55,9 +55,9 @@
         {{ news.description|safe }}
       </div>
       <div class="col-lg-5 ps-lg-7">
-        <div class="form-group">
+        {% comment %} <div class="form-group">
           <input class="form-control" type="text" placeholder="Search..." />
-        </div>
+        </div> {% endcomment %}
         <h4 class="mt-4 mb-3 fw-normal">Latest Posts</h4>
         {% for blog in latest %}
         <div class="d-flex mt-3">

@@ -49,7 +49,7 @@ class Brands(models.Model):
 
 class Slider(models.Model):
     title = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='slider')
+    image = models.ImageField(upload_to='brands/slider')
     home_data = models.ForeignKey(Brands, null=True, on_delete=models.SET_NULL, related_name='sliders')
 
     def __str__(self):

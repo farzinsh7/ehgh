@@ -6,12 +6,15 @@ class HomeData(models.Model):
     title = models.CharField(max_length=250)
     sub_title = models.CharField(max_length=300, null=True)
     header_img = models.ImageField(upload_to='home/header', null=True)
+    header_img_mobile = models.ImageField(upload_to='home/header', null=True)
     about_img = models.ImageField(upload_to='home/banner')
     about = HTMLField(null=True)
     about2 = HTMLField(null=True)
     video = models.FileField(upload_to="home/video", blank=True,null=True)
     video_banner = models.ImageField(upload_to='home/banner', null=True)
+    video_banner_mobile = models.ImageField(upload_to='home/banner', null=True)
     statistics_banner = models.ImageField(upload_to='home/banner', null=True)
+    statistics_banner_mobile = models.ImageField(upload_to='home/banner', null=True)
 
     def __str__(self):
         return self.title

@@ -67,6 +67,7 @@
         </div>
         {% endfor %}
     </div>
+    {% if page_obj.paginator.num_pages > 1 %}
     <div class="col-12 p-0">
         <div class="d-flex justify-content-center mt-7">
           <nav aria-label="Page navigation example">
@@ -80,7 +81,8 @@
             </ul>
           </nav>
         </div>
-      </div>
+    </div>
+    {% endif %}
 </div>
 <!-- end of .container-->
 </section>

@@ -36,3 +36,14 @@
         /* margin: 1.75rem auto; */
     }
 }
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        max-width: 60%!important;
+        /* margin: 1.75rem auto; */
+    }
+    .banner-mobile {
+        display: none;
+    }
+}
+
