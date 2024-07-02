@@ -50,7 +50,6 @@
         <h2 class="mt-4 text-transform-none fw-medium">{{ news.title }}</h2>
         <div class="mb-4">By<a class="text-700" href="#!"> {{ news.author|title }}</a><span class="mx-2 text-700">|</span>
           <a class="text-700" href="#!">{{ news.publish|date:"d M, Y"  }}</a><span class="mx-2 text-700">|</span>
-          {% comment %} <a class="text-700" href="#!">3 Comments</a><span class="mx-2 text-700">|</span> {% endcomment %}
           {% for cat in news.category.all %}<a class="text-700" href="#!">{% if forloop.first %}{% else %}, {% endif %}{{ cat.title }}</a>{% endfor %}
         </div>
         {{ news.description|safe }}
