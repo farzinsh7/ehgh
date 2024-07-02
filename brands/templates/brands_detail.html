@@ -90,12 +90,14 @@
                     </li>
                 </td>
             </tr>
+            {% if brand.tags.all %}
             <tr>
                 <td class="py-1 ps-0 text-dark">Tags:</td>
                 <td class="py-1 text-600">
                     {% for item in brand.tags.all  %}<a class="btn btn-dark btn-sm hvr-sweep-top me-1 mb-1" href="#!">{{ item.title }}</a>{% endfor %}
                 </td>
             </tr>
+            {% endif %}
             </table>
         </div>
         </div>

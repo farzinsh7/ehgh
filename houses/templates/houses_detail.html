@@ -48,10 +48,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg pe-lg-5 mb-4 mb-lg-0 position-relative">
-            {% thumbnail house.image "1060x700" crop="center" as im %}
-            <img class="img-fluid mb-4" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ house.title }}">
-            {% endthumbnail %}
-        <h4 class="fw-normal font-base">{{ house.title }}</h4>
+        <h4 class="fw-normal d-flex justify-content-center font-base">{{ house.title }}</h4>
         {{ house.description|safe }}
     </div>
     </div>

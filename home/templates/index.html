@@ -51,9 +51,11 @@
       <div class="row g-2 position-relative thumbnail-grid-container" id="selector">
         {% for brand in brands %}
         <div class="col-12 col-sm-6 col-lg-4 thumbnail-grid-item">
-          {% thumbnail brand.thumbnail "360x202" crop="center" as im %}
-          <img class="w-100 rounded img-fluid" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ brand.title }}">
-          {% endthumbnail %}
+          <a href="{% url "brands:detail_view" brand.slug %}">
+            {% thumbnail brand.thumbnail "360x202" crop="center" as im %}
+            <img class="w-100 rounded img-fluid" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ brand.title }}">
+            {% endthumbnail %}
+          </a>
         </div>  
         {% endfor %}  
       </div>
