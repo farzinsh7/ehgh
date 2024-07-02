@@ -24,7 +24,7 @@
             <h1 class="display-3 text-white fs-5 fs-md-7" data-zanim-xs='{"duration":2,"delay":0}'>{{ home.title }}</h1>
           </div>
           <div class="overflow-hidden">
-            <p class="text-uppercase text-400 ls-3 mt-2" data-zanim-xs='{"duration":2,"delay":0.1}'>{{ home.description }}</p>
+            <p class="text-uppercase text-400 ls-3 mt-2" data-zanim-xs='{"duration":2,"delay":0.1}'>{{ home.sub_title }}</p>
           </div>
         </div>
       </div>
@@ -135,6 +135,7 @@
   <section class="py-8 py-md-10 text-center">
     <div class="bg-holder" style="background-image:url({{ home.video_banner.url }});background-position: 63% 50%;"></div>
     <!--/.bg-holder-->
+    {% if home.video %}
     <div class="container">
       <div class="row justify-content-center" data-zanim-timeline="{}">
         <div class="col-lg-8">
@@ -160,15 +161,11 @@
               </div>
               <!--/.bg-modal-->
             </div>
-            <div class="col-md-5 text-md-start">
-              <div class="overflow-hidden">
-                <p class="text-white mb-0" data-zanim-xs="{&quot;from&quot;:{&quot;opacity&quot;:0,&quot;x&quot;:30},&quot;to&quot;:{&quot;opacity&quot;:1,&quot;x&quot;:0},&quot;duration&quot;:1.5,&quot;delay&quot;:0.1}" style="transform: translate(0px, 0px); opacity: 1;">Promote your company<br>Creating your own <br>slogan here</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
+    {% endif %}
     <!-- end of .container-->
   </section>
   <section id="blog">

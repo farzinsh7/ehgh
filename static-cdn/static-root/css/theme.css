@@ -18085,9 +18085,10 @@ small, .small {
 .navbar-theme .navbar-nav > .nav-item > .nav-link:active > .nav-link-text,
 .navbar-theme .navbar-nav > .nav-item > .nav-link.active > .nav-link-text,
 .navbar-theme .navbar-nav > .nav-item > .nav-link:hover > .nav-link-text, .navbar-theme .navbar-nav > .nav-item.show > .nav-link > .nav-link-text {
-  background-color: #fff;
+  /* background-color: #fff;
   color: #000;
-  border-radius: 0.125rem;
+  border-radius: 0.125rem; */
+  text-decoration: underline;
 }
 
 .navbar-theme .navbar-collapse.show {
