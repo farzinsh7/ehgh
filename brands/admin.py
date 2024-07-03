@@ -22,4 +22,4 @@ class BrandsAdmin(admin.ModelAdmin):
     ordering = ['-created']
 
 
-admin.site.register(models.Tags)
+# admin.site.register(models.Tags)

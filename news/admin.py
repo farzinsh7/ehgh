@@ -13,4 +13,4 @@ class NewsAdmin(admin.ModelAdmin):
 
 
 admin.site.register(models.Category)
-admin.site.register(models.Tags)
+# admin.site.register(models.Tags)
