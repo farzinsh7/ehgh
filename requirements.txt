@@ -1,5 +1,6 @@
 asgiref==3.8.1
 Django==5.0.6
+django-jazzmin==3.0.0
 django-js-asset==2.2.0
 django-render-partial==0.4
 django-tinymce==4.0.0
