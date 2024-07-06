@@ -21,8 +21,8 @@
       <div class="d-flex flex-center vh-100">
         <div class="header-overlay"></div>
         <div class="header-text">
-          <div class="overflow-hidden">
-            <h1 class="display-3 text-white fs-5 fs-md-7" data-zanim-xs='{"duration":2,"delay":0}'>{{ home.title }}</h1>
+          <div class="overflow-hidden pb-3">
+            <img class="img-fluid" width="70%" src="{% static 'img/EHGH.svg' %}" data-zanim-xs='{"duration":2,"delay":0}' alt="{{ home.title }}">
           </div>
           <div class="overflow-hidden">
             <p class="text-uppercase text-400 ls-3 mt-2" data-zanim-xs='{"duration":2,"delay":0.1}'>{{ home.sub_title }}</p>
@@ -42,7 +42,7 @@
             <h2 class="fs-md-5" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:0}" style="transform: translate(0px, 0px); opacity: 1;">our brands</h2>
           </div>
           <div class="overflow-hidden">
-            <p class="fs--1 text-uppercase text-black ls-1 mb-0" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:0.1}" style="transform: translate(0px, 0px); opacity: 1;">we plan, design, build and market high quality products</p>
+            <p class="fs--1 text-uppercase text-black ls-1 mb-0" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:0.1}" style="transform: translate(0px, 0px); opacity: 1;">we plan, design and build high quality products</p>
           </div>
           <div class="overflow-hidden">
             <hr class="hr-short bg-black opacity-100" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:0.2}" style="transform: translate(0px, 0px); opacity: 1;">
@@ -67,8 +67,8 @@
   </section>
   <!--/end our brands-->
   <section class="py-7 text-center" data-zanim-timeline="{}">
-    <div class="bg-holder overlay banner-desktop" style="background-image:url({{ home.statistics_banner.url }});"></div>
-    <div class="bg-holder overlay banner-mobile" style="background-image:url({{ home.statistics_banner_mobile.url }});"></div>
+    <div class="bg-holder overlay overlay-2 banner-desktop" style="background-image:url({{ home.statistics_banner.url }});"></div>
+    <div class="bg-holder overlay overlay-2 banner-mobile" style="background-image:url({{ home.statistics_banner_mobile.url }});"></div>
     <!--/.bg-holder-->
     <div class="container">
       <div class="row mb-4">
@@ -77,7 +77,7 @@
             <h2 class="fs-sm-5 text-white mb-1 mb-lg-2" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:0}" style="transform: translate(0px, 0px); opacity: 1;">do you know</h2>
           </div>
           <div class="overflow-hidden">
-            <p class="fs--1 text-uppercase text-white ls-1 mb-0" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:0.1}" style="transform: translate(0px, 0px); opacity: 1;">some cool facts about our company</p>
+            <p class="fs--1 text-uppercase text-white ls-1 mb-0" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:0.1}" style="transform: translate(0px, 0px); opacity: 1;">Who We Are</p>
           </div>
           <div class="overflow-hidden">
             <hr class="hr-short bg-white" data-zanim-xs="{&quot;duration&quot;:1.5,&quot;delay&quot;:0.2}" style="transform: translate(0px, 0px); opacity: 1;">
@@ -90,7 +90,7 @@
             {% for item in home.statistics.all %}
             <div class="col-md-4 mb-4 mb-lg-0">
               <div class="overflow-hidden">
-                <h3 class="text-white font-base fw-normal mb-1" data-countup="{&quot;endValue&quot;:{{ item.data }}}">{{ item.data }}</h3>
+                <h3 class="text-white font-base font-50 fw-normal mb-1" data-countup="{&quot;endValue&quot;:{{ item.data }}}">{{ item.data }}</h3>
               </div>
               <div class="overflow-hidden">
                 <p class="text-uppercase text-white fw-semi-bold ls-2 mb-0">{{ item.title }}</p>
@@ -137,8 +137,8 @@
     <!-- end of .container-->
   </section>
   <section class="py-8 py-md-10 text-center">
-    <div class="bg-holder banner-desktop" style="background-image:url({{ home.video_banner.url }});background-position: 63% 50%;"></div>
-    <div class="bg-holder banner-mobile" style="background-image:url({{ home.video_banner_mobile.url }});background-position: 63% 50%;"></div>
+    <div class="bg-holder overlay-2 overlay banner-desktop" style="background-image:url({{ home.video_banner.url }});background-position: 63% 50%;"></div>
+    <div class="bg-holder overlay-2 overlay banner-mobile" style="background-image:url({{ home.video_banner_mobile.url }});background-position: 63% 50%;"></div>
     <!--/.bg-holder-->
     {% if home.video %}
     <div class="container">
