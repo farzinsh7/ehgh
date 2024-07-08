@@ -45,23 +45,14 @@
 <section>
     <div class="container">
         <div class="row">
-        <div class="col-12 mb-4">
-            <div class="swiper theme-slider" data-swiper='{"autoplay":true,"spaceBetween":5,"loop":true,"loopedSlides":5,"slideToClickedSlide":true}'>
-            <div class="swiper-wrapper">
-                {% for item in brand.sliders.all  %}<div class="swiper-slide"><img class="img-fluid" src="{{ item.image.url }}" alt="{{ item.title }}" /></div>{% endfor %}
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-nav">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-            <div class="swiper-pagination"></div>
-            </div>
-        </div>
         <div class="col-lg-8 pe-lg-5 mb-4 mb-lg-0 position-relative">
+            <h2 class="text-transform-none fw-medium">{{ brand.title }}</h2>
             {{ brand.description|safe }}
             <div class="vertical-line"></div>
             <div class="row">
+                <div class="col-12">
+                    <h4 class="fw-normal mb-3">Image Gallery</h4>
+                </div>
                 <div class="swiper theme-slider" data-swiper='{"spaceBetween":30,"loop":true,"slidesPerView":1,"breakpoints":{"670":{"slidesPerView":2},"1200":{"slidesPerView":3}}}'>
                     <div class="swiper-wrapper">
                         {% for item in brand.sliders.all  %}
