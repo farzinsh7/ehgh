@@ -61,6 +61,23 @@
         <div class="col-lg-8 pe-lg-5 mb-4 mb-lg-0 position-relative">
             {{ brand.description|safe }}
             <div class="vertical-line"></div>
+            <div class="row">
+                <div class="swiper theme-slider" data-swiper='{"spaceBetween":30,"loop":true,"slidesPerView":1,"breakpoints":{"670":{"slidesPerView":2},"1200":{"slidesPerView":3}}}'>
+                    <div class="swiper-wrapper">
+                        {% for item in brand.sliders.all  %}
+                        <div class="swiper-slide">
+                            <a href="{{ item.image.url }}" data-gallery="gallery-1">
+                                <img class="img-fluid rounded" src="{{ item.image.url }}" alt="{{ item.title }}" />
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-nav">
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="col-lg-4 ps-lg-4">
             <h5 class="fw-normal mb-1">Informations</h5>
