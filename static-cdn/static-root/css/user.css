@@ -28,7 +28,10 @@
 .hidden-display {
     display: none;
 }
-  
+
+.logo{
+    width: 15rem;
+}
 
 @media (min-width: 576px) {
     .modal-dialog {
@@ -44,6 +47,9 @@
     }
     .banner-mobile {
         display: none;
+    }
+    .logo{
+        width: 30rem;
     }
 }
 
