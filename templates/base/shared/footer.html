@@ -33,7 +33,7 @@
             <h5 class="text-white mb-3">FROM THE BLOG</h5>
             <ul class="list-unstyled mb-0">
               {% for news in latest %}
-              <li class="mb-3"><a class="text-700 hover-color-white" href="pages/single-post.html">{{ news.title }}</a>
+              <li class="mb-3"><a class="text-700 hover-color-white" href="{% url "news:detail_view" news.slug %}">{{ news.title }}</a>
                 <p class="text-900 hover-color-white mb-0">{{ news.publish|date:"d M, Y" }}</p>
               </li>
               {% endfor %}
